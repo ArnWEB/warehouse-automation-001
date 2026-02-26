@@ -1,0 +1,1 @@
+/home/xelf/warehouse-automation/build/amr_description/launch/gazebo.launch.py

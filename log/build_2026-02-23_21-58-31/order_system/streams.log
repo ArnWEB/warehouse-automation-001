@@ -1,0 +1,18 @@
+[1.406s] Invoking command in '/home/xelf/warehouse-automation/build/order_system': PYTHONPATH=/home/xelf/warehouse-automation/build/order_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/order_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/order_system/build --no-deps symlink_data
+[1.637s] running develop
+[1.757s] running egg_info
+[1.757s] writing order_system.egg-info/PKG-INFO
+[1.758s] writing dependency_links to order_system.egg-info/dependency_links.txt
+[1.758s] writing entry points to order_system.egg-info/entry_points.txt
+[1.758s] writing requirements to order_system.egg-info/requires.txt
+[1.758s] writing top-level names to order_system.egg-info/top_level.txt
+[1.759s] reading manifest file 'order_system.egg-info/SOURCES.txt'
+[1.760s] writing manifest file 'order_system.egg-info/SOURCES.txt'
+[1.762s] running build_ext
+[1.762s] Creating /home/xelf/warehouse-automation/install/order_system/lib/python3.10/site-packages/order-system.egg-link (link to .)
+[1.762s] Installing order_generator script to /home/xelf/warehouse-automation/install/order_system/lib/order_system
+[1.763s] Installing order_listener script to /home/xelf/warehouse-automation/install/order_system/lib/order_system
+[1.763s] 
+[1.763s] Installed /home/xelf/warehouse-automation/build/order_system
+[1.763s] running symlink_data
+[1.806s] Invoked command in '/home/xelf/warehouse-automation/build/order_system' returned '0': PYTHONPATH=/home/xelf/warehouse-automation/build/order_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/order_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/order_system/build --no-deps symlink_data

@@ -1,0 +1,1 @@
+/home/xelf/warehouse-automation/amr_description/launch/warehouse_gzros.launch.py

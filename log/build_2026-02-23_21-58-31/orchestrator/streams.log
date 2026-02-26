@@ -1,0 +1,18 @@
+[1.444s] Invoking command in '/home/xelf/warehouse-automation/build/orchestrator': PYTHONPATH=/home/xelf/warehouse-automation/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/orchestrator/build --no-deps symlink_data
+[1.670s] running develop
+[1.786s] running egg_info
+[1.786s] writing orchestrator.egg-info/PKG-INFO
+[1.786s] writing dependency_links to orchestrator.egg-info/dependency_links.txt
+[1.787s] writing entry points to orchestrator.egg-info/entry_points.txt
+[1.787s] writing requirements to orchestrator.egg-info/requires.txt
+[1.787s] writing top-level names to orchestrator.egg-info/top_level.txt
+[1.788s] reading manifest file 'orchestrator.egg-info/SOURCES.txt'
+[1.788s] writing manifest file 'orchestrator.egg-info/SOURCES.txt'
+[1.790s] running build_ext
+[1.790s] Creating /home/xelf/warehouse-automation/install/orchestrator/lib/python3.10/site-packages/orchestrator.egg-link (link to .)
+[1.791s] Installing amr_robot script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[1.791s] Installing orchestrator script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[1.792s] 
+[1.792s] Installed /home/xelf/warehouse-automation/build/orchestrator
+[1.792s] running symlink_data
+[1.858s] Invoked command in '/home/xelf/warehouse-automation/build/orchestrator' returned '0': PYTHONPATH=/home/xelf/warehouse-automation/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/orchestrator/build --no-deps symlink_data

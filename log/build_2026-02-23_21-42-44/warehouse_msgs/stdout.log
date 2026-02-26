@@ -1,0 +1,32 @@
+running egg_info
+creating ../build/warehouse_msgs/warehouse_msgs.egg-info
+writing ../build/warehouse_msgs/warehouse_msgs.egg-info/PKG-INFO
+writing dependency_links to ../build/warehouse_msgs/warehouse_msgs.egg-info/dependency_links.txt
+writing requirements to ../build/warehouse_msgs/warehouse_msgs.egg-info/requires.txt
+writing top-level names to ../build/warehouse_msgs/warehouse_msgs.egg-info/top_level.txt
+writing manifest file '../build/warehouse_msgs/warehouse_msgs.egg-info/SOURCES.txt'
+reading manifest file '../build/warehouse_msgs/warehouse_msgs.egg-info/SOURCES.txt'
+writing manifest file '../build/warehouse_msgs/warehouse_msgs.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/xelf/warehouse-automation/build/warehouse_msgs/build
+creating /home/xelf/warehouse-automation/build/warehouse_msgs/build/lib
+creating /home/xelf/warehouse-automation/build/warehouse_msgs/build/lib/warehouse_msgs
+copying warehouse_msgs/__init__.py -> /home/xelf/warehouse-automation/build/warehouse_msgs/build/lib/warehouse_msgs
+running install
+running install_lib
+creating /home/xelf/warehouse-automation/install/warehouse_msgs/lib/python3.10/site-packages/warehouse_msgs
+copying /home/xelf/warehouse-automation/build/warehouse_msgs/build/lib/warehouse_msgs/__init__.py -> /home/xelf/warehouse-automation/install/warehouse_msgs/lib/python3.10/site-packages/warehouse_msgs
+byte-compiling /home/xelf/warehouse-automation/install/warehouse_msgs/lib/python3.10/site-packages/warehouse_msgs/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/xelf/warehouse-automation/install/warehouse_msgs/share/ament_index
+creating /home/xelf/warehouse-automation/install/warehouse_msgs/share/ament_index/resource_index
+creating /home/xelf/warehouse-automation/install/warehouse_msgs/share/ament_index/resource_index/packages
+copying resource/warehouse_msgs -> /home/xelf/warehouse-automation/install/warehouse_msgs/share/ament_index/resource_index/packages
+copying package.xml -> /home/xelf/warehouse-automation/install/warehouse_msgs/share/warehouse_msgs
+creating /home/xelf/warehouse-automation/install/warehouse_msgs/share/warehouse_msgs/msg
+copying msg/Order.msg -> /home/xelf/warehouse-automation/install/warehouse_msgs/share/warehouse_msgs/msg
+running install_egg_info
+Copying ../build/warehouse_msgs/warehouse_msgs.egg-info to /home/xelf/warehouse-automation/install/warehouse_msgs/lib/python3.10/site-packages/warehouse_msgs-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/xelf/warehouse-automation/build/warehouse_msgs/install.log'

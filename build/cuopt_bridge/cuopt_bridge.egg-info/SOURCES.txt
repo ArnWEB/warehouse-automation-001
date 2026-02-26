@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+cuopt_bridge/__init__.py
+cuopt_bridge/cuopt_bridge.py
+cuopt_bridge/cuopt_client.py
+cuopt_bridge.egg-info/PKG-INFO
+cuopt_bridge.egg-info/SOURCES.txt
+cuopt_bridge.egg-info/dependency_links.txt
+cuopt_bridge.egg-info/entry_points.txt
+cuopt_bridge.egg-info/requires.txt
+cuopt_bridge.egg-info/top_level.txt
+cuopt_bridge.egg-info/zip-safe
+launch/cuopt_bridge_launch.py
+resource/cuopt_bridge

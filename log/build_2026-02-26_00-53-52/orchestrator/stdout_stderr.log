@@ -1,0 +1,23 @@
+running develop
+running egg_info
+writing orchestrator.egg-info/PKG-INFO
+writing dependency_links to orchestrator.egg-info/dependency_links.txt
+writing entry points to orchestrator.egg-info/entry_points.txt
+writing requirements to orchestrator.egg-info/requires.txt
+writing top-level names to orchestrator.egg-info/top_level.txt
+reading manifest file 'orchestrator.egg-info/SOURCES.txt'
+writing manifest file 'orchestrator.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/xelf/warehouse-automation/install/orchestrator/lib/python3.10/site-packages/orchestrator.egg-link (link to .)
+Installing amr_robot script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+Installing fleet_manager script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+Installing fleet_task_generator script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+Installing fleet_visualization script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+Installing gazebo_fleet_mover script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+Installing orchestrator script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+Installing robot_state_monitor script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+Installing task_executor script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+Installing test_gazebo_mover script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+
+Installed /home/xelf/warehouse-automation/build/orchestrator
+running symlink_data

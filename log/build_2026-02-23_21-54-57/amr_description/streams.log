@@ -1,0 +1,16 @@
+[0.422s] Invoking command in '/home/xelf/warehouse-automation/build/amr_description': PYTHONPATH=/home/xelf/warehouse-automation/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/amr_description/build --no-deps symlink_data
+[0.579s] running develop
+[0.659s] running egg_info
+[0.659s] writing amr_description.egg-info/PKG-INFO
+[0.659s] writing dependency_links to amr_description.egg-info/dependency_links.txt
+[0.659s] writing requirements to amr_description.egg-info/requires.txt
+[0.659s] writing top-level names to amr_description.egg-info/top_level.txt
+[0.661s] reading manifest file 'amr_description.egg-info/SOURCES.txt'
+[0.661s] writing manifest file 'amr_description.egg-info/SOURCES.txt'
+[0.662s] running build_ext
+[0.662s] Creating /home/xelf/warehouse-automation/install/amr_description/lib/python3.10/site-packages/amr-description.egg-link (link to .)
+[0.663s] 
+[0.663s] Installed /home/xelf/warehouse-automation/build/amr_description
+[0.663s] running symlink_data
+[0.663s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/launch/warehouse_gzros.launch.py -> /home/xelf/warehouse-automation/install/amr_description/share/amr_description/launch
+[0.685s] Invoked command in '/home/xelf/warehouse-automation/build/amr_description' returned '0': PYTHONPATH=/home/xelf/warehouse-automation/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/amr_description/build --no-deps symlink_data

@@ -1,0 +1,22 @@
+[0.423s] Invoking command in '/home/xelf/warehouse-automation/build/amr_description': PYTHONPATH=/home/xelf/warehouse-automation/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/amr_description/build --no-deps symlink_data --force
+[0.576s] running develop
+[0.655s] running egg_info
+[0.655s] writing amr_description.egg-info/PKG-INFO
+[0.655s] writing dependency_links to amr_description.egg-info/dependency_links.txt
+[0.655s] writing requirements to amr_description.egg-info/requires.txt
+[0.655s] writing top-level names to amr_description.egg-info/top_level.txt
+[0.656s] reading manifest file 'amr_description.egg-info/SOURCES.txt'
+[0.656s] writing manifest file 'amr_description.egg-info/SOURCES.txt'
+[0.657s] running build_ext
+[0.657s] Creating /home/xelf/warehouse-automation/install/amr_description/lib/python3.10/site-packages/amr-description.egg-link (link to .)
+[0.658s] 
+[0.658s] Installed /home/xelf/warehouse-automation/build/amr_description
+[0.658s] running symlink_data
+[0.658s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/resource/amr_description -> /home/xelf/warehouse-automation/install/amr_description/share/ament_index/resource_index/packages
+[0.658s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/package.xml -> /home/xelf/warehouse-automation/install/amr_description/share/amr_description
+[0.659s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/urdf/amr_robot.urdf -> /home/xelf/warehouse-automation/install/amr_description/share/amr_description/urdf
+[0.659s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/worlds/warehouse.world -> /home/xelf/warehouse-automation/install/amr_description/share/amr_description/worlds
+[0.659s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/launch/gazebo.launch.py -> /home/xelf/warehouse-automation/install/amr_description/share/amr_description/launch
+[0.659s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/launch/gazebo_simple.launch.py -> /home/xelf/warehouse-automation/install/amr_description/share/amr_description/launch
+[0.659s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/launch/gazebo_ros.launch.py -> /home/xelf/warehouse-automation/install/amr_description/share/amr_description/launch
+[0.682s] Invoked command in '/home/xelf/warehouse-automation/build/amr_description' returned '0': PYTHONPATH=/home/xelf/warehouse-automation/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/amr_description/build --no-deps symlink_data --force

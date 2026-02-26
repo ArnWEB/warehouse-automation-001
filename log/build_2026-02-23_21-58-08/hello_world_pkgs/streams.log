@@ -1,0 +1,21 @@
+[1.451s] Invoking command in '/home/xelf/warehouse-automation/build/hello_world_pkgs': PYTHONPATH=/home/xelf/warehouse-automation/build/hello_world_pkgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/hello_world_pkgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/hello_world_pkgs/build --no-deps symlink_data --force
+[1.691s] running develop
+[1.826s] running egg_info
+[1.827s] writing hello_world_pkgs.egg-info/PKG-INFO
+[1.827s] writing dependency_links to hello_world_pkgs.egg-info/dependency_links.txt
+[1.828s] writing entry points to hello_world_pkgs.egg-info/entry_points.txt
+[1.828s] writing requirements to hello_world_pkgs.egg-info/requires.txt
+[1.828s] writing top-level names to hello_world_pkgs.egg-info/top_level.txt
+[1.832s] reading manifest file 'hello_world_pkgs.egg-info/SOURCES.txt'
+[1.833s] writing manifest file 'hello_world_pkgs.egg-info/SOURCES.txt'
+[1.834s] running build_ext
+[1.835s] Creating /home/xelf/warehouse-automation/install/hello_world_pkgs/lib/python3.10/site-packages/hello-world-pkgs.egg-link (link to .)
+[1.835s] Installing hello_listener script to /home/xelf/warehouse-automation/install/hello_world_pkgs/lib/hello_world_pkgs
+[1.836s] Installing hello_talker script to /home/xelf/warehouse-automation/install/hello_world_pkgs/lib/hello_world_pkgs
+[1.836s] 
+[1.837s] Installed /home/xelf/warehouse-automation/build/hello_world_pkgs
+[1.837s] running symlink_data
+[1.837s] symbolically linking /home/xelf/warehouse-automation/build/hello_world_pkgs/resource/hello_world_pkgs -> /home/xelf/warehouse-automation/install/hello_world_pkgs/share/ament_index/resource_index/packages
+[1.838s] symbolically linking /home/xelf/warehouse-automation/build/hello_world_pkgs/package.xml -> /home/xelf/warehouse-automation/install/hello_world_pkgs/share/hello_world_pkgs
+[1.838s] symbolically linking /home/xelf/warehouse-automation/build/hello_world_pkgs/launch/hello_world_launch.py -> /home/xelf/warehouse-automation/install/hello_world_pkgs/share/hello_world_pkgs/launch
+[1.913s] Invoked command in '/home/xelf/warehouse-automation/build/hello_world_pkgs' returned '0': PYTHONPATH=/home/xelf/warehouse-automation/build/hello_world_pkgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/hello_world_pkgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/hello_world_pkgs/build --no-deps symlink_data --force

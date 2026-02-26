@@ -1,0 +1,25 @@
+[0.730s] Invoking command in '/home/xelf/warehouse-automation/build/orchestrator': PYTHONPATH=/home/xelf/warehouse-automation/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/orchestrator/build --no-deps symlink_data
+[0.898s] running develop
+[0.991s] running egg_info
+[0.991s] writing orchestrator.egg-info/PKG-INFO
+[0.992s] writing dependency_links to orchestrator.egg-info/dependency_links.txt
+[0.992s] writing entry points to orchestrator.egg-info/entry_points.txt
+[0.993s] writing requirements to orchestrator.egg-info/requires.txt
+[0.993s] writing top-level names to orchestrator.egg-info/top_level.txt
+[0.993s] reading manifest file 'orchestrator.egg-info/SOURCES.txt'
+[0.994s] writing manifest file 'orchestrator.egg-info/SOURCES.txt'
+[0.996s] running build_ext
+[0.996s] Creating /home/xelf/warehouse-automation/install/orchestrator/lib/python3.10/site-packages/orchestrator.egg-link (link to .)
+[0.997s] Installing amr_robot script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[0.998s] Installing fleet_manager script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[0.998s] Installing fleet_task_generator script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[0.998s] Installing fleet_visualization script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[0.998s] Installing gazebo_fleet_mover script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[0.998s] Installing orchestrator script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[0.998s] Installing robot_state_monitor script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[0.999s] Installing task_executor script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[0.999s] Installing test_gazebo_mover script to /home/xelf/warehouse-automation/install/orchestrator/lib/orchestrator
+[0.999s] 
+[0.999s] Installed /home/xelf/warehouse-automation/build/orchestrator
+[0.999s] running symlink_data
+[1.037s] Invoked command in '/home/xelf/warehouse-automation/build/orchestrator' returned '0': PYTHONPATH=/home/xelf/warehouse-automation/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/orchestrator/build --no-deps symlink_data

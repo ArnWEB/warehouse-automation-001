@@ -1,0 +1,18 @@
+[1.312s] Invoking command in '/home/xelf/warehouse-automation/build/hello_world_pkgs': PYTHONPATH=/home/xelf/warehouse-automation/build/hello_world_pkgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/hello_world_pkgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/hello_world_pkgs/build --no-deps symlink_data
+[1.524s] running develop
+[1.620s] running egg_info
+[1.621s] writing hello_world_pkgs.egg-info/PKG-INFO
+[1.621s] writing dependency_links to hello_world_pkgs.egg-info/dependency_links.txt
+[1.621s] writing entry points to hello_world_pkgs.egg-info/entry_points.txt
+[1.621s] writing requirements to hello_world_pkgs.egg-info/requires.txt
+[1.624s] writing top-level names to hello_world_pkgs.egg-info/top_level.txt
+[1.626s] reading manifest file 'hello_world_pkgs.egg-info/SOURCES.txt'
+[1.627s] writing manifest file 'hello_world_pkgs.egg-info/SOURCES.txt'
+[1.628s] running build_ext
+[1.628s] Creating /home/xelf/warehouse-automation/install/hello_world_pkgs/lib/python3.10/site-packages/hello-world-pkgs.egg-link (link to .)
+[1.629s] Installing hello_listener script to /home/xelf/warehouse-automation/install/hello_world_pkgs/lib/hello_world_pkgs
+[1.630s] Installing hello_talker script to /home/xelf/warehouse-automation/install/hello_world_pkgs/lib/hello_world_pkgs
+[1.630s] 
+[1.630s] Installed /home/xelf/warehouse-automation/build/hello_world_pkgs
+[1.630s] running symlink_data
+[1.658s] Invoked command in '/home/xelf/warehouse-automation/build/hello_world_pkgs' returned '0': PYTHONPATH=/home/xelf/warehouse-automation/build/hello_world_pkgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/hello_world_pkgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/hello_world_pkgs/build --no-deps symlink_data

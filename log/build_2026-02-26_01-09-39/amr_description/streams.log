@@ -1,0 +1,19 @@
+[0.466s] Invoking command in '/home/xelf/warehouse-automation/build/amr_description': PYTHONPATH=/home/xelf/warehouse-automation/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/amr_description/build --no-deps symlink_data
+[0.631s] running develop
+[0.717s] running egg_info
+[0.717s] writing amr_description.egg-info/PKG-INFO
+[0.717s] writing dependency_links to amr_description.egg-info/dependency_links.txt
+[0.718s] writing requirements to amr_description.egg-info/requires.txt
+[0.718s] writing top-level names to amr_description.egg-info/top_level.txt
+[0.720s] reading manifest file 'amr_description.egg-info/SOURCES.txt'
+[0.722s] writing manifest file 'amr_description.egg-info/SOURCES.txt'
+[0.723s] running build_ext
+[0.723s] Creating /home/xelf/warehouse-automation/install/amr_description/lib/python3.10/site-packages/amr-description.egg-link (link to .)
+[0.723s] 
+[0.723s] Installed /home/xelf/warehouse-automation/build/amr_description
+[0.724s] running symlink_data
+[0.724s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/urdf/amr_robot_diffdrive.urdf -> /home/xelf/warehouse-automation/install/amr_description/share/amr_description/urdf
+[0.724s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/launch/spawn_amr_diffdrive.launch.py -> /home/xelf/warehouse-automation/install/amr_description/share/amr_description/launch
+[0.725s] creating /home/xelf/warehouse-automation/install/amr_description/share/amr_description/config
+[0.725s] symbolically linking /home/xelf/warehouse-automation/build/amr_description/config/amr_controllers.yaml -> /home/xelf/warehouse-automation/install/amr_description/share/amr_description/config
+[0.750s] Invoked command in '/home/xelf/warehouse-automation/build/amr_description' returned '0': PYTHONPATH=/home/xelf/warehouse-automation/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation/build/amr_description/build --no-deps symlink_data
