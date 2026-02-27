@@ -1,0 +1,33 @@
+[1.656s] Invoking command in '/home/ubuntu/warehouse-automation-001/order_system': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/order_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/order_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/order_system build --build-base /home/ubuntu/warehouse-automation-001/build/order_system/build install --record /home/ubuntu/warehouse-automation-001/build/order_system/install.log --single-version-externally-managed install_data
+[1.913s] running egg_info
+[1.931s] writing ../build/order_system/order_system.egg-info/PKG-INFO
+[1.931s] writing dependency_links to ../build/order_system/order_system.egg-info/dependency_links.txt
+[1.932s] writing entry points to ../build/order_system/order_system.egg-info/entry_points.txt
+[1.932s] writing requirements to ../build/order_system/order_system.egg-info/requires.txt
+[1.932s] writing top-level names to ../build/order_system/order_system.egg-info/top_level.txt
+[1.973s] reading manifest file '../build/order_system/order_system.egg-info/SOURCES.txt'
+[1.975s] writing manifest file '../build/order_system/order_system.egg-info/SOURCES.txt'
+[1.975s] running build
+[1.975s] running build_py
+[1.975s] copying order_system/order_publisher.py -> /home/ubuntu/warehouse-automation-001/build/order_system/build/lib/order_system
+[1.976s] copying order_system/__init__.py -> /home/ubuntu/warehouse-automation-001/build/order_system/build/lib/order_system
+[1.976s] copying order_system/order_generator.py -> /home/ubuntu/warehouse-automation-001/build/order_system/build/lib/order_system
+[1.976s] copying order_system/order_listener.py -> /home/ubuntu/warehouse-automation-001/build/order_system/build/lib/order_system
+[1.977s] running install
+[1.979s] running install_lib
+[1.998s] running install_data
+[1.999s] copying resource/order_system -> /home/ubuntu/warehouse-automation-001/install/order_system/share/ament_index/resource_index/packages
+[1.999s] copying package.xml -> /home/ubuntu/warehouse-automation-001/install/order_system/share/order_system
+[1.999s] copying launch/order_system_launch.py -> /home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/launch
+[1.999s] copying launch/warehouse_launch.py -> /home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/launch
+[2.000s] copying launch/complete_warehouse.launch.py -> /home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/launch
+[2.000s] copying launch/complete_warehouse_fleet.launch.py -> /home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/launch
+[2.000s] copying launch/ros_nodes.launch.py -> /home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/launch
+[2.000s] running install_egg_info
+[2.020s] removing '/home/ubuntu/warehouse-automation-001/install/order_system/lib/python3.10/site-packages/order_system-0.0.0-py3.10.egg-info' (and everything under it)
+[2.020s] Copying ../build/order_system/order_system.egg-info to /home/ubuntu/warehouse-automation-001/install/order_system/lib/python3.10/site-packages/order_system-0.0.0-py3.10.egg-info
+[2.021s] running install_scripts
+[2.061s] Installing order_generator script to /home/ubuntu/warehouse-automation-001/install/order_system/lib/order_system
+[2.061s] Installing order_listener script to /home/ubuntu/warehouse-automation-001/install/order_system/lib/order_system
+[2.062s] writing list of installed files to '/home/ubuntu/warehouse-automation-001/build/order_system/install.log'
+[2.093s] Invoked command in '/home/ubuntu/warehouse-automation-001/order_system' returned '0': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/order_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/order_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/order_system build --build-base /home/ubuntu/warehouse-automation-001/build/order_system/build install --record /home/ubuntu/warehouse-automation-001/build/order_system/install.log --single-version-externally-managed install_data

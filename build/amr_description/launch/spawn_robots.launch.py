@@ -1,1 +1,0 @@
-/home/xelf/warehouse-automation/amr_description/launch/spawn_robots.launch.py

@@ -1,0 +1,363 @@
+[0.100s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.100s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x77f9559a8520>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x77f955967dc0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x77f955967dc0>>, mixin_verb=('build',))
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.138s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubuntu/warehouse-automation-001'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extension 'ignore_ament_install'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extensions ['colcon_pkg']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extension 'colcon_pkg'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extensions ['colcon_meta']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extension 'colcon_meta'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extension 'ros'
+[0.167s] DEBUG:colcon.colcon_core.package_identification:Package 'amr_description' with type 'ros.ament_python' and name 'amr_description'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extension 'ros'
+[0.168s] DEBUG:colcon.colcon_core.package_identification:Package 'cuopt_bridge' with type 'ros.ament_python' and name 'cuopt_bridge'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extension 'colcon_meta'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extensions ['ros']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extension 'ros'
+[0.169s] DEBUG:colcon.colcon_core.package_identification:Package 'hello_world_pkgs' with type 'ros.ament_python' and name 'hello_world_pkgs'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extension 'ros'
+[0.170s] DEBUG:colcon.colcon_core.package_identification:Package 'orchestrator' with type 'ros.ament_python' and name 'orchestrator'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extension 'ignore_ament_install'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extensions ['colcon_meta']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extension 'colcon_meta'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extensions ['ros']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extension 'ros'
+[0.171s] DEBUG:colcon.colcon_core.package_identification:Package 'order_system' with type 'ros.ament_python' and name 'order_system'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extension 'ignore_ament_install'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extension 'ros'
+[0.172s] DEBUG:colcon.colcon_core.package_identification:Package 'warehouse_msgs' with type 'ros.ament_python' and name 'warehouse_msgs'
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.192s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 274 installed packages in /opt/ros/humble
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'amr_description' build argument 'cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'amr_description' build argument 'cmake_target' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'amr_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'amr_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'amr_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'amr_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'amr_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'amr_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'amr_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.231s] DEBUG:colcon.colcon_core.verb:Building package 'amr_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/warehouse-automation-001/build/amr_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/warehouse-automation-001/install/amr_description', 'merge_install': False, 'path': '/home/ubuntu/warehouse-automation-001/amr_description', 'symlink_install': False, 'test_result_base': None}
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'cuopt_bridge' build argument 'cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'cuopt_bridge' build argument 'cmake_target' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'cuopt_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'cuopt_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'cuopt_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'cuopt_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'cuopt_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'cuopt_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'cuopt_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.231s] DEBUG:colcon.colcon_core.verb:Building package 'cuopt_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/warehouse-automation-001/build/cuopt_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge', 'merge_install': False, 'path': '/home/ubuntu/warehouse-automation-001/cuopt_bridge', 'symlink_install': False, 'test_result_base': None}
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'hello_world_pkgs' build argument 'cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'hello_world_pkgs' build argument 'cmake_target' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'hello_world_pkgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'hello_world_pkgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'hello_world_pkgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'hello_world_pkgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'hello_world_pkgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'hello_world_pkgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'hello_world_pkgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.232s] DEBUG:colcon.colcon_core.verb:Building package 'hello_world_pkgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/warehouse-automation-001/build/hello_world_pkgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs', 'merge_install': False, 'path': '/home/ubuntu/warehouse-automation-001/hello_world_pkgs', 'symlink_install': False, 'test_result_base': None}
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' build argument 'cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' build argument 'cmake_target' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' build argument 'cmake_clean_first' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' build argument 'cmake_force_configure' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' build argument 'ament_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.232s] DEBUG:colcon.colcon_core.verb:Building package 'orchestrator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/warehouse-automation-001/build/orchestrator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/warehouse-automation-001/install/orchestrator', 'merge_install': False, 'path': '/home/ubuntu/warehouse-automation-001/orchestrator', 'symlink_install': False, 'test_result_base': None}
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'order_system' build argument 'cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'order_system' build argument 'cmake_target' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'order_system' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'order_system' build argument 'cmake_clean_cache' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'order_system' build argument 'cmake_clean_first' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'order_system' build argument 'cmake_force_configure' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'order_system' build argument 'ament_cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'order_system' build argument 'catkin_cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'order_system' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.233s] DEBUG:colcon.colcon_core.verb:Building package 'order_system' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/warehouse-automation-001/build/order_system', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/warehouse-automation-001/install/order_system', 'merge_install': False, 'path': '/home/ubuntu/warehouse-automation-001/order_system', 'symlink_install': False, 'test_result_base': None}
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'warehouse_msgs' build argument 'cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'warehouse_msgs' build argument 'cmake_target' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'warehouse_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'warehouse_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'warehouse_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'warehouse_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'warehouse_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'warehouse_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'warehouse_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.233s] DEBUG:colcon.colcon_core.verb:Building package 'warehouse_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/warehouse-automation-001/build/warehouse_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs', 'merge_install': False, 'path': '/home/ubuntu/warehouse-automation-001/warehouse_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.233s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.234s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.235s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/warehouse-automation-001/amr_description' with build type 'ament_python'
+[0.235s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_description', 'ament_prefix_path')
+[0.236s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/hook/ament_prefix_path.ps1'
+[0.237s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/hook/ament_prefix_path.dsv'
+[0.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/hook/ament_prefix_path.sh'
+[0.238s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.238s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.241s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/warehouse-automation-001/cuopt_bridge' with build type 'ament_python'
+[0.241s] Level 1:colcon.colcon_core.shell:create_environment_hook('cuopt_bridge', 'ament_prefix_path')
+[0.241s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/hook/ament_prefix_path.ps1'
+[0.241s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/hook/ament_prefix_path.dsv'
+[0.242s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/hook/ament_prefix_path.sh'
+[0.242s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.242s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.244s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/warehouse-automation-001/hello_world_pkgs' with build type 'ament_python'
+[0.244s] Level 1:colcon.colcon_core.shell:create_environment_hook('hello_world_pkgs', 'ament_prefix_path')
+[0.244s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/hook/ament_prefix_path.ps1'
+[0.245s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/hook/ament_prefix_path.dsv'
+[0.245s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/hook/ament_prefix_path.sh'
+[0.246s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.246s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.248s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/warehouse-automation-001/orchestrator' with build type 'ament_python'
+[0.248s] Level 1:colcon.colcon_core.shell:create_environment_hook('orchestrator', 'ament_prefix_path')
+[0.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/hook/ament_prefix_path.ps1'
+[0.249s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/hook/ament_prefix_path.dsv'
+[0.249s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/hook/ament_prefix_path.sh'
+[0.249s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.249s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.252s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/warehouse-automation-001/order_system' with build type 'ament_python'
+[0.252s] Level 1:colcon.colcon_core.shell:create_environment_hook('order_system', 'ament_prefix_path')
+[0.252s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/hook/ament_prefix_path.ps1'
+[0.252s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/hook/ament_prefix_path.dsv'
+[0.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/hook/ament_prefix_path.sh'
+[0.253s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.253s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.255s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/warehouse-automation-001/warehouse_msgs' with build type 'ament_python'
+[0.255s] Level 1:colcon.colcon_core.shell:create_environment_hook('warehouse_msgs', 'ament_prefix_path')
+[0.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/hook/ament_prefix_path.ps1'
+[0.256s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/hook/ament_prefix_path.dsv'
+[0.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/hook/ament_prefix_path.sh'
+[0.257s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.257s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.451s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/warehouse-automation-001/amr_description'
+[0.452s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.452s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.650s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/warehouse-automation-001/cuopt_bridge'
+[0.650s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.650s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.855s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/warehouse-automation-001/hello_world_pkgs'
+[0.855s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.855s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.050s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/warehouse-automation-001/orchestrator'
+[1.050s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.051s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.248s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/warehouse-automation-001/order_system'
+[1.249s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.249s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.445s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/warehouse-automation-001/warehouse_msgs'
+[1.445s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.445s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.870s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/warehouse-automation-001/cuopt_bridge': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/cuopt_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/cuopt_bridge build --build-base /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/build install --record /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/install.log --single-version-externally-managed install_data
+[1.877s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/warehouse-automation-001/amr_description': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/amr_description build --build-base /home/ubuntu/warehouse-automation-001/build/amr_description/build install --record /home/ubuntu/warehouse-automation-001/build/amr_description/install.log --single-version-externally-managed install_data
+[1.895s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/warehouse-automation-001/warehouse_msgs': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/warehouse_msgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/warehouse_msgs build --build-base /home/ubuntu/warehouse-automation-001/build/warehouse_msgs/build install --record /home/ubuntu/warehouse-automation-001/build/warehouse_msgs/install.log --single-version-externally-managed install_data
+[1.898s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/warehouse-automation-001/hello_world_pkgs': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hello_world_pkgs build --build-base /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build install --record /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/install.log --single-version-externally-managed install_data
+[1.907s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/warehouse-automation-001/orchestrator': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/orchestrator build --build-base /home/ubuntu/warehouse-automation-001/build/orchestrator/build install --record /home/ubuntu/warehouse-automation-001/build/orchestrator/install.log --single-version-externally-managed install_data
+[1.907s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/warehouse-automation-001/order_system': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/order_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/order_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/order_system build --build-base /home/ubuntu/warehouse-automation-001/build/order_system/build install --record /home/ubuntu/warehouse-automation-001/build/order_system/install.log --single-version-externally-managed install_data
+[2.298s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/warehouse-automation-001/cuopt_bridge' returned '0': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/cuopt_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/cuopt_bridge build --build-base /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/build install --record /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/install.log --single-version-externally-managed install_data
+[2.300s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge' for CMake module files
+[2.300s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge' for CMake config files
+[2.301s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib'
+[2.301s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/bin'
+[2.301s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/pkgconfig/cuopt_bridge.pc'
+[2.302s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages'
+[2.302s] Level 1:colcon.colcon_core.shell:create_environment_hook('cuopt_bridge', 'pythonpath')
+[2.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/hook/pythonpath.ps1'
+[2.303s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/hook/pythonpath.dsv'
+[2.303s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/hook/pythonpath.sh'
+[2.304s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/bin'
+[2.304s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cuopt_bridge)
+[2.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/package.ps1'
+[2.305s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/package.dsv'
+[2.305s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/package.sh'
+[2.306s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/package.bash'
+[2.307s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/package.zsh'
+[2.307s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/colcon-core/packages/cuopt_bridge)
+[2.316s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs' for CMake module files
+[2.317s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/warehouse-automation-001/warehouse_msgs' returned '0': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/warehouse_msgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/warehouse_msgs build --build-base /home/ubuntu/warehouse-automation-001/build/warehouse_msgs/build install --record /home/ubuntu/warehouse-automation-001/build/warehouse_msgs/install.log --single-version-externally-managed install_data
+[2.317s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs' for CMake config files
+[2.317s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/lib'
+[2.318s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/bin'
+[2.318s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/lib/pkgconfig/warehouse_msgs.pc'
+[2.318s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/lib/python3.10/site-packages'
+[2.318s] Level 1:colcon.colcon_core.shell:create_environment_hook('warehouse_msgs', 'pythonpath')
+[2.318s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/hook/pythonpath.ps1'
+[2.319s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/hook/pythonpath.dsv'
+[2.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/hook/pythonpath.sh'
+[2.320s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/bin'
+[2.320s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(warehouse_msgs)
+[2.320s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/package.ps1'
+[2.321s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/package.dsv'
+[2.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/package.sh'
+[2.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/package.bash'
+[2.322s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/warehouse_msgs/package.zsh'
+[2.322s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/warehouse-automation-001/install/warehouse_msgs/share/colcon-core/packages/warehouse_msgs)
+[2.323s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/amr_description' for CMake module files
+[2.324s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/warehouse-automation-001/amr_description' returned '0': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/amr_description build --build-base /home/ubuntu/warehouse-automation-001/build/amr_description/build install --record /home/ubuntu/warehouse-automation-001/build/amr_description/install.log --single-version-externally-managed install_data
+[2.324s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/amr_description' for CMake config files
+[2.325s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/amr_description/lib'
+[2.325s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/amr_description/bin'
+[2.325s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/amr_description/lib/pkgconfig/amr_description.pc'
+[2.325s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages'
+[2.325s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_description', 'pythonpath')
+[2.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/hook/pythonpath.ps1'
+[2.325s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/hook/pythonpath.dsv'
+[2.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/hook/pythonpath.sh'
+[2.326s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/amr_description/bin'
+[2.326s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_description)
+[2.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/package.ps1'
+[2.327s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/package.dsv'
+[2.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/package.sh'
+[2.328s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/package.bash'
+[2.328s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/package.zsh'
+[2.328s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/warehouse-automation-001/install/amr_description/share/colcon-core/packages/amr_description)
+[2.338s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/orchestrator' for CMake module files
+[2.338s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/warehouse-automation-001/orchestrator' returned '0': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/orchestrator build --build-base /home/ubuntu/warehouse-automation-001/build/orchestrator/build install --record /home/ubuntu/warehouse-automation-001/build/orchestrator/install.log --single-version-externally-managed install_data
+[2.339s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/orchestrator' for CMake config files
+[2.340s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/orchestrator/lib'
+[2.340s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/orchestrator/bin'
+[2.340s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/pkgconfig/orchestrator.pc'
+[2.340s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages'
+[2.340s] Level 1:colcon.colcon_core.shell:create_environment_hook('orchestrator', 'pythonpath')
+[2.340s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/hook/pythonpath.ps1'
+[2.341s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/hook/pythonpath.dsv'
+[2.341s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/hook/pythonpath.sh'
+[2.342s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/orchestrator/bin'
+[2.342s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(orchestrator)
+[2.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/package.ps1'
+[2.342s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/package.dsv'
+[2.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/package.sh'
+[2.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/package.bash'
+[2.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/package.zsh'
+[2.344s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/warehouse-automation-001/install/orchestrator/share/colcon-core/packages/orchestrator)
+[2.344s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/order_system' for CMake module files
+[2.345s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/order_system' for CMake config files
+[2.345s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/warehouse-automation-001/order_system' returned '0': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/order_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/order_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/order_system build --build-base /home/ubuntu/warehouse-automation-001/build/order_system/build install --record /home/ubuntu/warehouse-automation-001/build/order_system/install.log --single-version-externally-managed install_data
+[2.346s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/order_system/lib'
+[2.346s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/order_system/bin'
+[2.346s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/order_system/lib/pkgconfig/order_system.pc'
+[2.346s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/order_system/lib/python3.10/site-packages'
+[2.346s] Level 1:colcon.colcon_core.shell:create_environment_hook('order_system', 'pythonpath')
+[2.346s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/hook/pythonpath.ps1'
+[2.347s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/hook/pythonpath.dsv'
+[2.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/hook/pythonpath.sh'
+[2.348s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/order_system/bin'
+[2.348s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(order_system)
+[2.348s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/package.ps1'
+[2.349s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/package.dsv'
+[2.349s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/package.sh'
+[2.349s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/package.bash'
+[2.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/order_system/share/order_system/package.zsh'
+[2.350s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/warehouse-automation-001/install/order_system/share/colcon-core/packages/order_system)
+[2.350s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs' for CMake module files
+[2.351s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/warehouse-automation-001/hello_world_pkgs' returned '0': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hello_world_pkgs build --build-base /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build install --record /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/install.log --single-version-externally-managed install_data
+[2.351s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs' for CMake config files
+[2.352s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib'
+[2.352s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/bin'
+[2.352s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/pkgconfig/hello_world_pkgs.pc'
+[2.352s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages'
+[2.352s] Level 1:colcon.colcon_core.shell:create_environment_hook('hello_world_pkgs', 'pythonpath')
+[2.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/hook/pythonpath.ps1'
+[2.353s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/hook/pythonpath.dsv'
+[2.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/hook/pythonpath.sh'
+[2.354s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/bin'
+[2.354s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hello_world_pkgs)
+[2.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/package.ps1'
+[2.354s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/package.dsv'
+[2.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/package.sh'
+[2.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/package.bash'
+[2.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/package.zsh'
+[2.356s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/colcon-core/packages/hello_world_pkgs)
+[2.356s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.356s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.356s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.356s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.361s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.361s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.361s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[27.383s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+[27.383s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[27.384s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/warehouse-automation-001/install/local_setup.ps1'
+[27.385s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/warehouse-automation-001/install/_local_setup_util_ps1.py'
+[27.386s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/warehouse-automation-001/install/setup.ps1'
+[27.387s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/warehouse-automation-001/install/local_setup.sh'
+[27.387s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/warehouse-automation-001/install/_local_setup_util_sh.py'
+[27.388s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/warehouse-automation-001/install/setup.sh'
+[27.388s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/warehouse-automation-001/install/local_setup.bash'
+[27.389s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/warehouse-automation-001/install/setup.bash'
+[27.389s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/warehouse-automation-001/install/local_setup.zsh'
+[27.390s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/warehouse-automation-001/install/setup.zsh'

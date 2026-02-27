@@ -4,6 +4,3 @@ source;share/cuopt_bridge/hook/pythonpath.sh
 source;share/cuopt_bridge/hook/ament_prefix_path.ps1
 source;share/cuopt_bridge/hook/ament_prefix_path.dsv
 source;share/cuopt_bridge/hook/ament_prefix_path.sh
-source;../../build/cuopt_bridge/share/cuopt_bridge/hook/pythonpath_develop.ps1
-source;../../build/cuopt_bridge/share/cuopt_bridge/hook/pythonpath_develop.dsv
-source;../../build/cuopt_bridge/share/cuopt_bridge/hook/pythonpath_develop.sh

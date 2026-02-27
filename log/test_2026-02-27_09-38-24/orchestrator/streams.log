@@ -1,0 +1,49 @@
+[0.208s] Invoking command in '/home/ubuntu/warehouse-automation-001/orchestrator': AMENT_PREFIX_PATH=/home/ubuntu/warehouse-automation-001/install/orchestrator:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ubuntu/warehouse-automation-001/build/orchestrator/pytest.xml --junit-prefix=orchestrator -o cache_dir=/home/ubuntu/warehouse-automation-001/build/orchestrator/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest
+[0.952s] ============================= test session starts ==============================
+[0.953s] platform linux -- Python 3.10.12, pytest-9.0.2, pluggy-1.6.0
+[0.953s] cachedir: /home/ubuntu/warehouse-automation-001/build/orchestrator/.pytest_cache
+[0.953s] rootdir: /home/ubuntu/warehouse-automation-001/orchestrator
+[0.953s] plugins: ament-flake8-0.12.14, ament-lint-0.12.14, ament-pep257-0.12.14, ament-copyright-0.12.14, launch-testing-1.0.13, launch-testing-ros-0.19.13, ament-xmllint-0.12.14, anyio-4.12.1, colcon-core-0.20.1, cov-3.0.0
+[0.953s] collected 3 items / 1 error
+[0.953s] 
+[0.953s] ==================================== ERRORS ====================================
+[0.953s] ________________________ ERROR collecting orchestrator _________________________
+[0.953s] /usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py:512: in __call__
+[0.953s]     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+[0.953s] /usr/local/lib/python3.10/dist-packages/pluggy/_manager.py:120: in _hookexec
+[0.953s]     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+[0.953s] /usr/local/lib/python3.10/dist-packages/_pytest/python.py:202: in pytest_collect_file
+[0.953s]     module: Module = ihook.pytest_pycollect_makemodule(
+[0.953s] /usr/local/lib/python3.10/dist-packages/_pytest/config/compat.py:79: in fixed_hook
+[0.953s]     return hook(**kw)
+[0.953s] /usr/local/lib/python3.10/dist-packages/pluggy/_hooks.py:512: in __call__
+[0.954s]     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+[0.954s] /usr/local/lib/python3.10/dist-packages/pluggy/_manager.py:120: in _hookexec
+[0.954s]     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+[0.954s] /opt/ros/humble/lib/python3.10/site-packages/launch_testing/pytest/hooks.py:193: in pytest_pycollect_makemodule
+[0.954s]     entrypoint = find_launch_test_entrypoint(path)
+[0.954s] /opt/ros/humble/lib/python3.10/site-packages/launch_testing/pytest/hooks.py:180: in find_launch_test_entrypoint
+[0.954s]     module = import_path(path, root=None, consider_namespace_packages=False)
+[0.954s] /usr/local/lib/python3.10/dist-packages/_pytest/pathlib.py:587: in import_path
+[0.954s]     importlib.import_module(module_name)
+[0.954s] /usr/lib/python3.10/importlib/__init__.py:126: in import_module
+[0.954s]     return _bootstrap._gcd_import(name[level:], package, level)
+[0.954s] <frozen importlib._bootstrap>:1050: in _gcd_import
+[0.954s]     ???
+[0.954s] <frozen importlib._bootstrap>:1027: in _find_and_load
+[0.954s]     ???
+[0.954s] <frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+[0.954s]     ???
+[0.954s] <frozen importlib._bootstrap>:688: in _load_unlocked
+[0.955s]     ???
+[0.955s] /usr/local/lib/python3.10/dist-packages/_pytest/assertion/rewrite.py:197: in exec_module
+[0.955s]     exec(co, module.__dict__)
+[0.955s] orchestrator/test_gazebo_mover.py:8: in <module>
+[0.955s]     from gazebo_msgs.msg import ModelState
+[0.955s] E   ModuleNotFoundError: No module named 'gazebo_msgs'
+[0.955s] - generated xml file: /home/ubuntu/warehouse-automation-001/build/orchestrator/pytest.xml -
+[0.955s] =========================== short test summary info ============================
+[0.955s] ERROR orchestrator - ModuleNotFoundError: No module named 'gazebo_msgs'
+[0.955s] !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+[0.955s] =============================== 1 error in 0.32s ===============================
+[1.000s] Invoked command in '/home/ubuntu/warehouse-automation-001/orchestrator' returned '2': AMENT_PREFIX_PATH=/home/ubuntu/warehouse-automation-001/install/orchestrator:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ubuntu/warehouse-automation-001/build/orchestrator/pytest.xml --junit-prefix=orchestrator -o cache_dir=/home/ubuntu/warehouse-automation-001/build/orchestrator/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest

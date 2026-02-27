@@ -1,1 +1,0 @@
-/home/xelf/warehouse-automation/orchestrator/launch/orchestrator_launch.py

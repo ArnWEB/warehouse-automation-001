@@ -1,1 +1,0 @@
-/home/xelf/warehouse-automation/hello_world_pkgs/setup.py

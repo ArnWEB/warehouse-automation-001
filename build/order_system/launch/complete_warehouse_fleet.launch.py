@@ -1,1 +1,0 @@
-/home/xelf/warehouse-automation/order_system/launch/complete_warehouse_fleet.launch.py

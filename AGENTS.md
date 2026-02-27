@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is a ROS 2 Humble warehouse automation project with the following packages:
+ROS 2 Humble warehouse automation project with packages:
 - `order_system` - Order generation and listening
 - `cuopt_bridge` - Mock NVIDIA CuOpt optimizer
 - `orchestrator` - Task execution and robot management
@@ -25,14 +25,14 @@ colcon build --packages-select <package_name>
 # Build with debug symbols
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Debug
 
-# Rebuild after changes
+# Rebuild after changes (fast iteration)
 colcon build --packages-select <package_name> --symlink-install
 ```
 
 ## Lint Commands
 
 ```bash
-# Run all linters (flake8, pep257, copyright)
+# Run all linters via colcon
 colcon test
 
 # Run specific linter on a package
@@ -40,10 +40,13 @@ cd <package_name>
 ament_flake8 .
 ament_pep257 .
 
-# Run single test file
-pytest test/test_flake8.py -v
-pytest test/test_pep257.py -v
-pytest test/test_copyright.py -v
+# Run single test file directly with pytest
+python3 -m pytest test/test_flake8.py -v
+python3 -m pytest test/test_pep257.py -v
+python3 -m pytest test/test_copyright.py -v
+
+# Run a specific test function
+python3 -m pytest test/test_flake8.py::test_flake8 -v
 ```
 
 ## Test Commands
@@ -58,12 +61,8 @@ colcon test --packages-select <package_name>
 # Run tests with verbose output
 colcon test --event-handlers console_direct+
 
-# Run pytest directly on a test file
-cd <package_name>
-python3 -m pytest test/test_flake8.py -v
-
-# Run a specific test function
-python3 -m pytest test/test_flake8.py::test_flake8 -v
+# Run tests for specific package with verbose
+colcon test --packages-select <package_name> --event-handlers console_direct+
 ```
 
 ## Code Style Guidelines
@@ -74,12 +73,7 @@ python3 -m pytest test/test_flake8.py::test_flake8 -v
 - Use shebang `#!/usr/bin/env python3` for executable scripts
 - Maximum line length: 100 characters
 
-### Imports
-- Standard library first, then third-party, then ROS/ROS 2
-- Group in order: stdlib, third-party, ROS messages, ROS nodes
-- Use absolute imports (e.g., `from rclpy.node import Node`)
-- Sort alphabetically within groups
-
+### Imports (order: stdlib → third-party → ROS messages → ROS nodes)
 ```python
 #!/usr/bin/env python3
 import json
@@ -98,26 +92,19 @@ from std_msgs.msg import String
 - **ROS topics/services**: snake_case with slashes (e.g., `/orders`, `/robot_status`)
 
 ### Type Annotations
-- Use type hints for function parameters and return values
-- Use `typing` module for complex types
-
+Use type hints for function parameters and return values:
 ```python
 from typing import List, Dict, Optional
 
-def process_order(order_id: str, priority: int) -> Dict[str, any]:
+def process_order(order_id: str, priority: int) -> Optional[Dict[str, str]]:
     ...
 ```
 
 ### ROS 2 Node Structure
-- Inherit from `rclpy.node.Node`
-- Use `main()` function with `rclpy.init()` and `rclpy.spin()`
-- Handle `KeyboardInterrupt` gracefully
-
 ```python
 class MyNode(Node):
     def __init__(self):
         super().__init__('my_node')
-        # Initialize publishers, subscribers, timers
 
 def main(args=None):
     rclpy.init(args=args)
@@ -135,26 +122,33 @@ if __name__ == '__main__':
 ```
 
 ### Logging
-- Use ROS 2 logger: `self.get_logger().info('message')`
-- Log levels: debug, info, warn, error, fatal
-
-```python
-self.get_logger().info('Starting node')
-self.get_logger().warn('Something unexpected')
-self.get_logger().error('Failed to process')
-```
+Use ROS 2 logger: `self.get_logger().info()`, `.warn()`, `.error()`, `.debug()`
 
 ### Error Handling
-- Use try/except for critical sections
-- Catch specific exceptions when possible
-- Re-raise or handle appropriately
-
 ```python
 try:
     result = process_data(data)
 except ValueError as e:
     self.get_logger().error(f'Invalid data: {e}')
     return None
+```
+
+### Docstrings (PEP 257)
+```python
+def generate_order(self):
+    """Generate a new order with unique ID and publish to /orders topic."""
+    ...
+```
+
+### Copyright Header (Apache 2.0)
+```python
+# Copyright 2024 Open Source Robotics Foundation, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
 ```
 
 ### File Organization
@@ -175,42 +169,13 @@ package_name/
 └── README.md
 ```
 
-### Docstrings
-- Use PEP 257 style (one-line for simple, multi-line for complex)
-- Include description, args, returns for functions
-
-```python
-def generate_order(self):
-    """Generate a new order with unique ID and publish to /orders topic."""
-    ...
-```
-
-### Copyright Header
-Include Apache 2.0 license header in new files:
-
-```python
-# Copyright 2024 Open Source Robotics Foundation, Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-```
-
 ### ROS 2 Best Practices
-- Always use QoS profiles for publishers/subscribers when needed
+- Use QoS profiles for publishers/subscribers when needed
 - Use timers for periodic tasks instead of sleep loops
 - Clean up resources in `finally` block
 - Use meaningful node and topic names
 - Keep nodes focused on single responsibility
-- Use actions for long-running tasks that may need feedback
+- Use actions for long-running tasks needing feedback
 
 ## Running the System
 
@@ -220,14 +185,13 @@ source /opt/ros/humble/setup.bash
 source install/setup.bash
 ros2 launch order_system complete_warehouse.launch.py
 
-# Terminal 2: Run Isaac Sim warehouse (optional)
+# Terminal 2: Run Isaac Sim (optional)
 cd ~/IsaacLab
 ./isaaclab.sh -p /path/to/warehouse-automation/amr_description/scripts/isaaclab_warehouse.py
 ```
 
 ## Package-Specific Notes
-
-- `amr_description/scripts/isaaclab_warehouse.py` - Runs in IsaacLab environment only
+- `amr_description/scripts/isaaclab_warehouse.py` - Runs in IsaacLab only
 - `amr_description/worlds/warehouse.world` - Gazebo world file
 - `amr_description/urdf/amr_robot.urdf` - Robot description
-- `cuopt_bridge/` - Contains mock CuOpt implementation (replace with real API)
+- `cuopt_bridge/` - Contains mock CuOpt (replace with real API)

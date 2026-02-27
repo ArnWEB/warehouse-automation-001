@@ -1,0 +1,44 @@
+[1.693s] Invoking command in '/home/ubuntu/warehouse-automation-001/amr_description': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/amr_description build --build-base /home/ubuntu/warehouse-automation-001/build/amr_description/build install --record /home/ubuntu/warehouse-automation-001/build/amr_description/install.log --single-version-externally-managed install_data
+[1.957s] running egg_info
+[1.975s] creating ../build/amr_description/amr_description.egg-info
+[1.975s] writing ../build/amr_description/amr_description.egg-info/PKG-INFO
+[1.976s] writing dependency_links to ../build/amr_description/amr_description.egg-info/dependency_links.txt
+[1.976s] writing requirements to ../build/amr_description/amr_description.egg-info/requires.txt
+[1.976s] writing top-level names to ../build/amr_description/amr_description.egg-info/top_level.txt
+[1.980s] writing manifest file '../build/amr_description/amr_description.egg-info/SOURCES.txt'
+[2.019s] reading manifest file '../build/amr_description/amr_description.egg-info/SOURCES.txt'
+[2.020s] writing manifest file '../build/amr_description/amr_description.egg-info/SOURCES.txt'
+[2.020s] running build
+[2.021s] running build_py
+[2.021s] creating /home/ubuntu/warehouse-automation-001/build/amr_description/build/lib/amr_description
+[2.021s] copying amr_description/__init__.py -> /home/ubuntu/warehouse-automation-001/build/amr_description/build/lib/amr_description
+[2.021s] running install
+[2.024s] running install_lib
+[2.043s] creating /home/ubuntu/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages/amr_description
+[2.043s] copying /home/ubuntu/warehouse-automation-001/build/amr_description/build/lib/amr_description/__init__.py -> /home/ubuntu/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages/amr_description
+[2.043s] byte-compiling /home/ubuntu/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages/amr_description/__init__.py to __init__.cpython-310.pyc
+[2.045s] running install_data
+[2.045s] creating /home/ubuntu/warehouse-automation-001/install/amr_description/share/ament_index/resource_index/packages
+[2.045s] copying resource/amr_description -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/ament_index/resource_index/packages
+[2.045s] copying package.xml -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description
+[2.045s] creating /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/urdf
+[2.046s] copying urdf/amr_robot.urdf -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/urdf
+[2.046s] copying urdf/amr_robot_diffdrive.urdf -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/urdf
+[2.046s] creating /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/worlds
+[2.046s] copying worlds/warehouse.world -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/worlds
+[2.046s] creating /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[2.046s] copying launch/gazebo_simple.launch.py -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[2.046s] copying launch/spawn_robots.launch.py -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[2.046s] copying launch/warehouse_gzros.launch.py -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[2.046s] copying launch/gazebo.launch.py -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[2.046s] copying launch/spawn_amrs.launch.py -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[2.047s] copying launch/gazebo_ros.launch.py -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[2.047s] copying launch/spawn_amr_diffdrive.launch.py -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[2.047s] copying launch/warehouse_complete.launch.py -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[2.047s] creating /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/config
+[2.047s] copying config/amr_controllers.yaml -> /home/ubuntu/warehouse-automation-001/install/amr_description/share/amr_description/config
+[2.047s] running install_egg_info
+[2.065s] Copying ../build/amr_description/amr_description.egg-info to /home/ubuntu/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages/amr_description-0.0.0-py3.10.egg-info
+[2.066s] running install_scripts
+[2.105s] writing list of installed files to '/home/ubuntu/warehouse-automation-001/build/amr_description/install.log'
+[2.130s] Invoked command in '/home/ubuntu/warehouse-automation-001/amr_description' returned '0': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/amr_description build --build-base /home/ubuntu/warehouse-automation-001/build/amr_description/build install --record /home/ubuntu/warehouse-automation-001/build/amr_description/install.log --single-version-externally-managed install_data

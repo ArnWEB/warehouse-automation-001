@@ -1,1 +1,0 @@
-/home/xelf/warehouse-automation/order_system/setup.py

@@ -1,1 +1,0 @@
-/home/xelf/warehouse-automation/amr_description/launch/warehouse_complete.launch.py

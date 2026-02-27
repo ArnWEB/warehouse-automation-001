@@ -1,1 +1,0 @@
-/home/xelf/warehouse-automation/warehouse_msgs/msg/Order.msg

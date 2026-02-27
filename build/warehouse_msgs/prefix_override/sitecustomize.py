@@ -1,4 +1,4 @@
 import sys
 if sys.prefix == '/usr':
     sys.real_prefix = sys.prefix
-    sys.prefix = sys.exec_prefix = '/home/xelf/warehouse-automation/install/warehouse_msgs'
+    sys.prefix = sys.exec_prefix = '/home/ubuntu/warehouse-automation-001/install/warehouse_msgs'

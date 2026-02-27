@@ -1,0 +1,37 @@
+running egg_info
+creating ../build/cuopt_bridge/cuopt_bridge.egg-info
+writing ../build/cuopt_bridge/cuopt_bridge.egg-info/PKG-INFO
+writing dependency_links to ../build/cuopt_bridge/cuopt_bridge.egg-info/dependency_links.txt
+writing entry points to ../build/cuopt_bridge/cuopt_bridge.egg-info/entry_points.txt
+writing requirements to ../build/cuopt_bridge/cuopt_bridge.egg-info/requires.txt
+writing top-level names to ../build/cuopt_bridge/cuopt_bridge.egg-info/top_level.txt
+writing manifest file '../build/cuopt_bridge/cuopt_bridge.egg-info/SOURCES.txt'
+reading manifest file '../build/cuopt_bridge/cuopt_bridge.egg-info/SOURCES.txt'
+writing manifest file '../build/cuopt_bridge/cuopt_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/build/lib/cuopt_bridge
+copying cuopt_bridge/cuopt_bridge.py -> /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/build/lib/cuopt_bridge
+copying cuopt_bridge/cuopt_client.py -> /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/build/lib/cuopt_bridge
+copying cuopt_bridge/__init__.py -> /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/build/lib/cuopt_bridge
+running install
+running install_lib
+creating /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages/cuopt_bridge
+copying /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/build/lib/cuopt_bridge/cuopt_bridge.py -> /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages/cuopt_bridge
+copying /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/build/lib/cuopt_bridge/cuopt_client.py -> /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages/cuopt_bridge
+copying /home/ubuntu/warehouse-automation-001/build/cuopt_bridge/build/lib/cuopt_bridge/__init__.py -> /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages/cuopt_bridge
+byte-compiling /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages/cuopt_bridge/cuopt_bridge.py to cuopt_bridge.cpython-310.pyc
+byte-compiling /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages/cuopt_bridge/cuopt_client.py to cuopt_client.cpython-310.pyc
+byte-compiling /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages/cuopt_bridge/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/ament_index/resource_index/packages
+copying resource/cuopt_bridge -> /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge
+creating /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/launch
+copying launch/cuopt_bridge_launch.py -> /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/share/cuopt_bridge/launch
+running install_egg_info
+Copying ../build/cuopt_bridge/cuopt_bridge.egg-info to /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/python3.10/site-packages/cuopt_bridge-0.0.0-py3.10.egg-info
+running install_scripts
+Installing cuopt_bridge script to /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/cuopt_bridge
+Installing cuopt_client script to /home/ubuntu/warehouse-automation-001/install/cuopt_bridge/lib/cuopt_bridge
+writing list of installed files to '/home/ubuntu/warehouse-automation-001/build/cuopt_bridge/install.log'

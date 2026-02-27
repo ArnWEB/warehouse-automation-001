@@ -1,0 +1,130 @@
+[0.169s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'test', '--packages-select', 'orchestrator', '--event-handlers', 'console_direct+']
+[0.169s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='test', build_base='build', install_base='install', merge_install=False, test_result_base=None, retest_until_fail=0, retest_until_pass=0, abort_on_error=False, return_code_on_test_failure=False, executor='parallel', parallel_workers=16, event_handlers=['console_direct+'], ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['orchestrator'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], ctest_args=None, python_testing=None, pytest_args=None, pytest_with_coverage=False, unittest_args=None, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x756d03151390>, verb_extension=<colcon_core.verb.test.TestVerb object at 0x756d0310ff10>, main=<bound method TestVerb.main of <colcon_core.verb.test.TestVerb object at 0x756d0310ff10>>, mixin_verb=('test',))
+[0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.211s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubuntu/warehouse-automation-001'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extension 'ignore_ament_install'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(amr_description) by extension 'ros'
+[0.234s] DEBUG:colcon.colcon_core.package_identification:Package 'amr_description' with type 'ros.ament_python' and name 'amr_description'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(cuopt_bridge) by extension 'ros'
+[0.235s] DEBUG:colcon.colcon_core.package_identification:Package 'cuopt_bridge' with type 'ros.ament_python' and name 'cuopt_bridge'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extension 'ignore_ament_install'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extensions ['colcon_pkg']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(hello_world_pkgs) by extension 'ros'
+[0.236s] DEBUG:colcon.colcon_core.package_identification:Package 'hello_world_pkgs' with type 'ros.ament_python' and name 'hello_world_pkgs'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extension 'ignore'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extension 'ignore_ament_install'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extensions ['colcon_pkg']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extension 'colcon_pkg'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extensions ['colcon_meta']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extension 'colcon_meta'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extensions ['ros']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(orchestrator) by extension 'ros'
+[0.237s] DEBUG:colcon.colcon_core.package_identification:Package 'orchestrator' with type 'ros.ament_python' and name 'orchestrator'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extensions ['ignore', 'ignore_ament_install']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extension 'ignore'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extension 'ignore_ament_install'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extensions ['colcon_pkg']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extension 'colcon_pkg'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extensions ['colcon_meta']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(order_system) by extension 'ros'
+[0.238s] DEBUG:colcon.colcon_core.package_identification:Package 'order_system' with type 'ros.ament_python' and name 'order_system'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extension 'ignore_ament_install'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extensions ['colcon_pkg']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extension 'colcon_pkg'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extensions ['colcon_meta']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(warehouse_msgs) by extension 'ros'
+[0.239s] DEBUG:colcon.colcon_core.package_identification:Package 'warehouse_msgs' with type 'ros.ament_python' and name 'warehouse_msgs'
+[0.239s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.239s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.239s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.239s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.239s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.241s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'amr_description' in 'amr_description'
+[0.241s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'cuopt_bridge' in 'cuopt_bridge'
+[0.241s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'hello_world_pkgs' in 'hello_world_pkgs'
+[0.241s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'order_system' in 'order_system'
+[0.241s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'warehouse_msgs' in 'warehouse_msgs'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' test argument 'ctest_args' from command line to 'None'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' test argument 'python_testing' from command line to 'None'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' test argument 'pytest_args' from command line to 'None'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' test argument 'pytest_with_coverage' from command line to 'False'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' test argument 'unittest_args' from command line to 'None'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' test argument 'retest_until_pass' from command line to '0'
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'orchestrator' test argument 'retest_until_fail' from command line to '0'
+[0.242s] DEBUG:colcon.colcon_core.verb.test:Testing package 'orchestrator' with the following arguments: {'build_base': '/home/ubuntu/warehouse-automation-001/build/orchestrator', 'ctest_args': None, 'install_base': '/home/ubuntu/warehouse-automation-001/install/orchestrator', 'path': '/home/ubuntu/warehouse-automation-001/orchestrator', 'pytest_args': None, 'pytest_with_coverage': False, 'python_testing': None, 'retest_until_fail': 0, 'retest_until_pass': 0, 'test_result_base': None, 'unittest_args': None}
+[0.242s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.243s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.243s] INFO:colcon.colcon_ros.task.ament_python.test:Testing ROS package in '/home/ubuntu/warehouse-automation-001/orchestrator' with build type'ament_python'
+[0.243s] INFO:colcon.colcon_core.task.python.test:Testing Python package in '/home/ubuntu/warehouse-automation-001/orchestrator'
+[0.245s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.245s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.245s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.449s] Level 1:colcon.colcon_core.task.python.test:test() by extension 'pytest'
+[0.449s] Level 1:colcon.colcon_core.task.python.test:test.step() by extension 'pytest'
+[0.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/warehouse-automation-001/orchestrator': AMENT_PREFIX_PATH=/home/ubuntu/warehouse-automation-001/install/orchestrator:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ubuntu/warehouse-automation-001/build/orchestrator/pytest.xml --junit-prefix=orchestrator -o cache_dir=/home/ubuntu/warehouse-automation-001/build/orchestrator/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest
+[1.243s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/warehouse-automation-001/orchestrator' returned '2': AMENT_PREFIX_PATH=/home/ubuntu/warehouse-automation-001/install/orchestrator:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ubuntu/warehouse-automation-001/build/orchestrator/pytest.xml --junit-prefix=orchestrator -o cache_dir=/home/ubuntu/warehouse-automation-001/build/orchestrator/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest
+[1.253s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.253s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.253s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[1.253s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.258s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.258s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.258s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[26.274s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+[26.274s] DEBUG:colcon.colcon_core.event_reactor:joined thread
