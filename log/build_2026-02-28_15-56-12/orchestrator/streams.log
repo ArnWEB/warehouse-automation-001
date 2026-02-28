@@ -1,0 +1,93 @@
+[0.663s] Invoking command in '/home/xelf/warehouse-automation-001/orchestrator': PYTHONPATH=/home/xelf/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/orchestrator build --build-base /home/xelf/warehouse-automation-001/build/orchestrator/build install --record /home/xelf/warehouse-automation-001/build/orchestrator/install.log --single-version-externally-managed install_data
+[0.889s] running egg_info
+[0.889s] creating ../build/orchestrator/orchestrator.egg-info
+[0.889s] writing ../build/orchestrator/orchestrator.egg-info/PKG-INFO
+[0.890s] writing dependency_links to ../build/orchestrator/orchestrator.egg-info/dependency_links.txt
+[0.890s] writing entry points to ../build/orchestrator/orchestrator.egg-info/entry_points.txt
+[0.890s] writing requirements to ../build/orchestrator/orchestrator.egg-info/requires.txt
+[0.890s] writing top-level names to ../build/orchestrator/orchestrator.egg-info/top_level.txt
+[0.891s] writing manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'
+[0.892s] reading manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'
+[0.893s] writing manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'
+[0.893s] running build
+[0.893s] running build_py
+[0.894s] creating /home/xelf/warehouse-automation-001/build/orchestrator/build
+[0.894s] creating /home/xelf/warehouse-automation-001/build/orchestrator/build/lib
+[0.895s] creating /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.895s] copying orchestrator/gazebo_fleet_controller.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.895s] copying orchestrator/fleet_dashboard.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.895s] copying orchestrator/orchestrator.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.895s] copying orchestrator/gazebo_velocity_mover.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.895s] copying orchestrator/robot_state_monitor.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.895s] copying orchestrator/gazebo_robot_mover.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.897s] copying orchestrator/fleet_manager.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.897s] copying orchestrator/task_executor.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.897s] copying orchestrator/__init__.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.897s] copying orchestrator/fleet_visualization.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.897s] copying orchestrator/simple_mover.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.898s] copying orchestrator/amr_robot.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.898s] copying orchestrator/gazebo_fleet_viz.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.898s] copying orchestrator/test_gazebo_mover.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.898s] copying orchestrator/gazebo_fleet_mover.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.898s] copying orchestrator/fleet_task_generator.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[0.898s] running install
+[0.899s] running install_lib
+[0.899s] creating /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.899s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_fleet_controller.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.900s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_dashboard.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.900s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/orchestrator.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.900s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_velocity_mover.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/robot_state_monitor.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_robot_mover.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_manager.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/task_executor.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/__init__.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_visualization.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/simple_mover.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/amr_robot.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_fleet_viz.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/test_gazebo_mover.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_fleet_mover.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_task_generator.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[0.901s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_fleet_controller.py to gazebo_fleet_controller.cpython-310.pyc
+[0.903s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_dashboard.py to fleet_dashboard.cpython-310.pyc
+[0.905s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/orchestrator.py to orchestrator.cpython-310.pyc
+[0.906s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_velocity_mover.py to gazebo_velocity_mover.cpython-310.pyc
+[0.907s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/robot_state_monitor.py to robot_state_monitor.cpython-310.pyc
+[0.909s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_robot_mover.py to gazebo_robot_mover.cpython-310.pyc
+[0.910s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_manager.py to fleet_manager.cpython-310.pyc
+[0.910s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/task_executor.py to task_executor.cpython-310.pyc
+[0.913s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__init__.py to __init__.cpython-310.pyc
+[0.913s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_visualization.py to fleet_visualization.cpython-310.pyc
+[0.914s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/simple_mover.py to simple_mover.cpython-310.pyc
+[0.914s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/amr_robot.py to amr_robot.cpython-310.pyc
+[0.915s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_fleet_viz.py to gazebo_fleet_viz.cpython-310.pyc
+[0.916s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/test_gazebo_mover.py to test_gazebo_mover.cpython-310.pyc
+[0.916s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_fleet_mover.py to gazebo_fleet_mover.cpython-310.pyc
+[0.917s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_task_generator.py to fleet_task_generator.cpython-310.pyc
+[0.918s] running install_data
+[0.918s] creating /home/xelf/warehouse-automation-001/install/orchestrator/share/ament_index
+[0.918s] creating /home/xelf/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index
+[0.918s] creating /home/xelf/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index/packages
+[0.919s] copying resource/orchestrator -> /home/xelf/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index/packages
+[0.919s] copying package.xml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator
+[0.920s] creating /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+[0.920s] copying launch/orchestrator_launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+[0.920s] copying launch/production_fleet.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+[0.920s] running install_egg_info
+[0.922s] Copying ../build/orchestrator/orchestrator.egg-info to /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator-0.0.0-py3.10.egg-info
+[0.922s] running install_scripts
+[0.942s] Installing amr_robot script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.944s] Installing fleet_dashboard script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.944s] Installing fleet_manager script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.944s] Installing fleet_task_generator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.944s] Installing fleet_visualization script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.944s] Installing gazebo_fleet_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.945s] Installing gazebo_velocity_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.945s] Installing orchestrator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.945s] Installing robot_state_monitor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.945s] Installing simple_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.945s] Installing task_executor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.945s] Installing test_gazebo_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[0.946s] writing list of installed files to '/home/xelf/warehouse-automation-001/build/orchestrator/install.log'
+[0.968s] Invoked command in '/home/xelf/warehouse-automation-001/orchestrator' returned '0': PYTHONPATH=/home/xelf/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/orchestrator build --build-base /home/xelf/warehouse-automation-001/build/orchestrator/build install --record /home/xelf/warehouse-automation-001/build/orchestrator/install.log --single-version-externally-managed install_data

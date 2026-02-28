@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
 """
 Task Executor Node (Per Robot)
-- Executes CuOpt plans using Nav2
+- Executes CuOpt plans using cmd_vel OR Nav2 (Isaac Sim compatible)
 - Handles plan updates and replanning
 - Smart replan: doesn't restart if goal unchanged
 
 State Machine:
-  WAIT_FOR_PLAN → EXECUTE_GOAL → WAIT_NAV2 → NEXT_GOAL
+  WAIT_FOR_PLAN → TURNING → MOVING → ARRIVED → NEXT_GOAL
+
+Usage:
+  cmd_vel mode: ros2 run orchestrator task_executor
+  Nav2 mode: ros2 run orchestrator task_executor --ros-args -p use_nav2:=true
 """
 
 import rclpy
 from rclpy.node import Node
+from rclpy.action import ActionClient
 from std_msgs.msg import String, Int32
-from geometry_msgs.msg import PoseStamped, Twist, Pose
+from geometry_msgs.msg import Twist, Pose, Quaternion, PoseStamped
 from nav_msgs.msg import Odometry
+from nav2_msgs.action import NavigateToPose
 import json
 import time
 import math
@@ -114,6 +120,12 @@ WAREHOUSE_LOCATIONS = {
 
 
 class TaskExecutor(Node):
+    # Movement parameters for iw_hub AMR
+    LINEAR_SPEED = 0.5  # m/s
+    ANGULAR_SPEED = 2.0  # rad/s
+    ARRIVAL_THRESHOLD = 0.2  # meters (increased for Isaac Sim)
+    TURN_THRESHOLD = 0.3  # radians (increased - ~17 degrees)
+
     def __init__(self, robot_id: str = "amr1", use_nav2: bool = False):
         super().__init__(f"task_executor_{robot_id}")
 
@@ -136,25 +148,180 @@ class TaskExecutor(Node):
             self.current_y = 4.16
         self.current_theta = 0.0
 
+        # Movement state
+        self.target_x = None
+        self.target_y = None
+        self.moving_to_target = False
+        self.state = "idle"  # idle, turning, moving
+
         self.current_plan = []
         self.current_goal_index = 0
         self.plan_id = -1
         self.replan_requested = False
         self.executing = False
 
+        # Subscriptions
         self.plan_sub = self.create_subscription(
             String, "/fleet/cuopt_plan", self.plan_callback, 10
         )
+        
+        # Subscribe to real odometry from Isaac Sim
+        # Note: Isaac Sim publishes to /{robot_id}/chassis/odom
+        self.odom_sub = self.create_subscription(
+            Odometry, f"/{robot_id}/chassis/odom", self.odom_callback, 10
+        )
 
+        # Publishers
         self.status_pub = self.create_publisher(Int32, f"/{robot_id}/status", 10)
-        self.odom_pub = self.create_publisher(Odometry, f"/{robot_id}/odom", 10)
+        self.cmd_vel_pub = self.create_publisher(Twist, f"/{robot_id}/cmd_vel", 10)
         self.debug_pub = self.create_publisher(
             String, f"/{robot_id}/executor_debug", 10
         )
+        self.robot_state_pub = self.create_publisher(
+            String, f"/{robot_id}/robot_state", 10
+        )
 
-        self.timer = self.create_timer(0.1, self.update_position)
+        # Timers
+        self.move_timer = self.create_timer(0.1, self.move_control)
+        self.state_timer = self.create_timer(1.0, self.publish_robot_state)
+
+        # Nav2 Action Client (if use_nav2 is True)
+        self.nav_action_client = None
+        self.nav_goal_handle = None
+        self.nav_result_future = None
+        
+        if self.use_nav2:
+            action_server_name = f"/{robot_id}/navigate_to_pose"
+            self.nav_action_client = ActionClient(self, NavigateToPose, action_server_name)
+            self.get_logger().info(f"Nav2 action client created: {action_server_name}")
+            
+            # Wait for Nav2 server to be available
+            if self.nav_action_client.wait_for_server(timeout_sec=5.0):
+                self.get_logger().info("Nav2 server available")
+            else:
+                self.get_logger().warn("Nav2 server not available, falling back to cmd_vel")
+                self.use_nav2 = False
 
         self.get_logger().info(f"Task Executor initialized for {robot_id}")
+        self.get_logger().info(f"Mode: {'Nav2' if self.use_nav2 else 'cmd_vel'}")
+        self.get_logger().info(f"Subscribed to /{robot_id}/chassis/odom")
+        self.get_logger().info(f"Publishing to /{robot_id}/cmd_vel")
+
+    def odom_callback(self, msg):
+        """Update position from real Isaac Sim odometry."""
+        self.current_x = msg.pose.pose.position.x
+        self.current_y = msg.pose.pose.position.y
+        
+        # Extract theta from quaternion
+        q = msg.pose.pose.orientation
+        siny_cosp = 2.0 * (q.w * q.z + q.x * q.y)
+        cosy_cosp = 1.0 - 2.0 * (q.y * q.y + q.z * q.z)
+        self.current_theta = math.atan2(siny_cosp, cosy_cosp)
+
+    def publish_robot_state(self):
+        """Publish robot state to /{robot_id}/robot_state for CuOpt."""
+        current_task = -1
+        target_waypoint = -1
+        progress = 0.0
+        
+        if self.current_plan and self.current_goal_index < len(self.current_plan):
+            current_task = self.current_plan[self.current_goal_index]
+            target_waypoint = self.current_plan[-1]
+            progress = self.current_goal_index / len(self.current_plan) if self.current_plan else 0.0
+        
+        state = {
+            "robot_id": self.robot_id,
+            "x": round(self.current_x, 3),
+            "y": round(self.current_y, 3),
+            "theta": round(self.current_theta, 3),
+            "busy": self.executing,
+            "current_task": current_task,
+            "target_waypoint": target_waypoint,
+            "progress": round(progress, 2),
+            "plan_id": self.plan_id,
+        }
+        
+        msg = String()
+        msg.data = json.dumps(state)
+        self.robot_state_pub.publish(msg)
+        self.get_logger().debug(f"Published state: {state}")
+
+    def navigate_to_pose(self, x: float, y: float, theta: float = 0.0) -> bool:
+        """
+        Navigate to pose using Nav2 action.
+        
+        Args:
+            x: Target x position
+            y: Target y position
+            theta: Target orientation (radians)
+            
+        Returns:
+            True if goal succeeded, False otherwise
+        """
+        if not self.use_nav2 or not self.nav_action_client:
+            self.get_logger().warn("Nav2 not enabled, cannot navigate")
+            return False
+            
+        # Check if server is available
+        if not self.nav_action_client.server_is_ready():
+            self.get_logger().error("Nav2 server not ready")
+            return False
+        
+        # Create pose goal
+        goal_pose = PoseStamped()
+        goal_pose.header.frame_id = "map"
+        goal_pose.header.stamp = self.get_clock().now().to_msg()
+        goal_pose.pose.position.x = x
+        goal_pose.pose.position.y = y
+        goal_pose.pose.position.z = 0.0
+        
+        # Convert theta to quaternion
+        goal_pose.pose.orientation.x = 0.0
+        goal_pose.pose.orientation.y = 0.0
+        goal_pose.pose.orientation.z = math.sin(theta / 2)
+        goal_pose.pose.orientation.w = math.cos(theta / 2)
+        
+        # Create NavigateToPose goal
+        goal_msg = NavigateToPose.Goal()
+        goal_msg.pose = goal_pose
+        
+        self.get_logger().info(f"Nav2: Sending goal ({x}, {y})")
+        
+        # Send goal
+        self.nav_goal_handle = self.nav_action_client.send_goal_async(goal_msg)
+        self.nav_goal_handle.add_done_callback(self.nav_goal_response_callback)
+        
+        # Wait for result (blocking)
+        # For non-blocking, you'd handle this differently
+        return True
+
+    def nav_goal_response_callback(self, future):
+        """Handle goal response from Nav2."""
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error("Nav2 goal rejected")
+            return
+            
+        self.get_logger().info("Nav2 goal accepted")
+        self.nav_result_future = goal_handle.get_result_async()
+        self.nav_result_future.add_done_callback(self.nav_result_callback)
+
+    def nav_result_callback(self, future):
+        """Handle goal result from Nav2."""
+        try:
+            result = future.result()
+            if result.result == 2:  # SUCCESS
+                self.get_logger().info("Nav2 goal succeeded")
+            else:
+                self.get_logger().warn(f"Nav2 goal finished with result: {result.result}")
+        except Exception as e:
+            self.get_logger().error(f"Nav2 result error: {e}")
+
+    def cancel_navigation(self):
+        """Cancel current Nav2 navigation."""
+        if self.nav_goal_handle:
+            self.get_logger().info("Cancelling Nav2 goal")
+            self.nav_goal_handle.cancel_goal()
 
     def plan_callback(self, msg):
         try:
@@ -199,6 +366,9 @@ class TaskExecutor(Node):
             self.get_logger().info(
                 f"REPLAN: canceling goal {current_goal}, new route: {new_tasks}"
             )
+            # Cancel Nav2 navigation if active
+            if self.use_nav2:
+                self.cancel_navigation()
             self.replan_requested = True
             self.current_plan = new_tasks
             self.current_goal_index = 0
@@ -211,88 +381,139 @@ class TaskExecutor(Node):
             self.get_logger().info("No tasks in plan, waiting...")
             self.executing = False
             self.publish_status(0)
+            self.stop_robot()
             return
 
         self.executing = True
         self.publish_status(self.current_plan[self.current_goal_index])
 
-        while self.current_goal_index < len(self.current_plan):
+        if self.current_goal_index < len(self.current_plan):
             task_id = self.current_plan[self.current_goal_index]
-
+            target = WAREHOUSE_LOCATIONS[task_id]
+            
             self.get_logger().info(
-                f"EXECUTING: {self.robot_id} → Task {task_id} @ {WAREHOUSE_LOCATIONS[task_id]['name']}"
+                f"EXECUTING: {self.robot_id} → Task {task_id} @ {target['name']}"
             )
 
             self.publish_debug(
                 {
                     "state": "moving",
                     "task_id": task_id,
-                    "location": WAREHOUSE_LOCATIONS[task_id]["name"],
+                    "location": target["name"],
                     "progress": f"{self.current_goal_index + 1}/{len(self.current_plan)}",
                     "plan_id": self.plan_id,
                 }
             )
 
-            target = WAREHOUSE_LOCATIONS[task_id]
-            self.move_to(target["x"], target["y"])
-
-            self.current_goal_index += 1
-
-            if self.replan_requested:
-                self.get_logger().info(
-                    "Replan received during execution, restarting..."
-                )
-                self.replan_requested = False
-                break
-
-        if self.current_goal_index >= len(self.current_plan):
+            # Start moving to target (non-blocking)
+            self.start_move_to(target["x"], target["y"])
+        else:
             self.get_logger().info(
                 f"PLAN COMPLETE: {self.robot_id} finished all tasks!"
             )
             self.executing = False
             self.publish_status(0)
+            self.stop_robot()
+
+    def start_move_to(self, target_x, target_y):
+        """Start moving to target (non-blocking)."""
+        self.target_x = target_x
+        self.target_y = target_y
+        self.moving_to_target = True
+        
+        if self.use_nav2:
+            self.state = "nav2_navigating"
+            # Use Nav2 for navigation
+            result = self.navigate_to_pose(target_x, target_y, 0.0)
+            if result:
+                self.get_logger().info(f"Nav2 navigation started to ({target_x}, {target_y})")
+            else:
+                self.get_logger().error("Nav2 navigation failed to start")
+        else:
+            self.state = "turning"
+
+    def move_control(self):
+        """Timer-based movement control (10Hz)."""
+        if not self.moving_to_target or self.target_x is None or self.target_y is None:
+            return
+
+        dx = self.target_x - self.current_x
+        dy = self.target_y - self.current_y
+        dist = math.sqrt(dx * dx + dy * dy)
+
+        # Check if arrived
+        if dist < self.ARRIVAL_THRESHOLD:
+            self.moving_to_target = False
+            self.stop_robot()
+            self.get_logger().info(f"ARRIVED at ({self.target_x}, {self.target_y})")
+            
+            # Move to next goal
+            self.current_goal_index += 1
+            
+            # Handle replan during execution
+            if self.replan_requested:
+                self.get_logger().info("Replan received during execution, restarting...")
+                self.replan_requested = False
+                self.execute_plan()
+                return
+            
+            # Continue with next goal or finish
+            if self.current_goal_index < len(self.current_plan):
+                task_id = self.current_plan[self.current_goal_index]
+                target = WAREHOUSE_LOCATIONS[task_id]
+                self.start_move_to(target["x"], target["y"])
+            else:
+                self.get_logger().info(
+                    f"PLAN COMPLETE: {self.robot_id} finished all tasks!"
+                )
+                self.executing = False
+                self.publish_status(0)
+                self.stop_robot()
+            return
+
+        # Calculate angle to target
+        angle_to_target = math.atan2(dy, dx)
+        
+        # Calculate angle difference (handle wraparound)
+        angle_diff = angle_to_target - self.current_theta
+        while angle_diff > math.pi:
+            angle_diff -= 2 * math.pi
+        while angle_diff < -math.pi:
+            angle_diff += 2 * math.pi
+
+        twist = Twist()
+
+        # State machine: turn first, then move
+        if abs(angle_diff) > self.TURN_THRESHOLD:
+            # Turning state
+            self.state = "turning"
+            twist.linear.x = 0.0
+            twist.angular.z = max(-self.ANGULAR_SPEED, min(self.ANGULAR_SPEED, angle_diff * 2.0))
+            self.get_logger().debug(f"Turning: angle_diff={angle_diff:.3f}, angular={twist.angular.z:.3f}")
+        else:
+            # Moving state
+            self.state = "moving"
+            twist.linear.x = self.LINEAR_SPEED
+            twist.angular.z = 0.0
+            self.get_logger().debug(f"Moving: dist={dist:.3f}, heading={angle_to_target:.3f}")
+
+        self.cmd_vel_pub.publish(twist)
+
+    def stop_robot(self):
+        """Publish zero velocity to stop the robot."""
+        twist = Twist()
+        twist.linear.x = 0.0
+        twist.linear.y = 0.0
+        twist.linear.z = 0.0
+        twist.angular.x = 0.0
+        twist.angular.y = 0.0
+        twist.angular.z = 0.0
+        self.cmd_vel_pub.publish(twist)
+        self.state = "idle"
 
     def move_to(self, target_x, target_y):
-        speed = 0.5
-        arrived = False
-
-        while not arrived:
-            dx = target_x - self.current_x
-            dy = target_y - self.current_y
-            dist = math.sqrt(dx * dx + dy * dy)
-
-            if dist < 0.1:
-                arrived = True
-                break
-
-            angle = math.atan2(dy, dx)
-
-            self.current_x += math.cos(angle) * speed * 0.1
-            self.current_y += math.sin(angle) * speed * 0.1
-            self.current_theta = angle
-
-            time.sleep(0.1)
-
-    def update_position(self):
-        from geometry_msgs.msg import Quaternion
-
-        odom = Odometry()
-        odom.header.frame_id = "map"
-        odom.header.stamp = self.get_clock().now().to_msg()
-        odom.child_frame_id = self.robot_id
-
-        odom.pose.pose.position.x = self.current_x
-        odom.pose.pose.position.y = self.current_y
-        odom.pose.pose.position.z = 0.0
-
-        q = Quaternion()
-        q.x = 0.0
-        q.y = 0.0
-        q.z = math.sin(self.current_theta / 2)
-        q.w = math.cos(self.current_theta / 2)
-        odom.pose.pose.orientation = q
-
-        self.odom_pub.publish(odom)
+        """Legacy method - now just sets target (non-blocking)."""
+        self.start_move_to(target_x, target_y)
 
     def publish_status(self, task_id: int):
         msg = Int32()
@@ -304,15 +525,34 @@ class TaskExecutor(Node):
         msg.data = json.dumps(data)
         self.debug_pub.publish(msg)
 
+    def shutdown_cleanup(self):
+        """Stop robot on shutdown."""
+        self.get_logger().info("Shutting down, stopping robot...")
+        # Cancel Nav2 navigation if active
+        if self.use_nav2:
+            self.cancel_navigation()
+        self.stop_robot()
+
 
 def main(args=None):
     rclpy.init(args=args)
-    node = TaskExecutor(robot_id="amr1", use_nav2=False)
+    
+    # Create node to get parameters
+    temp_node = rclpy.node.Node('temp')
+    temp_node.declare_parameter('robot_id', 'amr1')
+    temp_node.declare_parameter('use_nav2', False)
+    
+    robot_id = temp_node.get_parameter('robot_id').value
+    use_nav2 = temp_node.get_parameter('use_nav2').value
+    temp_node.destroy_node()
+    
+    node = TaskExecutor(robot_id=robot_id, use_nav2=use_nav2)
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
     finally:
+        node.shutdown_cleanup()
         node.destroy_node()
         rclpy.shutdown()
 

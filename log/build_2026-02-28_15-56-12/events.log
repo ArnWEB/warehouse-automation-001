@@ -1,0 +1,112 @@
+[0.000000] (-) TimerEvent: {}
+[0.000162] (-) JobUnselected: {'identifier': 'amr_description'}
+[0.000211] (-) JobUnselected: {'identifier': 'cuopt_bridge'}
+[0.000226] (-) JobUnselected: {'identifier': 'hello_world_pkgs'}
+[0.000239] (-) JobUnselected: {'identifier': 'order_system'}
+[0.000253] (-) JobUnselected: {'identifier': 'warehouse_msgs'}
+[0.000271] (orchestrator) JobQueued: {'identifier': 'orchestrator', 'dependencies': OrderedDict()}
+[0.001439] (orchestrator) JobStarted: {'identifier': 'orchestrator'}
+[0.099749] (-) TimerEvent: {}
+[0.200015] (-) TimerEvent: {}
+[0.300358] (-) TimerEvent: {}
+[0.400676] (-) TimerEvent: {}
+[0.500912] (-) TimerEvent: {}
+[0.601204] (-) TimerEvent: {}
+[0.663095] (orchestrator) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/orchestrator', 'build', '--build-base', '/home/xelf/warehouse-automation-001/build/orchestrator/build', 'install', '--record', '/home/xelf/warehouse-automation-001/build/orchestrator/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/xelf/warehouse-automation-001/orchestrator', 'env': {'USER': 'xelf', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/xelf', 'OLDPWD': '/home/xelf/warehouse-automation-001', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'xelf', 'NAME': 'MSI', 'WSL_INTEROP': '/run/WSL/66195_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/arnab/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Python312/Scripts:/mnt/c/Python312:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Spring Boot/Java/openjdk-21+35_windows-x64_bin/jdk-21/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2025.3.1:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/PowerShell/7:/mnt/c/Program Files/nodejs:/mnt/c/Users/arnab/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/arnab/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/arnab/AppData/Local/Programs/oh-my-posh/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA 2024.2.4/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2024.2.4/bin:/mnt/c/Program Files/JetBrains/WebStorm 2024.2.4/bin:/mnt/c/Users/arnab/AppData/Roaming/Python/Python312/Scripts:/mnt/c/Users/arnab/AppData/Local/Programs/Ollama:/mnt/c/Program Files/gstreamer/1.0/msvc_x86_64/bin:/mnt/c/Users/arnab/AppData/Roaming/npm:/mnt/c/Users/arnab/AppData/Local/Programs/Antigravity/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'PWD': '/home/xelf/warehouse-automation-001/build/orchestrator', 'PYTHONPATH': '/home/xelf/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[0.701577] (-) TimerEvent: {}
+[0.801803] (-) TimerEvent: {}
+[0.890403] (orchestrator) StdoutLine: {'line': b'running egg_info\n'}
+[0.890883] (orchestrator) StdoutLine: {'line': b'creating ../build/orchestrator/orchestrator.egg-info\n'}
+[0.891263] (orchestrator) StdoutLine: {'line': b'writing ../build/orchestrator/orchestrator.egg-info/PKG-INFO\n'}
+[0.892025] (orchestrator) StdoutLine: {'line': b'writing dependency_links to ../build/orchestrator/orchestrator.egg-info/dependency_links.txt\n'}
+[0.892174] (orchestrator) StdoutLine: {'line': b'writing entry points to ../build/orchestrator/orchestrator.egg-info/entry_points.txt\n'}
+[0.892273] (orchestrator) StdoutLine: {'line': b'writing requirements to ../build/orchestrator/orchestrator.egg-info/requires.txt\n'}
+[0.892363] (orchestrator) StdoutLine: {'line': b'writing top-level names to ../build/orchestrator/orchestrator.egg-info/top_level.txt\n'}
+[0.892447] (orchestrator) StdoutLine: {'line': b"writing manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'\n"}
+[0.893853] (orchestrator) StdoutLine: {'line': b"reading manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'\n"}
+[0.894862] (orchestrator) StdoutLine: {'line': b"writing manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'\n"}
+[0.895218] (orchestrator) StdoutLine: {'line': b'running build\n'}
+[0.895314] (orchestrator) StdoutLine: {'line': b'running build_py\n'}
+[0.895687] (orchestrator) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/build/orchestrator/build\n'}
+[0.896095] (orchestrator) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/build/orchestrator/build/lib\n'}
+[0.896389] (orchestrator) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.896500] (orchestrator) StdoutLine: {'line': b'copying orchestrator/gazebo_fleet_controller.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.896850] (orchestrator) StdoutLine: {'line': b'copying orchestrator/fleet_dashboard.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.896928] (orchestrator) StdoutLine: {'line': b'copying orchestrator/orchestrator.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.896967] (orchestrator) StdoutLine: {'line': b'copying orchestrator/gazebo_velocity_mover.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.897003] (orchestrator) StdoutLine: {'line': b'copying orchestrator/robot_state_monitor.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.897039] (orchestrator) StdoutLine: {'line': b'copying orchestrator/gazebo_robot_mover.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.898127] (orchestrator) StdoutLine: {'line': b'copying orchestrator/fleet_manager.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.898627] (orchestrator) StdoutLine: {'line': b'copying orchestrator/task_executor.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.898848] (orchestrator) StdoutLine: {'line': b'copying orchestrator/__init__.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.899025] (orchestrator) StdoutLine: {'line': b'copying orchestrator/fleet_visualization.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.899303] (orchestrator) StdoutLine: {'line': b'copying orchestrator/simple_mover.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.899381] (orchestrator) StdoutLine: {'line': b'copying orchestrator/amr_robot.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.899484] (orchestrator) StdoutLine: {'line': b'copying orchestrator/gazebo_fleet_viz.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.899560] (orchestrator) StdoutLine: {'line': b'copying orchestrator/test_gazebo_mover.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.899716] (orchestrator) StdoutLine: {'line': b'copying orchestrator/gazebo_fleet_mover.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.899794] (orchestrator) StdoutLine: {'line': b'copying orchestrator/fleet_task_generator.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator\n'}
+[0.899863] (orchestrator) StdoutLine: {'line': b'running install\n'}
+[0.900392] (orchestrator) StdoutLine: {'line': b'running install_lib\n'}
+[0.900482] (orchestrator) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.900773] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_fleet_controller.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.901876] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_dashboard.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.902249] (-) TimerEvent: {}
+[0.902281] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/orchestrator.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.902375] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_velocity_mover.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.902459] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/robot_state_monitor.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.902730] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_robot_mover.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.902795] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_manager.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.902836] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/task_executor.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.902872] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/__init__.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.902907] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_visualization.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.902941] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/simple_mover.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.902975] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/amr_robot.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.903012] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_fleet_viz.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.903045] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/test_gazebo_mover.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.903077] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_fleet_mover.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.903109] (orchestrator) StdoutLine: {'line': b'copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_task_generator.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator\n'}
+[0.903140] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_fleet_controller.py to gazebo_fleet_controller.cpython-310.pyc\n'}
+[0.904783] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_dashboard.py to fleet_dashboard.cpython-310.pyc\n'}
+[0.906597] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/orchestrator.py to orchestrator.cpython-310.pyc\n'}
+[0.908048] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_velocity_mover.py to gazebo_velocity_mover.cpython-310.pyc\n'}
+[0.908896] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/robot_state_monitor.py to robot_state_monitor.cpython-310.pyc\n'}
+[0.910665] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_robot_mover.py to gazebo_robot_mover.cpython-310.pyc\n'}
+[0.911561] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_manager.py to fleet_manager.cpython-310.pyc\n'}
+[0.912299] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/task_executor.py to task_executor.cpython-310.pyc\n'}
+[0.914719] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__init__.py to __init__.cpython-310.pyc\n'}
+[0.915275] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_visualization.py to fleet_visualization.cpython-310.pyc\n'}
+[0.915679] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/simple_mover.py to simple_mover.cpython-310.pyc\n'}
+[0.916354] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/amr_robot.py to amr_robot.cpython-310.pyc\n'}
+[0.916753] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_fleet_viz.py to gazebo_fleet_viz.cpython-310.pyc\n'}
+[0.917809] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/test_gazebo_mover.py to test_gazebo_mover.cpython-310.pyc\n'}
+[0.918354] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_fleet_mover.py to gazebo_fleet_mover.cpython-310.pyc\n'}
+[0.919122] (orchestrator) StdoutLine: {'line': b'byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_task_generator.py to fleet_task_generator.cpython-310.pyc\n'}
+[0.919616] (orchestrator) StdoutLine: {'line': b'running install_data\n'}
+[0.920067] (orchestrator) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/orchestrator/share/ament_index\n'}
+[0.920189] (orchestrator) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index\n'}
+[0.920276] (orchestrator) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index/packages\n'}
+[0.920670] (orchestrator) StdoutLine: {'line': b'copying resource/orchestrator -> /home/xelf/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index/packages\n'}
+[0.920991] (orchestrator) StdoutLine: {'line': b'copying package.xml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator\n'}
+[0.921076] (orchestrator) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch\n'}
+[0.921834] (orchestrator) StdoutLine: {'line': b'copying launch/orchestrator_launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch\n'}
+[0.921953] (orchestrator) StdoutLine: {'line': b'copying launch/production_fleet.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch\n'}
+[0.922038] (orchestrator) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.923450] (orchestrator) StdoutLine: {'line': b'Copying ../build/orchestrator/orchestrator.egg-info to /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator-0.0.0-py3.10.egg-info\n'}
+[0.924143] (orchestrator) StdoutLine: {'line': b'running install_scripts\n'}
+[0.944164] (orchestrator) StdoutLine: {'line': b'Installing amr_robot script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.945433] (orchestrator) StdoutLine: {'line': b'Installing fleet_dashboard script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.946021] (orchestrator) StdoutLine: {'line': b'Installing fleet_manager script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.946113] (orchestrator) StdoutLine: {'line': b'Installing fleet_task_generator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.946184] (orchestrator) StdoutLine: {'line': b'Installing fleet_visualization script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.946261] (orchestrator) StdoutLine: {'line': b'Installing gazebo_fleet_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.946867] (orchestrator) StdoutLine: {'line': b'Installing gazebo_velocity_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.947016] (orchestrator) StdoutLine: {'line': b'Installing orchestrator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.947106] (orchestrator) StdoutLine: {'line': b'Installing robot_state_monitor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.947187] (orchestrator) StdoutLine: {'line': b'Installing simple_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.947278] (orchestrator) StdoutLine: {'line': b'Installing task_executor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.947356] (orchestrator) StdoutLine: {'line': b'Installing test_gazebo_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[0.947432] (orchestrator) StdoutLine: {'line': b"writing list of installed files to '/home/xelf/warehouse-automation-001/build/orchestrator/install.log'\n"}
+[0.969782] (orchestrator) CommandEnded: {'returncode': 0}
+[0.981400] (orchestrator) JobEnded: {'identifier': 'orchestrator', 'rc': 0}
+[0.981809] (-) EventReactorShutdown: {}

@@ -1,0 +1,19 @@
+[2.875s] Invoking command in '/home/xelf/warehouse-automation-001/warehouse_msgs': PYTHONPATH=/home/xelf/warehouse-automation-001/build/warehouse_msgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/warehouse_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/warehouse_msgs build --build-base /home/xelf/warehouse-automation-001/build/warehouse_msgs/build install --record /home/xelf/warehouse-automation-001/build/warehouse_msgs/install.log --single-version-externally-managed install_data
+[3.301s] running egg_info
+[3.304s] writing ../build/warehouse_msgs/warehouse_msgs.egg-info/PKG-INFO
+[3.305s] writing dependency_links to ../build/warehouse_msgs/warehouse_msgs.egg-info/dependency_links.txt
+[3.310s] writing requirements to ../build/warehouse_msgs/warehouse_msgs.egg-info/requires.txt
+[3.311s] writing top-level names to ../build/warehouse_msgs/warehouse_msgs.egg-info/top_level.txt
+[3.315s] reading manifest file '../build/warehouse_msgs/warehouse_msgs.egg-info/SOURCES.txt'
+[3.320s] writing manifest file '../build/warehouse_msgs/warehouse_msgs.egg-info/SOURCES.txt'
+[3.320s] running build
+[3.320s] running build_py
+[3.320s] running install
+[3.320s] running install_lib
+[3.323s] running install_data
+[3.323s] running install_egg_info
+[3.327s] removing '/home/xelf/warehouse-automation-001/install/warehouse_msgs/lib/python3.10/site-packages/warehouse_msgs-0.0.0-py3.10.egg-info' (and everything under it)
+[3.332s] Copying ../build/warehouse_msgs/warehouse_msgs.egg-info to /home/xelf/warehouse-automation-001/install/warehouse_msgs/lib/python3.10/site-packages/warehouse_msgs-0.0.0-py3.10.egg-info
+[3.335s] running install_scripts
+[3.381s] writing list of installed files to '/home/xelf/warehouse-automation-001/build/warehouse_msgs/install.log'
+[3.479s] Invoked command in '/home/xelf/warehouse-automation-001/warehouse_msgs' returned '0': PYTHONPATH=/home/xelf/warehouse-automation-001/build/warehouse_msgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/warehouse_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/warehouse_msgs build --build-base /home/xelf/warehouse-automation-001/build/warehouse_msgs/build install --record /home/xelf/warehouse-automation-001/build/warehouse_msgs/install.log --single-version-externally-managed install_data

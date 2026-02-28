@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-ROS 2 Humble warehouse automation project with packages:
+ROS 2 Humble warehouse automation with packages:
 - `order_system` - Order generation and listening
 - `cuopt_bridge` - Mock NVIDIA CuOpt optimizer
 - `orchestrator` - Task execution and robot management
@@ -11,67 +11,36 @@ ROS 2 Humble warehouse automation project with packages:
 - `hello_world_pkgs` - Example packages
 
 ## Build Commands
-
 ```bash
-# Source ROS 2
 source /opt/ros/humble/setup.bash
-
-# Build all packages
 colcon build
-
-# Build specific package
-colcon build --packages-select <package_name>
-
-# Build with debug symbols
+colcon build --packages-select <package>
+colcon build --packages-select <package> --symlink-install
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Debug
-
-# Rebuild after changes (fast iteration)
-colcon build --packages-select <package_name> --symlink-install
 ```
 
 ## Lint Commands
-
 ```bash
-# Run all linters via colcon
 colcon test
-
-# Run specific linter on a package
-cd <package_name>
-ament_flake8 .
-ament_pep257 .
-
-# Run single test file directly with pytest
+cd <package> && ament_flake8 . && ament_pep257 .
 python3 -m pytest test/test_flake8.py -v
 python3 -m pytest test/test_pep257.py -v
 python3 -m pytest test/test_copyright.py -v
-
-# Run a specific test function
 python3 -m pytest test/test_flake8.py::test_flake8 -v
 ```
 
 ## Test Commands
-
 ```bash
-# Run all tests
 colcon test
-
-# Run tests for specific package
-colcon test --packages-select <package_name>
-
-# Run tests with verbose output
+colcon test --packages-select <package>
 colcon test --event-handlers console_direct+
-
-# Run tests for specific package with verbose
-colcon test --packages-select <package_name> --event-handlers console_direct+
 ```
 
 ## Code Style Guidelines
 
 ### General
-- Use Python 3
-- Follow PEP 8 (enforced by flake8)
-- Use shebang `#!/usr/bin/env python3` for executable scripts
-- Maximum line length: 100 characters
+- Python 3, follow PEP 8 (flake8), max line length 100
+- Shebang `#!/usr/bin/env python3` for executables
 
 ### Imports (order: stdlib → third-party → ROS messages → ROS nodes)
 ```python
@@ -85,14 +54,13 @@ from std_msgs.msg import String
 ```
 
 ### Naming Conventions
-- **Classes**: PascalCase (e.g., `OrderGenerator`)
-- **Functions/methods**: snake_case (e.g., `generate_order`)
-- **Variables**: snake_case (e.g., `order_count`)
-- **Constants**: UPPER_SNAKE_CASE (e.g., `MAX_RETRIES`)
-- **ROS topics/services**: snake_case with slashes (e.g., `/orders`, `/robot_status`)
+- **Classes**: PascalCase (`OrderGenerator`)
+- **Functions/methods**: snake_case (`generate_order`)
+- **Variables**: snake_case (`order_count`)
+- **Constants**: UPPER_SNAKE_CASE (`MAX_RETRIES`)
+- **ROS topics/services**: snake_case with slashes (`/orders`, `/robot_status`)
 
 ### Type Annotations
-Use type hints for function parameters and return values:
 ```python
 from typing import List, Dict, Optional
 
@@ -173,25 +141,18 @@ package_name/
 - Use QoS profiles for publishers/subscribers when needed
 - Use timers for periodic tasks instead of sleep loops
 - Clean up resources in `finally` block
-- Use meaningful node and topic names
 - Keep nodes focused on single responsibility
 - Use actions for long-running tasks needing feedback
 
 ## Running the System
-
 ```bash
-# Terminal 1: Start Gazebo
 source /opt/ros/humble/setup.bash
 source install/setup.bash
 ros2 launch order_system complete_warehouse.launch.py
-
-# Terminal 2: Run Isaac Sim (optional)
-cd ~/IsaacLab
-./isaaclab.sh -p /path/to/warehouse-automation/amr_description/scripts/isaaclab_warehouse.py
 ```
 
-## Package-Specific Notes
-- `amr_description/scripts/isaaclab_warehouse.py` - Runs in IsaacLab only
-- `amr_description/worlds/warehouse.world` - Gazebo world file
+## Package Notes
+- `amr_description/scripts/isaaclab_warehouse.py` - IsaacLab only
+- `amr_description/worlds/warehouse.world` - Gazebo world
 - `amr_description/urdf/amr_robot.urdf` - Robot description
-- `cuopt_bridge/` - Contains mock CuOpt (replace with real API)
+- `cuopt_bridge/` - Mock CuOpt (replace with real API)

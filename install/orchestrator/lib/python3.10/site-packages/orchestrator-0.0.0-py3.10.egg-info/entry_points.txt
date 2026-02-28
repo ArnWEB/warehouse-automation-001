@@ -6,8 +6,10 @@ fleet_task_generator = orchestrator.fleet_task_generator:main
 fleet_visualization = orchestrator.fleet_visualization:main
 gazebo_fleet_mover = orchestrator.gazebo_fleet_mover:main
 gazebo_velocity_mover = orchestrator.gazebo_velocity_mover:main
+mock_odom_publisher = orchestrator.mock_odom_publisher:main
 orchestrator = orchestrator.orchestrator:main
 robot_state_monitor = orchestrator.robot_state_monitor:main
 simple_mover = orchestrator.simple_mover:main
 task_executor = orchestrator.task_executor:main
 test_gazebo_mover = orchestrator.test_gazebo_mover:main
+

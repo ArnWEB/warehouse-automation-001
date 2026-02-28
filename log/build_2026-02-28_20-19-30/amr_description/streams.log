@@ -1,0 +1,21 @@
+[0.976s] Invoking command in '/home/xelf/warehouse-automation-001/amr_description': PYTHONPATH=/home/xelf/warehouse-automation-001/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/amr_description build --build-base /home/xelf/warehouse-automation-001/build/amr_description/build install --record /home/xelf/warehouse-automation-001/build/amr_description/install.log --single-version-externally-managed install_data
+[1.218s] running egg_info
+[1.219s] writing ../build/amr_description/amr_description.egg-info/PKG-INFO
+[1.219s] writing dependency_links to ../build/amr_description/amr_description.egg-info/dependency_links.txt
+[1.220s] writing entry points to ../build/amr_description/amr_description.egg-info/entry_points.txt
+[1.220s] writing requirements to ../build/amr_description/amr_description.egg-info/requires.txt
+[1.220s] writing top-level names to ../build/amr_description/amr_description.egg-info/top_level.txt
+[1.222s] reading manifest file '../build/amr_description/amr_description.egg-info/SOURCES.txt'
+[1.223s] writing manifest file '../build/amr_description/amr_description.egg-info/SOURCES.txt'
+[1.223s] running build
+[1.223s] running build_py
+[1.224s] running install
+[1.224s] running install_lib
+[1.225s] running install_data
+[1.225s] running install_egg_info
+[1.227s] removing '/home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages/amr_description-0.0.0-py3.10.egg-info' (and everything under it)
+[1.227s] Copying ../build/amr_description/amr_description.egg-info to /home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages/amr_description-0.0.0-py3.10.egg-info
+[1.229s] running install_scripts
+[1.260s] Installing spawn_waypoints script to /home/xelf/warehouse-automation-001/install/amr_description/lib/amr_description
+[1.260s] writing list of installed files to '/home/xelf/warehouse-automation-001/build/amr_description/install.log'
+[1.311s] Invoked command in '/home/xelf/warehouse-automation-001/amr_description' returned '0': PYTHONPATH=/home/xelf/warehouse-automation-001/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/amr_description build --build-base /home/xelf/warehouse-automation-001/build/amr_description/build install --record /home/xelf/warehouse-automation-001/build/amr_description/install.log --single-version-externally-managed install_data

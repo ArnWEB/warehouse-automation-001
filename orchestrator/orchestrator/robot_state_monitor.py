@@ -130,7 +130,7 @@ class RobotStateMonitor(Node):
 
             odom_sub = self.create_subscription(
                 Odometry,
-                f"/{robot_id}/odom",
+                f"/{robot_id}/chassis/odom",
                 lambda msg, rid=robot_id: self.odom_callback(msg, rid),
                 10,
             )

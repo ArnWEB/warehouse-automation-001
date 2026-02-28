@@ -27,7 +27,7 @@ def get_extension_data_path():
         return EXTENSION_DATA_PATH
 
     # Use known path since extension path isn't resolved in --exec mode
-    EXTENSION_DATA_PATH = "/home/ubuntu/isaac-sim-allfiles/isaac-sim-standalone-5.1.0-linux-x86_64/extscache/omni.cuopt.examples-1.3.0+107.3.2/omni/cuopt/examples/warehouse_transport_demo/extension_data/"
+    EXTENSION_DATA_PATH = "C:/isaacsim/extscache/omni.cuopt.examples-1.3.0+107.3.2/omni/cuopt/examples/warehouse_transport_demo/extension_data/"
 
     print(f"[DEBUG] Extension data path: {EXTENSION_DATA_PATH}")
 
@@ -430,14 +430,14 @@ def run_main():
 
     load_warehouse_environment(stage)
     load_waypoint_graph(stage)
-    num_robots = 3
-    spawn_amr_robots(stage, num_robots=num_robots)
+    # num_robots = 3
+    # spawn_amr_robots(stage, num_robots=num_robots)
 
-    # Add sensors to robots
-    for i in range(1, num_robots + 1):
-        add_sensors_to_robot(stage, f"amr{i}", f"/World/AMR/amr{i}")
+    # # Add sensors to robots
+    # for i in range(1, num_robots + 1):
+    #     add_sensors_to_robot(stage, f"amr{i}", f"/World/AMR/amr{i}")
 
-    setup_ros2_bridge()
+    # setup_ros2_bridge()
 
     from isaacsim.core.utils.viewports import set_camera_view
 

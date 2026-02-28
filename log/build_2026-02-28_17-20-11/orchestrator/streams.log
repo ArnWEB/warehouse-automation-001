@@ -1,0 +1,36 @@
+[0.879s] Invoking command in '/home/xelf/warehouse-automation-001/orchestrator': PYTHONPATH=/home/xelf/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/orchestrator build --build-base /home/xelf/warehouse-automation-001/build/orchestrator/build install --record /home/xelf/warehouse-automation-001/build/orchestrator/install.log --single-version-externally-managed install_data
+[1.064s] running egg_info
+[1.065s] writing ../build/orchestrator/orchestrator.egg-info/PKG-INFO
+[1.065s] writing dependency_links to ../build/orchestrator/orchestrator.egg-info/dependency_links.txt
+[1.065s] writing entry points to ../build/orchestrator/orchestrator.egg-info/entry_points.txt
+[1.065s] writing requirements to ../build/orchestrator/orchestrator.egg-info/requires.txt
+[1.065s] writing top-level names to ../build/orchestrator/orchestrator.egg-info/top_level.txt
+[1.066s] reading manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'
+[1.068s] writing manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'
+[1.068s] running build
+[1.068s] running build_py
+[1.069s] copying orchestrator/mock_odom_publisher.py -> /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.070s] running install
+[1.070s] running install_lib
+[1.071s] copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/mock_odom_publisher.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.072s] byte-compiling /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/mock_odom_publisher.py to mock_odom_publisher.cpython-310.pyc
+[1.073s] running install_data
+[1.073s] running install_egg_info
+[1.075s] removing '/home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator-0.0.0-py3.10.egg-info' (and everything under it)
+[1.076s] Copying ../build/orchestrator/orchestrator.egg-info to /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator-0.0.0-py3.10.egg-info
+[1.077s] running install_scripts
+[1.094s] Installing amr_robot script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing fleet_dashboard script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing fleet_manager script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing fleet_task_generator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing fleet_visualization script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing gazebo_fleet_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing gazebo_velocity_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing mock_odom_publisher script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing orchestrator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing robot_state_monitor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing simple_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.094s] Installing task_executor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.095s] Installing test_gazebo_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.095s] writing list of installed files to '/home/xelf/warehouse-automation-001/build/orchestrator/install.log'
+[1.116s] Invoked command in '/home/xelf/warehouse-automation-001/orchestrator' returned '0': PYTHONPATH=/home/xelf/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/orchestrator build --build-base /home/xelf/warehouse-automation-001/build/orchestrator/build install --record /home/xelf/warehouse-automation-001/build/orchestrator/install.log --single-version-externally-managed install_data

@@ -1,0 +1,22 @@
+[2.348s] Invoking command in '/home/xelf/warehouse-automation-001/order_system': PYTHONPATH=/home/xelf/warehouse-automation-001/build/order_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/order_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/order_system build --build-base /home/xelf/warehouse-automation-001/build/order_system/build install --record /home/xelf/warehouse-automation-001/build/order_system/install.log --single-version-externally-managed install_data
+[2.771s] running egg_info
+[2.772s] writing ../build/order_system/order_system.egg-info/PKG-INFO
+[2.773s] writing dependency_links to ../build/order_system/order_system.egg-info/dependency_links.txt
+[2.774s] writing entry points to ../build/order_system/order_system.egg-info/entry_points.txt
+[2.774s] writing requirements to ../build/order_system/order_system.egg-info/requires.txt
+[2.774s] writing top-level names to ../build/order_system/order_system.egg-info/top_level.txt
+[2.778s] reading manifest file '../build/order_system/order_system.egg-info/SOURCES.txt'
+[2.779s] writing manifest file '../build/order_system/order_system.egg-info/SOURCES.txt'
+[2.779s] running build
+[2.779s] running build_py
+[2.780s] running install
+[2.781s] running install_lib
+[2.784s] running install_data
+[2.785s] running install_egg_info
+[2.789s] removing '/home/xelf/warehouse-automation-001/install/order_system/lib/python3.10/site-packages/order_system-0.0.0-py3.10.egg-info' (and everything under it)
+[2.790s] Copying ../build/order_system/order_system.egg-info to /home/xelf/warehouse-automation-001/install/order_system/lib/python3.10/site-packages/order_system-0.0.0-py3.10.egg-info
+[2.792s] running install_scripts
+[2.835s] Installing order_generator script to /home/xelf/warehouse-automation-001/install/order_system/lib/order_system
+[2.836s] Installing order_listener script to /home/xelf/warehouse-automation-001/install/order_system/lib/order_system
+[2.836s] writing list of installed files to '/home/xelf/warehouse-automation-001/build/order_system/install.log'
+[2.886s] Invoked command in '/home/xelf/warehouse-automation-001/order_system' returned '0': PYTHONPATH=/home/xelf/warehouse-automation-001/build/order_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/order_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/order_system build --build-base /home/xelf/warehouse-automation-001/build/order_system/build install --record /home/xelf/warehouse-automation-001/build/order_system/install.log --single-version-externally-managed install_data

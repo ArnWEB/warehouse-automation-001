@@ -1,0 +1,22 @@
+[2.326s] Invoking command in '/home/xelf/warehouse-automation-001/hello_world_pkgs': PYTHONPATH=/home/xelf/warehouse-automation-001/build/hello_world_pkgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hello_world_pkgs build --build-base /home/xelf/warehouse-automation-001/build/hello_world_pkgs/build install --record /home/xelf/warehouse-automation-001/build/hello_world_pkgs/install.log --single-version-externally-managed install_data
+[2.754s] running egg_info
+[2.756s] writing ../build/hello_world_pkgs/hello_world_pkgs.egg-info/PKG-INFO
+[2.757s] writing dependency_links to ../build/hello_world_pkgs/hello_world_pkgs.egg-info/dependency_links.txt
+[2.757s] writing entry points to ../build/hello_world_pkgs/hello_world_pkgs.egg-info/entry_points.txt
+[2.757s] writing requirements to ../build/hello_world_pkgs/hello_world_pkgs.egg-info/requires.txt
+[2.758s] writing top-level names to ../build/hello_world_pkgs/hello_world_pkgs.egg-info/top_level.txt
+[2.761s] reading manifest file '../build/hello_world_pkgs/hello_world_pkgs.egg-info/SOURCES.txt'
+[2.763s] writing manifest file '../build/hello_world_pkgs/hello_world_pkgs.egg-info/SOURCES.txt'
+[2.764s] running build
+[2.764s] running build_py
+[2.764s] running install
+[2.765s] running install_lib
+[2.768s] running install_data
+[2.768s] running install_egg_info
+[2.773s] removing '/home/xelf/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages/hello_world_pkgs-0.0.0-py3.10.egg-info' (and everything under it)
+[2.776s] Copying ../build/hello_world_pkgs/hello_world_pkgs.egg-info to /home/xelf/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages/hello_world_pkgs-0.0.0-py3.10.egg-info
+[2.776s] running install_scripts
+[2.815s] Installing hello_listener script to /home/xelf/warehouse-automation-001/install/hello_world_pkgs/lib/hello_world_pkgs
+[2.815s] Installing hello_talker script to /home/xelf/warehouse-automation-001/install/hello_world_pkgs/lib/hello_world_pkgs
+[2.816s] writing list of installed files to '/home/xelf/warehouse-automation-001/build/hello_world_pkgs/install.log'
+[2.869s] Invoked command in '/home/xelf/warehouse-automation-001/hello_world_pkgs' returned '0': PYTHONPATH=/home/xelf/warehouse-automation-001/build/hello_world_pkgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hello_world_pkgs build --build-base /home/xelf/warehouse-automation-001/build/hello_world_pkgs/build install --record /home/xelf/warehouse-automation-001/build/hello_world_pkgs/install.log --single-version-externally-managed install_data

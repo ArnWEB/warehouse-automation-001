@@ -1,16 +1,13 @@
-Metadata-Version: 2.4
-Name: order_system
+Metadata-Version: 2.1
+Name: order-system
 Version: 0.0.0
 Summary: Order system for warehouse automation
+Home-page: UNKNOWN
 Maintainer: xelf
 Maintainer-email: xelf@todo.todo
 License: Apache-2.0
-Requires-Dist: setuptools
+Platform: UNKNOWN
 Provides-Extra: test
-Requires-Dist: pytest; extra == "test"
-Dynamic: license
-Dynamic: maintainer
-Dynamic: maintainer-email
-Dynamic: provides-extra
-Dynamic: requires-dist
-Dynamic: summary
+
+UNKNOWN
+

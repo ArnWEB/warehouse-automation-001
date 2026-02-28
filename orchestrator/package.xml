@@ -3,9 +3,20 @@
 <package format="3">
   <name>orchestrator</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Warehouse Fleet Orchestrator with Nav2 Integration</description>
   <maintainer email="xelf@todo.todo">xelf</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>nav2_msgs</depend>
+  <depend>nav2_controller</depend>
+  <depend>nav2_planner</depend>
+  <depend>nav2_bt_navigator</depend>
+  <depend>nav2_velocity_smoother</depend>
+  <depend>nav2_lifecycle</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

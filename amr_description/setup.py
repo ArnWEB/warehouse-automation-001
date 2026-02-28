@@ -16,6 +16,7 @@ setup(
         ('share/' + package_name + '/worlds', glob('worlds/*.world')),
         ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
         ('share/' + package_name + '/config', glob('config/*.yaml')),
+        ('share/' + package_name + '/gazebo', glob('gazebo/*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -29,5 +30,8 @@ setup(
         ],
     },
     entry_points={
+        'console_scripts': [
+            'spawn_waypoints = amr_description.spawn_waypoints:main',
+        ],
     },
 )

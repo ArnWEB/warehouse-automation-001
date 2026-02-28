@@ -1,0 +1,3 @@
+[console_scripts]
+spawn_waypoints = amr_description.spawn_waypoints:main
+

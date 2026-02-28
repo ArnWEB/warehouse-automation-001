@@ -8,6 +8,7 @@ setup.py
 ../build/orchestrator/orchestrator.egg-info/requires.txt
 ../build/orchestrator/orchestrator.egg-info/top_level.txt
 ../build/orchestrator/orchestrator.egg-info/zip-safe
+launch/nav2_amr.launch.py
 launch/orchestrator_launch.py
 launch/production_fleet.launch.py
 orchestrator/__init__.py
@@ -21,11 +22,13 @@ orchestrator/gazebo_fleet_mover.py
 orchestrator/gazebo_fleet_viz.py
 orchestrator/gazebo_robot_mover.py
 orchestrator/gazebo_velocity_mover.py
+orchestrator/mock_odom_publisher.py
 orchestrator/orchestrator.py
 orchestrator/robot_state_monitor.py
 orchestrator/simple_mover.py
 orchestrator/task_executor.py
 orchestrator/test_gazebo_mover.py
+params/nav2_gridfree.yaml
 resource/orchestrator
 test/test_copyright.py
 test/test_flake8.py

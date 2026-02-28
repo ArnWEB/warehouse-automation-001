@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'orchestrator'
 
@@ -10,16 +12,14 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', [
-            'launch/orchestrator_launch.py',
-            'launch/production_fleet.launch.py'
-        ]),
+        ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
+        ('share/' + package_name + '/params', glob('params/*.yaml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='xelf',
     maintainer_email='xelf@todo.todo',
-    description='Orchestrator for warehouse automation',
+    description='Orchestrator for warehouse automation with Nav2',
     license='Apache-2.0',
     extras_require={
         'test': [
@@ -40,6 +40,7 @@ setup(
             'test_gazebo_mover = orchestrator.test_gazebo_mover:main',
             'robot_state_monitor = orchestrator.robot_state_monitor:main',
             'task_executor = orchestrator.task_executor:main',
+            'mock_odom_publisher = orchestrator.mock_odom_publisher:main',
         ],
     },
 )
