@@ -27,7 +27,7 @@ def get_extension_data_path():
         return EXTENSION_DATA_PATH
 
     # Use known path since extension path isn't resolved in --exec mode
-    EXTENSION_DATA_PATH = "C:/isaacsim/extscache/omni.cuopt.examples-1.3.0+107.3.2/omni/cuopt/examples/warehouse_transport_demo/extension_data/"
+    EXTENSION_DATA_PATH = "/home/ubuntu/isaac-sim-allfiles/isaac-sim-standalone-5.1.0-linux-x86_64/extscache/omni.cuopt.examples-1.3.0+107.3.2/omni/cuopt/examples/warehouse_transport_demo/extension_data/"
 
     print(f"[DEBUG] Extension data path: {EXTENSION_DATA_PATH}")
 

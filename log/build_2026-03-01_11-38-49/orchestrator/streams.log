@@ -1,0 +1,103 @@
+[0.743s] Invoking command in '/home/ubuntu/warehouse-automation-001/orchestrator': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/orchestrator build --build-base /home/ubuntu/warehouse-automation-001/build/orchestrator/build install --record /home/ubuntu/warehouse-automation-001/build/orchestrator/install.log --single-version-externally-managed install_data
+[1.037s] running egg_info
+[1.057s] creating ../build/orchestrator/orchestrator.egg-info
+[1.057s] writing ../build/orchestrator/orchestrator.egg-info/PKG-INFO
+[1.057s] writing dependency_links to ../build/orchestrator/orchestrator.egg-info/dependency_links.txt
+[1.057s] writing entry points to ../build/orchestrator/orchestrator.egg-info/entry_points.txt
+[1.058s] writing requirements to ../build/orchestrator/orchestrator.egg-info/requires.txt
+[1.058s] writing top-level names to ../build/orchestrator/orchestrator.egg-info/top_level.txt
+[1.061s] writing manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'
+[1.111s] reading manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'
+[1.112s] writing manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'
+[1.113s] running build
+[1.113s] running build_py
+[1.113s] creating /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.113s] copying orchestrator/gazebo_velocity_mover.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.113s] copying orchestrator/fleet_task_generator.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.114s] copying orchestrator/mock_odom_publisher.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.114s] copying orchestrator/fleet_visualization.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.114s] copying orchestrator/amr_robot.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.114s] copying orchestrator/gazebo_fleet_viz.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.114s] copying orchestrator/robot_state_monitor.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.115s] copying orchestrator/__init__.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.115s] copying orchestrator/gazebo_robot_mover.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.115s] copying orchestrator/orchestrator.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.115s] copying orchestrator/gazebo_fleet_controller.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.115s] copying orchestrator/task_executor.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.115s] copying orchestrator/gazebo_fleet_mover.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.116s] copying orchestrator/fleet_dashboard.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.116s] copying orchestrator/simple_mover.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.116s] copying orchestrator/fleet_manager.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.116s] copying orchestrator/test_gazebo_mover.py -> /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator
+[1.117s] running install
+[1.121s] running install_lib
+[1.142s] creating /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.142s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_velocity_mover.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.142s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_task_generator.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.142s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/mock_odom_publisher.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.142s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_visualization.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.142s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/amr_robot.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.143s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_fleet_viz.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.143s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/robot_state_monitor.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.143s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/__init__.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.143s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_robot_mover.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.143s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/orchestrator.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.143s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_fleet_controller.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.144s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/task_executor.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.144s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/gazebo_fleet_mover.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.144s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_dashboard.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.144s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/simple_mover.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.144s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/fleet_manager.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.144s] copying /home/ubuntu/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/test_gazebo_mover.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+[1.144s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_velocity_mover.py to gazebo_velocity_mover.cpython-310.pyc
+[1.146s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_task_generator.py to fleet_task_generator.cpython-310.pyc
+[1.146s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/mock_odom_publisher.py to mock_odom_publisher.cpython-310.pyc
+[1.147s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_visualization.py to fleet_visualization.cpython-310.pyc
+[1.148s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/amr_robot.py to amr_robot.cpython-310.pyc
+[1.148s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_fleet_viz.py to gazebo_fleet_viz.cpython-310.pyc
+[1.149s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/robot_state_monitor.py to robot_state_monitor.cpython-310.pyc
+[1.151s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__init__.py to __init__.cpython-310.pyc
+[1.152s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_robot_mover.py to gazebo_robot_mover.cpython-310.pyc
+[1.154s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/orchestrator.py to orchestrator.cpython-310.pyc
+[1.154s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_fleet_controller.py to gazebo_fleet_controller.cpython-310.pyc
+[1.156s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/task_executor.py to task_executor.cpython-310.pyc
+[1.160s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_fleet_mover.py to gazebo_fleet_mover.cpython-310.pyc
+[1.161s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_dashboard.py to fleet_dashboard.cpython-310.pyc
+[1.163s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/simple_mover.py to simple_mover.cpython-310.pyc
+[1.164s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_manager.py to fleet_manager.cpython-310.pyc
+[1.165s] byte-compiling /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/test_gazebo_mover.py to test_gazebo_mover.cpython-310.pyc
+[1.165s] running install_data
+[1.165s] creating /home/ubuntu/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index/packages
+[1.165s] copying resource/orchestrator -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index/packages
+[1.166s] copying package.xml -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator
+[1.166s] creating /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+[1.166s] copying launch/nav2_amr1.launch.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+[1.166s] copying launch/nav2_amr.launch.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+[1.166s] copying launch/nav2_all.launch.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+[1.166s] copying launch/nav2_amr3.launch.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+[1.167s] copying launch/nav2_amr2.launch.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+[1.167s] copying launch/production_fleet.launch.py -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+[1.167s] creating /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+[1.167s] copying params/nav2_amr1.yaml -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+[1.167s] copying params/nav2_amr3.yaml -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+[1.167s] copying params/nav2_isaacsim.yaml -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+[1.167s] copying params/nav2_gridfree.yaml -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+[1.168s] copying params/nav2_amr2.yaml -> /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+[1.168s] running install_egg_info
+[1.190s] Copying ../build/orchestrator/orchestrator.egg-info to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator-0.0.0-py3.10.egg-info
+[1.191s] running install_scripts
+[1.238s] Installing amr_robot script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.238s] Installing fleet_dashboard script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.238s] Installing fleet_manager script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.239s] Installing fleet_task_generator script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.239s] Installing fleet_visualization script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.239s] Installing gazebo_fleet_mover script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.239s] Installing gazebo_velocity_mover script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.239s] Installing mock_odom_publisher script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.240s] Installing orchestrator script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.240s] Installing robot_state_monitor script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.240s] Installing simple_mover script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.240s] Installing task_executor script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.241s] Installing test_gazebo_mover script to /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator
+[1.241s] writing list of installed files to '/home/ubuntu/warehouse-automation-001/build/orchestrator/install.log'
+[1.266s] Invoked command in '/home/ubuntu/warehouse-automation-001/orchestrator' returned '0': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/orchestrator build --build-base /home/ubuntu/warehouse-automation-001/build/orchestrator/build install --record /home/ubuntu/warehouse-automation-001/build/orchestrator/install.log --single-version-externally-managed install_data
