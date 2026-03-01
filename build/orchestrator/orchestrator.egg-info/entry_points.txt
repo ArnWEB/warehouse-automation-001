@@ -12,3 +12,4 @@ robot_state_monitor = orchestrator.robot_state_monitor:main
 simple_mover = orchestrator.simple_mover:main
 task_executor = orchestrator.task_executor:main
 test_gazebo_mover = orchestrator.test_gazebo_mover:main
+

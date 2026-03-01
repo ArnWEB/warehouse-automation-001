@@ -1,0 +1,47 @@
+running develop
+Removing /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator.egg-link (link to .)
+running egg_info
+writing ../build/orchestrator/orchestrator.egg-info/PKG-INFO
+writing dependency_links to ../build/orchestrator/orchestrator.egg-info/dependency_links.txt
+writing entry points to ../build/orchestrator/orchestrator.egg-info/entry_points.txt
+writing requirements to ../build/orchestrator/orchestrator.egg-info/requires.txt
+writing top-level names to ../build/orchestrator/orchestrator.egg-info/top_level.txt
+reading manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'
+writing manifest file '../build/orchestrator/orchestrator.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+copying /home/xelf/warehouse-automation-001/build/orchestrator/build/lib/orchestrator/__init__.py -> /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator
+running install_data
+copying resource/orchestrator -> /home/xelf/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index/packages
+copying package.xml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator
+copying launch/nav2_amr1.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+copying launch/nav2_all.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+copying launch/nav2_amr2.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+copying launch/nav2_amr3.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+copying launch/production_fleet.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+copying launch/nav2_amr.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch
+copying params/nav2_amr2.yaml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+copying params/nav2_amr1.yaml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+copying params/nav2_isaacsim.yaml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+copying params/nav2_gridfree.yaml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+copying params/nav2_amr3.yaml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/params
+running install_egg_info
+removing '/home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/orchestrator/orchestrator.egg-info to /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator-0.0.0-py3.10.egg-info
+running install_scripts
+Installing amr_robot script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing fleet_dashboard script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing fleet_manager script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing fleet_task_generator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing fleet_visualization script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing gazebo_fleet_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing gazebo_velocity_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing mock_odom_publisher script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing orchestrator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing robot_state_monitor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing simple_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing task_executor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+Installing test_gazebo_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator
+writing list of installed files to '/home/xelf/warehouse-automation-001/build/orchestrator/install.log'

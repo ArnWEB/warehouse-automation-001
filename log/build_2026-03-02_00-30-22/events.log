@@ -1,0 +1,113 @@
+[0.000000] (-) TimerEvent: {}
+[0.000721] (-) JobUnselected: {'identifier': 'cuopt_bridge'}
+[0.000848] (-) JobUnselected: {'identifier': 'hello_world_pkgs'}
+[0.001016] (-) JobUnselected: {'identifier': 'order_system'}
+[0.001083] (-) JobUnselected: {'identifier': 'warehouse_msgs'}
+[0.001337] (amr_description) JobQueued: {'identifier': 'amr_description', 'dependencies': OrderedDict()}
+[0.001637] (orchestrator) JobQueued: {'identifier': 'orchestrator', 'dependencies': OrderedDict()}
+[0.001746] (amr_description) JobStarted: {'identifier': 'amr_description'}
+[0.012430] (orchestrator) JobStarted: {'identifier': 'orchestrator'}
+[0.097663] (-) TimerEvent: {}
+[0.197937] (-) TimerEvent: {}
+[0.298205] (-) TimerEvent: {}
+[0.398458] (-) TimerEvent: {}
+[0.498761] (-) TimerEvent: {}
+[0.599057] (-) TimerEvent: {}
+[0.699379] (-) TimerEvent: {}
+[0.799657] (-) TimerEvent: {}
+[0.899957] (-) TimerEvent: {}
+[1.000275] (-) TimerEvent: {}
+[1.100657] (-) TimerEvent: {}
+[1.201021] (-) TimerEvent: {}
+[1.301392] (-) TimerEvent: {}
+[1.401633] (-) TimerEvent: {}
+[1.491819] (amr_description) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/xelf/warehouse-automation-001/build/amr_description/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/home/xelf/warehouse-automation-001/build/amr_description', 'env': {'USER': 'xelf', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/xelf', 'OLDPWD': '/home/xelf/warehouse-automation-001', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'xelf', 'NAME': 'MSI', 'WSL_INTEROP': '/run/WSL/39568_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/arnab/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Python312/Scripts:/mnt/c/Python312:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Spring Boot/Java/openjdk-21+35_windows-x64_bin/jdk-21/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2025.3.1:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/PowerShell/7:/mnt/c/Program Files/nodejs:/mnt/c/Users/arnab/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/arnab/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/arnab/AppData/Local/Programs/oh-my-posh/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA 2024.2.4/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2024.2.4/bin:/mnt/c/Program Files/JetBrains/WebStorm 2024.2.4/bin:/mnt/c/Users/arnab/AppData/Roaming/Python/Python312/Scripts:/mnt/c/Users/arnab/AppData/Local/Programs/Ollama:/mnt/c/Program Files/gstreamer/1.0/msvc_x86_64/bin:/mnt/c/Users/arnab/AppData/Roaming/npm:/mnt/c/Users/arnab/AppData/Local/Programs/Antigravity/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'PWD': '/home/xelf/warehouse-automation-001/build/amr_description', 'PYTHONPATH': '/home/xelf/warehouse-automation-001/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[1.501947] (-) TimerEvent: {}
+[1.503627] (orchestrator) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/xelf/warehouse-automation-001/build/orchestrator/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/home/xelf/warehouse-automation-001/build/orchestrator', 'env': {'USER': 'xelf', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/xelf', 'OLDPWD': '/home/xelf/warehouse-automation-001', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'xelf', 'NAME': 'MSI', 'WSL_INTEROP': '/run/WSL/39568_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/arnab/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Python312/Scripts:/mnt/c/Python312:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Spring Boot/Java/openjdk-21+35_windows-x64_bin/jdk-21/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2025.3.1:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/PowerShell/7:/mnt/c/Program Files/nodejs:/mnt/c/Users/arnab/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/arnab/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/arnab/AppData/Local/Programs/oh-my-posh/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA 2024.2.4/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2024.2.4/bin:/mnt/c/Program Files/JetBrains/WebStorm 2024.2.4/bin:/mnt/c/Users/arnab/AppData/Roaming/Python/Python312/Scripts:/mnt/c/Users/arnab/AppData/Local/Programs/Ollama:/mnt/c/Program Files/gstreamer/1.0/msvc_x86_64/bin:/mnt/c/Users/arnab/AppData/Roaming/npm:/mnt/c/Users/arnab/AppData/Local/Programs/Antigravity/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'PWD': '/home/xelf/warehouse-automation-001/build/orchestrator', 'PYTHONPATH': '/home/xelf/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[1.602123] (-) TimerEvent: {}
+[1.702404] (-) TimerEvent: {}
+[1.802716] (-) TimerEvent: {}
+[1.893770] (amr_description) StdoutLine: {'line': b'running develop\n'}
+[1.902862] (-) TimerEvent: {}
+[1.938211] (orchestrator) StdoutLine: {'line': b'running develop\n'}
+[2.003040] (-) TimerEvent: {}
+[2.103434] (-) TimerEvent: {}
+[2.133189] (amr_description) StdoutLine: {'line': b'running egg_info\n'}
+[2.133530] (amr_description) StdoutLine: {'line': b'writing amr_description.egg-info/PKG-INFO\n'}
+[2.134414] (amr_description) StdoutLine: {'line': b'writing dependency_links to amr_description.egg-info/dependency_links.txt\n'}
+[2.134678] (amr_description) StdoutLine: {'line': b'writing entry points to amr_description.egg-info/entry_points.txt\n'}
+[2.135324] (amr_description) StdoutLine: {'line': b'writing requirements to amr_description.egg-info/requires.txt\n'}
+[2.135455] (amr_description) StdoutLine: {'line': b'writing top-level names to amr_description.egg-info/top_level.txt\n'}
+[2.145680] (amr_description) StdoutLine: {'line': b"reading manifest file 'amr_description.egg-info/SOURCES.txt'\n"}
+[2.147331] (amr_description) StdoutLine: {'line': b"writing manifest file 'amr_description.egg-info/SOURCES.txt'\n"}
+[2.149490] (amr_description) StdoutLine: {'line': b'running build_ext\n'}
+[2.150194] (amr_description) StdoutLine: {'line': b'Creating /home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages/amr-description.egg-link (link to .)\n'}
+[2.151095] (amr_description) StdoutLine: {'line': b'Installing spawn_waypoints script to /home/xelf/warehouse-automation-001/install/amr_description/lib/amr_description\n'}
+[2.151247] (amr_description) StdoutLine: {'line': b'\n'}
+[2.151584] (amr_description) StdoutLine: {'line': b'Installed /home/xelf/warehouse-automation-001/build/amr_description\n'}
+[2.151903] (amr_description) StdoutLine: {'line': b'running symlink_data\n'}
+[2.152324] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/resource/amr_description -> /home/xelf/warehouse-automation-001/install/amr_description/share/ament_index/resource_index/packages\n'}
+[2.153121] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/package.xml -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description\n'}
+[2.153590] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/urdf/amr_robot.urdf -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/urdf\n'}
+[2.153958] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/urdf/amr_robot_diffdrive.urdf -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/urdf\n'}
+[2.154294] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/worlds/warehouse.world -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/worlds\n'}
+[2.154608] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/gazebo.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[2.155250] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/spawn_amr_diffdrive.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[2.155355] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/spawn_robots.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[2.155416] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/gazebo_simple.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[2.155558] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/spawn_amrs.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[2.157263] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/warehouse_gzros.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[2.158381] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/gazebo_ros.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[2.158936] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/warehouse_complete.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[2.160415] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/config/amr_controllers.yaml -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/config\n'}
+[2.160906] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/gazebo/gazebo_warehouse.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo\n'}
+[2.161822] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/gazebo/warehouse.world -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo\n'}
+[2.162435] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/gazebo/spawn_waypoints.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo\n'}
+[2.163545] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/maps/iw_hub_warehouse_navigation.yaml -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/maps\n'}
+[2.164185] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/maps/iw_hub_warehouse_navigation.png -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/maps\n'}
+[2.164366] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/maps/cuopt_costmap.png -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/maps\n'}
+[2.197606] (orchestrator) StdoutLine: {'line': b'running egg_info\n'}
+[2.198149] (orchestrator) StdoutLine: {'line': b'writing orchestrator.egg-info/PKG-INFO\n'}
+[2.198907] (orchestrator) StdoutLine: {'line': b'writing dependency_links to orchestrator.egg-info/dependency_links.txt\n'}
+[2.199012] (orchestrator) StdoutLine: {'line': b'writing entry points to orchestrator.egg-info/entry_points.txt\n'}
+[2.199062] (orchestrator) StdoutLine: {'line': b'writing requirements to orchestrator.egg-info/requires.txt\n'}
+[2.199158] (orchestrator) StdoutLine: {'line': b'writing top-level names to orchestrator.egg-info/top_level.txt\n'}
+[2.203165] (orchestrator) StdoutLine: {'line': b"reading manifest file 'orchestrator.egg-info/SOURCES.txt'\n"}
+[2.203552] (-) TimerEvent: {}
+[2.205280] (orchestrator) StdoutLine: {'line': b"writing manifest file 'orchestrator.egg-info/SOURCES.txt'\n"}
+[2.207329] (orchestrator) StdoutLine: {'line': b'running build_ext\n'}
+[2.208128] (orchestrator) StdoutLine: {'line': b'Creating /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator.egg-link (link to .)\n'}
+[2.209623] (amr_description) CommandEnded: {'returncode': 0}
+[2.230541] (amr_description) JobEnded: {'identifier': 'amr_description', 'rc': 0}
+[2.231361] (orchestrator) StdoutLine: {'line': b'Installing amr_robot script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.231489] (orchestrator) StdoutLine: {'line': b'Installing fleet_dashboard script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.231560] (orchestrator) StdoutLine: {'line': b'Installing fleet_manager script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.231628] (orchestrator) StdoutLine: {'line': b'Installing fleet_task_generator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.231674] (orchestrator) StdoutLine: {'line': b'Installing fleet_visualization script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.231761] (orchestrator) StdoutLine: {'line': b'Installing gazebo_fleet_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.231853] (orchestrator) StdoutLine: {'line': b'Installing gazebo_velocity_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.231925] (orchestrator) StdoutLine: {'line': b'Installing mock_odom_publisher script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.231972] (orchestrator) StdoutLine: {'line': b'Installing orchestrator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.232017] (orchestrator) StdoutLine: {'line': b'Installing robot_state_monitor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.232060] (orchestrator) StdoutLine: {'line': b'Installing simple_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.232103] (orchestrator) StdoutLine: {'line': b'Installing task_executor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.232146] (orchestrator) StdoutLine: {'line': b'Installing test_gazebo_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[2.232188] (orchestrator) StdoutLine: {'line': b'\n'}
+[2.232265] (orchestrator) StdoutLine: {'line': b'Installed /home/xelf/warehouse-automation-001/build/orchestrator\n'}
+[2.232338] (orchestrator) StdoutLine: {'line': b'running symlink_data\n'}
+[2.232386] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/resource/orchestrator -> /home/xelf/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index/packages\n'}
+[2.232437] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/package.xml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator\n'}
+[2.232482] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/launch/nav2_amr1.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch\n'}
+[2.232525] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/launch/nav2_all.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch\n'}
+[2.232582] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/launch/nav2_amr2.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch\n'}
+[2.232643] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/launch/nav2_amr3.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch\n'}
+[2.232719] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/launch/production_fleet.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch\n'}
+[2.232815] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/launch/nav2_amr.launch.py -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/launch\n'}
+[2.232867] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/params/nav2_amr2.yaml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/params\n'}
+[2.232925] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/params/nav2_amr1.yaml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/params\n'}
+[2.232967] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/params/nav2_isaacsim.yaml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/params\n'}
+[2.233017] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/params/nav2_gridfree.yaml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/params\n'}
+[2.233056] (orchestrator) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/orchestrator/params/nav2_amr3.yaml -> /home/xelf/warehouse-automation-001/install/orchestrator/share/orchestrator/params\n'}
+[2.268908] (orchestrator) CommandEnded: {'returncode': 0}
+[2.282229] (orchestrator) JobEnded: {'identifier': 'orchestrator', 'rc': 0}
+[2.283344] (-) EventReactorShutdown: {}

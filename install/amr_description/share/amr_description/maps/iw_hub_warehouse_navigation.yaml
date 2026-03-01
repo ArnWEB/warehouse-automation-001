@@ -1,1 +1,6 @@
-/home/xelf/warehouse-automation-001/build/amr_description/maps/iw_hub_warehouse_navigation.yaml
+image: iw_hub_warehouse_navigation.png
+resolution: 0.05
+origin: [-2.925000047683716, -0.225, 0.0000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

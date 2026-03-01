@@ -1,1 +1,333 @@
-/home/xelf/warehouse-automation-001/build/amr_description/gazebo/warehouse.world
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="warehouse">
+    
+    <!-- Physics -->
+    <physics type="ode">
+      <gravity>0 0 -9.8</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>50</iters>
+          <sor>1.0</sor>
+        </solver>
+      </ode>
+    </physics>
+
+    <!-- Scene -->
+    <scene>
+      <ambient>0.6 0.6 0.6</ambient>
+      <background>0.7 0.7 0.7</background>
+      <grid>false</grid>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- Lighting -->
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 30 0 0 0</pose>
+      <diffuse>1 1 1</diffuse>
+      <specular>0.1 0.1 0.1</specular>
+      <attenuation>
+        <range>100</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+    </light>
+
+    <!-- Ground Floor -->
+    <model name="ground">
+      <static>1</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><size>100 100</size></plane></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><size>100 100</size></plane></geometry>
+          <material>
+            <ambient>0.3 0.3 0.3</ambient>
+            <diffuse>0.3 0.3 0.3</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Walls -->
+    <!-- Back Wall -->
+    <model name="wall_back">
+      <static>1</static>
+      <pose>17.98 65 2 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>50 0.3 4</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>50 0.3 4</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Front Wall -->
+    <model name="wall_front">
+      <static>1</static>
+      <pose>17.98 -5 2 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>50 0.3 4</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>50 0.3 4</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Left Wall -->
+    <model name="wall_left">
+      <static>1</static>
+      <pose>-7 30 2 0 0 1.5708</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>70 0.3 4</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>70 0.3 4</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Right Wall -->
+    <model name="wall_right">
+      <static>1</static>
+      <pose>42 30 2 0 0 1.5708</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>70 0.3 4</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>70 0.3 4</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ==================== SHELVES ==================== -->
+    <!-- Shelf Row 1 (near ASRS) -->
+    <model name="shelf_1_1">
+      <static>1</static>
+      <pose>5 15 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="shelf_1_2">
+      <static>1</static>
+      <pose>8 15 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="shelf_1_3">
+      <static>1</static>
+      <pose>11 15 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Shelf Row 2 -->
+    <model name="shelf_2_1">
+      <static>1</static>
+      <pose>5 25 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="shelf_2_2">
+      <static>1</static>
+      <pose>8 25 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="shelf_2_3">
+      <static>1</static>
+      <pose>11 25 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Shelf Row 3 -->
+    <model name="shelf_3_1">
+      <static>1</static>
+      <pose>5 35 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="shelf_3_2">
+      <static>1</static>
+      <pose>8 35 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="shelf_3_3">
+      <static>1</static>
+      <pose>11 35 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Shelf Row 4 -->
+    <model name="shelf_4_1">
+      <static>1</static>
+      <pose>25 35 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="shelf_4_2">
+      <static>1</static>
+      <pose>28 35 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    <model name="shelf_4_3">
+      <static>1</static>
+      <pose>31 35 0.75 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.5 1.5</size></box></geometry>
+          <material><ambient>0.6 0.3 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ==================== KEY LOCATIONS ==================== -->
+    
+    <!-- ASRS (Automated Storage) - Waypoint 14/15 area -->
+    <model name="asrs">
+      <static>1</static>
+      <pose>17.98 47.7 1 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>4 1 2</size></box></geometry>
+          <material><ambient>0.2 0.4 0.9</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Palletizer - Waypoint 2 area -->
+    <model name="palletizer">
+      <static>1</static>
+      <pose>20.26 58.46 1 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>3 2 2</size></box></geometry>
+          <material><ambient>0.9 0.4 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Inbound Dock - Waypoint 0 -->
+    <model name="inbound_dock">
+      <static>1</static>
+      <pose>17.98 61.49 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>4 2 1</size></box></geometry>
+          <material><ambient>0.3 0.8 0.3</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Staging Area - Waypoint 75 area -->
+    <model name="staging">
+      <static>1</static>
+      <pose>17.98 8.79 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>4 4 1</size></box></geometry>
+          <material><ambient>0.2 0.9 0.2</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Charging Station - Waypoint 80 / amr1 position -->
+    <model name="charging_station_1">
+      <static>1</static>
+      <pose>17.98 4.16 0.3 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>2 1 0.6</size></box></geometry>
+          <material><ambient>0.1 0.8 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Charging Station 2 -->
+    <model name="charging_station_2">
+      <static>1</static>
+      <pose>17.98 8.79 0.3 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>2 1 0.6</size></box></geometry>
+          <material><ambient>0.1 0.8 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Charging Station 3 -->
+    <model name="charging_station_3">
+      <static>1</static>
+      <pose>17.98 47.7 0.3 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>2 1 0.6</size></box></geometry>
+          <material><ambient>0.1 0.8 0.1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

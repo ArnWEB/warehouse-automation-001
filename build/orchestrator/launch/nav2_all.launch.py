@@ -1,0 +1,1 @@
+/home/xelf/warehouse-automation-001/orchestrator/launch/nav2_all.launch.py

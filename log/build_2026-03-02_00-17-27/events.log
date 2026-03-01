@@ -1,0 +1,57 @@
+[0.000000] (-) TimerEvent: {}
+[0.000119] (-) JobUnselected: {'identifier': 'amr_description'}
+[0.000161] (-) JobUnselected: {'identifier': 'cuopt_bridge'}
+[0.000189] (-) JobUnselected: {'identifier': 'hello_world_pkgs'}
+[0.000215] (-) JobUnselected: {'identifier': 'order_system'}
+[0.000239] (-) JobUnselected: {'identifier': 'warehouse_msgs'}
+[0.000269] (orchestrator) JobQueued: {'identifier': 'orchestrator', 'dependencies': OrderedDict()}
+[0.000300] (orchestrator) JobStarted: {'identifier': 'orchestrator'}
+[0.098405] (-) TimerEvent: {}
+[0.198735] (-) TimerEvent: {}
+[0.299004] (-) TimerEvent: {}
+[0.399323] (-) TimerEvent: {}
+[0.499616] (-) TimerEvent: {}
+[0.599935] (-) TimerEvent: {}
+[0.700231] (-) TimerEvent: {}
+[0.800532] (-) TimerEvent: {}
+[0.900828] (-) TimerEvent: {}
+[1.001110] (-) TimerEvent: {}
+[1.101420] (-) TimerEvent: {}
+[1.201846] (-) TimerEvent: {}
+[1.226414] (orchestrator) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/xelf/warehouse-automation-001/build/orchestrator/build', '--no-deps', 'symlink_data'], 'cwd': '/home/xelf/warehouse-automation-001/build/orchestrator', 'env': {'USER': 'xelf', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/xelf', 'OLDPWD': '/home/xelf/warehouse-automation-001', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'xelf', 'NAME': 'MSI', 'WSL_INTEROP': '/run/WSL/25557_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/arnab/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Python312/Scripts:/mnt/c/Python312:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Spring Boot/Java/openjdk-21+35_windows-x64_bin/jdk-21/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2025.3.1:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/PowerShell/7:/mnt/c/Program Files/nodejs:/mnt/c/Users/arnab/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/arnab/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/arnab/AppData/Local/Programs/oh-my-posh/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA 2024.2.4/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2024.2.4/bin:/mnt/c/Program Files/JetBrains/WebStorm 2024.2.4/bin:/mnt/c/Users/arnab/AppData/Roaming/Python/Python312/Scripts:/mnt/c/Users/arnab/AppData/Local/Programs/Ollama:/mnt/c/Program Files/gstreamer/1.0/msvc_x86_64/bin:/mnt/c/Users/arnab/AppData/Roaming/npm:/mnt/c/Users/arnab/AppData/Local/Programs/Antigravity/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'PWD': '/home/xelf/warehouse-automation-001/build/orchestrator', 'PYTHONPATH': '/home/xelf/warehouse-automation-001/build/orchestrator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[1.302129] (-) TimerEvent: {}
+[1.402503] (-) TimerEvent: {}
+[1.502791] (-) TimerEvent: {}
+[1.565001] (orchestrator) StdoutLine: {'line': b'running develop\n'}
+[1.603000] (-) TimerEvent: {}
+[1.703291] (-) TimerEvent: {}
+[1.747330] (orchestrator) StdoutLine: {'line': b'running egg_info\n'}
+[1.748128] (orchestrator) StdoutLine: {'line': b'writing orchestrator.egg-info/PKG-INFO\n'}
+[1.752028] (orchestrator) StdoutLine: {'line': b'writing dependency_links to orchestrator.egg-info/dependency_links.txt\n'}
+[1.752606] (orchestrator) StdoutLine: {'line': b'writing entry points to orchestrator.egg-info/entry_points.txt\n'}
+[1.753058] (orchestrator) StdoutLine: {'line': b'writing requirements to orchestrator.egg-info/requires.txt\n'}
+[1.753146] (orchestrator) StdoutLine: {'line': b'writing top-level names to orchestrator.egg-info/top_level.txt\n'}
+[1.756760] (orchestrator) StdoutLine: {'line': b"reading manifest file 'orchestrator.egg-info/SOURCES.txt'\n"}
+[1.759547] (orchestrator) StdoutLine: {'line': b"writing manifest file 'orchestrator.egg-info/SOURCES.txt'\n"}
+[1.762927] (orchestrator) StdoutLine: {'line': b'running build_ext\n'}
+[1.763125] (orchestrator) StdoutLine: {'line': b'Creating /home/xelf/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator.egg-link (link to .)\n'}
+[1.763420] (orchestrator) StdoutLine: {'line': b'Installing amr_robot script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.765445] (orchestrator) StdoutLine: {'line': b'Installing fleet_dashboard script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.765819] (orchestrator) StdoutLine: {'line': b'Installing fleet_manager script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.766523] (orchestrator) StdoutLine: {'line': b'Installing fleet_task_generator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.766657] (orchestrator) StdoutLine: {'line': b'Installing fleet_visualization script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.766759] (orchestrator) StdoutLine: {'line': b'Installing gazebo_fleet_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.766858] (orchestrator) StdoutLine: {'line': b'Installing gazebo_velocity_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.767600] (orchestrator) StdoutLine: {'line': b'Installing mock_odom_publisher script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.768038] (orchestrator) StdoutLine: {'line': b'Installing orchestrator script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.768701] (orchestrator) StdoutLine: {'line': b'Installing robot_state_monitor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.768942] (orchestrator) StdoutLine: {'line': b'Installing simple_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.769296] (orchestrator) StdoutLine: {'line': b'Installing task_executor script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.769782] (orchestrator) StdoutLine: {'line': b'Installing test_gazebo_mover script to /home/xelf/warehouse-automation-001/install/orchestrator/lib/orchestrator\n'}
+[1.770266] (orchestrator) StdoutLine: {'line': b'\n'}
+[1.770395] (orchestrator) StdoutLine: {'line': b'Installed /home/xelf/warehouse-automation-001/build/orchestrator\n'}
+[1.770486] (orchestrator) StdoutLine: {'line': b'running symlink_data\n'}
+[1.803603] (-) TimerEvent: {}
+[1.809421] (orchestrator) CommandEnded: {'returncode': 0}
+[1.842744] (orchestrator) JobEnded: {'identifier': 'orchestrator', 'rc': 0}
+[1.846215] (-) EventReactorShutdown: {}
