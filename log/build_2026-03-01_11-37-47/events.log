@@ -1,0 +1,66 @@
+[0.000000] (-) TimerEvent: {}
+[0.000599] (-) JobUnselected: {'identifier': 'cuopt_bridge'}
+[0.000662] (-) JobUnselected: {'identifier': 'hello_world_pkgs'}
+[0.000692] (-) JobUnselected: {'identifier': 'orchestrator'}
+[0.000703] (-) JobUnselected: {'identifier': 'order_system'}
+[0.000712] (-) JobUnselected: {'identifier': 'warehouse_msgs'}
+[0.000725] (amr_description) JobQueued: {'identifier': 'amr_description', 'dependencies': OrderedDict()}
+[0.000738] (amr_description) JobStarted: {'identifier': 'amr_description'}
+[0.098280] (-) TimerEvent: {}
+[0.198562] (-) TimerEvent: {}
+[0.298955] (-) TimerEvent: {}
+[0.399244] (-) TimerEvent: {}
+[0.499668] (-) TimerEvent: {}
+[0.591147] (amr_description) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/xelf/warehouse-automation-001/build/amr_description/build', '--no-deps', 'symlink_data'], 'cwd': '/home/xelf/warehouse-automation-001/build/amr_description', 'env': {'USER': 'xelf', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/xelf', 'OLDPWD': '/home/xelf/warehouse-automation-001', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'xelf', 'NAME': 'MSI', 'WSL_INTEROP': '/run/WSL/91875_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/arnab/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Python312/Scripts:/mnt/c/Python312:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Spring Boot/Java/openjdk-21+35_windows-x64_bin/jdk-21/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2025.3.1:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/PowerShell/7:/mnt/c/Program Files/nodejs:/mnt/c/Users/arnab/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/arnab/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/arnab/AppData/Local/Programs/oh-my-posh/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA 2024.2.4/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2024.2.4/bin:/mnt/c/Program Files/JetBrains/WebStorm 2024.2.4/bin:/mnt/c/Users/arnab/AppData/Roaming/Python/Python312/Scripts:/mnt/c/Users/arnab/AppData/Local/Programs/Ollama:/mnt/c/Program Files/gstreamer/1.0/msvc_x86_64/bin:/mnt/c/Users/arnab/AppData/Roaming/npm:/mnt/c/Users/arnab/AppData/Local/Programs/Antigravity/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'PWD': '/home/xelf/warehouse-automation-001/build/amr_description', 'PYTHONPATH': '/home/xelf/warehouse-automation-001/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[0.599893] (-) TimerEvent: {}
+[0.700208] (-) TimerEvent: {}
+[0.800501] (-) TimerEvent: {}
+[0.832435] (amr_description) StdoutLine: {'line': b'running develop\n'}
+[0.900693] (-) TimerEvent: {}
+[0.931590] (amr_description) StdoutLine: {'line': b'running egg_info\n'}
+[0.931729] (amr_description) StdoutLine: {'line': b'creating amr_description.egg-info\n'}
+[0.932248] (amr_description) StdoutLine: {'line': b'writing amr_description.egg-info/PKG-INFO\n'}
+[0.932533] (amr_description) StdoutLine: {'line': b'writing dependency_links to amr_description.egg-info/dependency_links.txt\n'}
+[0.932981] (amr_description) StdoutLine: {'line': b'writing entry points to amr_description.egg-info/entry_points.txt\n'}
+[0.933449] (amr_description) StdoutLine: {'line': b'writing requirements to amr_description.egg-info/requires.txt\n'}
+[0.933557] (amr_description) StdoutLine: {'line': b'writing top-level names to amr_description.egg-info/top_level.txt\n'}
+[0.933640] (amr_description) StdoutLine: {'line': b"writing manifest file 'amr_description.egg-info/SOURCES.txt'\n"}
+[0.934965] (amr_description) StdoutLine: {'line': b"reading manifest file 'amr_description.egg-info/SOURCES.txt'\n"}
+[0.935644] (amr_description) StdoutLine: {'line': b"writing manifest file 'amr_description.egg-info/SOURCES.txt'\n"}
+[0.936991] (amr_description) StdoutLine: {'line': b'running build_ext\n'}
+[0.937220] (amr_description) StdoutLine: {'line': b'Creating /home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages/amr-description.egg-link (link to .)\n'}
+[0.937783] (amr_description) StdoutLine: {'line': b'Installing spawn_waypoints script to /home/xelf/warehouse-automation-001/install/amr_description/lib/amr_description\n'}
+[0.938287] (amr_description) StdoutLine: {'line': b'\n'}
+[0.938389] (amr_description) StdoutLine: {'line': b'Installed /home/xelf/warehouse-automation-001/build/amr_description\n'}
+[0.938494] (amr_description) StdoutLine: {'line': b'running symlink_data\n'}
+[0.938695] (amr_description) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/amr_description/share/ament_index\n'}
+[0.938755] (amr_description) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/amr_description/share/ament_index/resource_index\n'}
+[0.939009] (amr_description) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/amr_description/share/ament_index/resource_index/packages\n'}
+[0.939124] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/resource/amr_description -> /home/xelf/warehouse-automation-001/install/amr_description/share/ament_index/resource_index/packages\n'}
+[0.939759] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/package.xml -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description\n'}
+[0.940009] (amr_description) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/urdf\n'}
+[0.940113] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/urdf/amr_robot.urdf -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/urdf\n'}
+[0.940192] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/urdf/amr_robot_diffdrive.urdf -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/urdf\n'}
+[0.940485] (amr_description) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/worlds\n'}
+[0.940686] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/worlds/warehouse.world -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/worlds\n'}
+[0.940999] (amr_description) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[0.941315] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/gazebo.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[0.941774] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/spawn_amr_diffdrive.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[0.942121] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/spawn_robots.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[0.943444] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/gazebo_simple.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[0.944452] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/spawn_amrs.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[0.944818] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/warehouse_gzros.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[0.945215] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/gazebo_ros.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[0.945489] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/warehouse_complete.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch\n'}
+[0.946218] (amr_description) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/config\n'}
+[0.947100] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/config/amr_controllers.yaml -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/config\n'}
+[0.947375] (amr_description) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo\n'}
+[0.947496] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/gazebo/gazebo_warehouse.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo\n'}
+[0.947733] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/gazebo/warehouse.world -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo\n'}
+[0.947878] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/gazebo/spawn_waypoints.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo\n'}
+[0.948031] (amr_description) StdoutLine: {'line': b'creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/maps\n'}
+[0.948276] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/maps/iw_hub_warehouse_navigation.yaml -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/maps\n'}
+[0.948567] (amr_description) StdoutLine: {'line': b'symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/maps/iw_hub_warehouse_navigation.png -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/maps\n'}
+[0.979937] (amr_description) CommandEnded: {'returncode': 0}
+[0.993352] (amr_description) JobEnded: {'identifier': 'amr_description', 'rc': 0}
+[0.993941] (-) EventReactorShutdown: {}

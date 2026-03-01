@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Nav2 Launch for AMR (Grid-Free, No Map Operation)
+Nav2 Launch for AMR with Map-based Navigation (Isaac Sim compatible)
 
 Usage:
     ros2 launch orchestrator nav2_amr.launch.py robot_id:=amr1
@@ -10,7 +10,7 @@ Usage:
 
 import os
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, TimerAction
+from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
@@ -18,8 +18,12 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
     robot_id = LaunchConfiguration('robot_id')
+    
     orchestrator_share = get_package_share_directory('orchestrator')
-    nav2_params = os.path.join(orchestrator_share, 'params', 'nav2_gridfree.yaml')
+    amr_description_share = get_package_share_directory('amr_description')
+    
+    nav2_params = os.path.join(orchestrator_share, 'params', 'nav2_isaacsim.yaml')
+    map_file = os.path.join(amr_description_share, 'maps', 'iw_hub_warehouse_navigation.yaml')
     
     ld = LaunchDescription([
         DeclareLaunchArgument(
@@ -39,12 +43,37 @@ def generate_launch_description():
                 'use_sim_time': True,
                 'autostart': True,
                 'node_names': [
+                    'map_server',
+                    'amcl',
                     'controller_server',
                     'planner_server',
                     'bt_navigator',
-                    'velocity_smoother'
+                    'behavior_server'
                 ]
             }]
+        ),
+        
+        # Map Server
+        Node(
+            package='nav2_map_server',
+            executable='map_server',
+            name='map_server',
+            namespace=robot_id,
+            output='screen',
+            parameters=[{
+                'yaml_filename': map_file,
+                'use_sim_time': True
+            }]
+        ),
+        
+        # AMCL Localization
+        Node(
+            package='nav2_amcl',
+            executable='amcl',
+            name='amcl',
+            namespace=robot_id,
+            output='screen',
+            parameters=[nav2_params]
         ),
         
         # Controller Server
@@ -54,7 +83,7 @@ def generate_launch_description():
             name='controller_server',
             namespace=robot_id,
             output='screen',
-            parameters=[nav2_params],
+            parameters=[nav2_params]
         ),
         
         # Planner Server
@@ -64,7 +93,7 @@ def generate_launch_description():
             name='planner_server',
             namespace=robot_id,
             output='screen',
-            parameters=[nav2_params],
+            parameters=[nav2_params]
         ),
         
         # BT Navigator
@@ -74,17 +103,17 @@ def generate_launch_description():
             name='bt_navigator',
             namespace=robot_id,
             output='screen',
-            parameters=[nav2_params],
+            parameters=[nav2_params]
         ),
         
-        # Velocity Smoother
+        # Behavior Server
         Node(
-            package='nav2_velocity_smoother',
-            executable='velocity_smoother',
-            name='velocity_smoother',
+            package='nav2_behaviors',
+            executable='behavior_server',
+            name='behavior_server',
             namespace=robot_id,
             output='screen',
-            parameters=[nav2_params],
+            parameters=[nav2_params]
         ),
     ])
     

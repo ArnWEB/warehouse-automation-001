@@ -1,0 +1,47 @@
+[0.592s] Invoking command in '/home/xelf/warehouse-automation-001/build/amr_description': PYTHONPATH=/home/xelf/warehouse-automation-001/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation-001/build/amr_description/build --no-deps symlink_data
+[0.832s] running develop
+[0.931s] running egg_info
+[0.931s] creating amr_description.egg-info
+[0.931s] writing amr_description.egg-info/PKG-INFO
+[0.932s] writing dependency_links to amr_description.egg-info/dependency_links.txt
+[0.933s] writing entry points to amr_description.egg-info/entry_points.txt
+[0.933s] writing requirements to amr_description.egg-info/requires.txt
+[0.933s] writing top-level names to amr_description.egg-info/top_level.txt
+[0.933s] writing manifest file 'amr_description.egg-info/SOURCES.txt'
+[0.934s] reading manifest file 'amr_description.egg-info/SOURCES.txt'
+[0.935s] writing manifest file 'amr_description.egg-info/SOURCES.txt'
+[0.936s] running build_ext
+[0.936s] Creating /home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages/amr-description.egg-link (link to .)
+[0.937s] Installing spawn_waypoints script to /home/xelf/warehouse-automation-001/install/amr_description/lib/amr_description
+[0.937s] 
+[0.938s] Installed /home/xelf/warehouse-automation-001/build/amr_description
+[0.938s] running symlink_data
+[0.938s] creating /home/xelf/warehouse-automation-001/install/amr_description/share/ament_index
+[0.938s] creating /home/xelf/warehouse-automation-001/install/amr_description/share/ament_index/resource_index
+[0.938s] creating /home/xelf/warehouse-automation-001/install/amr_description/share/ament_index/resource_index/packages
+[0.939s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/resource/amr_description -> /home/xelf/warehouse-automation-001/install/amr_description/share/ament_index/resource_index/packages
+[0.939s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/package.xml -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description
+[0.939s] creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/urdf
+[0.939s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/urdf/amr_robot.urdf -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/urdf
+[0.939s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/urdf/amr_robot_diffdrive.urdf -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/urdf
+[0.940s] creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/worlds
+[0.940s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/worlds/warehouse.world -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/worlds
+[0.940s] creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[0.941s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/gazebo.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[0.941s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/spawn_amr_diffdrive.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[0.941s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/spawn_robots.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[0.943s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/gazebo_simple.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[0.944s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/spawn_amrs.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[0.944s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/warehouse_gzros.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[0.944s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/gazebo_ros.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[0.945s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/launch/warehouse_complete.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/launch
+[0.945s] creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/config
+[0.946s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/config/amr_controllers.yaml -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/config
+[0.947s] creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo
+[0.947s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/gazebo/gazebo_warehouse.launch.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo
+[0.947s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/gazebo/warehouse.world -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo
+[0.947s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/gazebo/spawn_waypoints.py -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/gazebo
+[0.947s] creating /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/maps
+[0.947s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/maps/iw_hub_warehouse_navigation.yaml -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/maps
+[0.948s] symbolically linking /home/xelf/warehouse-automation-001/build/amr_description/maps/iw_hub_warehouse_navigation.png -> /home/xelf/warehouse-automation-001/install/amr_description/share/amr_description/maps
+[0.980s] Invoked command in '/home/xelf/warehouse-automation-001/build/amr_description' returned '0': PYTHONPATH=/home/xelf/warehouse-automation-001/build/amr_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xelf/warehouse-automation-001/install/amr_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/xelf/warehouse-automation-001/build/amr_description/build --no-deps symlink_data

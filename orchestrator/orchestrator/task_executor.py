@@ -126,11 +126,12 @@ class TaskExecutor(Node):
     ARRIVAL_THRESHOLD = 0.2  # meters (increased for Isaac Sim)
     TURN_THRESHOLD = 0.3  # radians (increased - ~17 degrees)
 
-    def __init__(self, robot_id: str = "amr1", use_nav2: bool = False):
+    def __init__(self, robot_id: str = "amr1", use_nav2: bool = False, use_global_namespace: bool = True):
         super().__init__(f"task_executor_{robot_id}")
 
         self.robot_id = robot_id
         self.use_nav2 = use_nav2
+        self.use_global_namespace = use_global_namespace
 
         # Default positions matching cuopt_bridge ROBOTS config
         # amr1: charging_station (waypoint 80), amr2: staging (waypoint 75), amr3: asrs_output (waypoint 15)
@@ -166,14 +167,54 @@ class TaskExecutor(Node):
         )
         
         # Subscribe to real odometry from Isaac Sim
-        # Note: Isaac Sim publishes to /{robot_id}/chassis/odom
+        # Note: Isaac Sim publishes to /{robot_id}/chassis/odom (namespaced) OR /chassis/odom (global)
+        # Determine if using global namespace or namespaced based on use_nav2 and use_global_namespace
+        
+        # Nav2 Action Client (if use_nav2 is True)
+        self.nav_action_client = None
+        self.nav_goal_handle = None
+        self.nav_result_future = None
+        
+        # Determine topic names based on namespace mode
+        # use_global_namespace=True: global Nav2 (/navigate_to_pose, /chassis/odom, /cmd_vel)
+        # use_global_namespace=False: namespaced Nav2 (/{robot_id}/navigate_to_pose, etc.)
+        
+        if self.use_nav2:
+            if self.use_global_namespace:
+                # Global namespace (single robot Nav2)
+                self.odom_topic = "/chassis/odom"
+                self.cmd_vel_topic = "/cmd_vel"
+                action_server_name = "/navigate_to_pose"
+            else:
+                # Namespaced (multi-robot Nav2)
+                self.odom_topic = f"/{robot_id}/chassis/odom"
+                self.cmd_vel_topic = f"/{robot_id}/cmd_vel"
+                action_server_name = f"/{robot_id}/navigate_to_pose"
+            
+            self.nav_action_client = ActionClient(self, NavigateToPose, action_server_name)
+            self.get_logger().info(f"Nav2 action client created: {action_server_name}")
+            
+            # Wait for Nav2 server to be available
+            if self.nav_action_client.wait_for_server(timeout_sec=5.0):
+                self.get_logger().info("Nav2 server available")
+            else:
+                self.get_logger().warn("Nav2 server not available, falling back to cmd_vel")
+                self.use_nav2 = False
+                self.odom_topic = f"/{robot_id}/chassis/odom"
+                self.cmd_vel_topic = f"/{robot_id}/cmd_vel"
+        else:
+            # cmd_vel mode - always use namespaced topics
+            self.odom_topic = f"/{robot_id}/chassis/odom"
+            self.cmd_vel_topic = f"/{robot_id}/cmd_vel"
+        
+        # Subscribe to odometry
         self.odom_sub = self.create_subscription(
-            Odometry, f"/{robot_id}/chassis/odom", self.odom_callback, 10
+            Odometry, self.odom_topic, self.odom_callback, 10
         )
 
         # Publishers
         self.status_pub = self.create_publisher(Int32, f"/{robot_id}/status", 10)
-        self.cmd_vel_pub = self.create_publisher(Twist, f"/{robot_id}/cmd_vel", 10)
+        self.cmd_vel_pub = self.create_publisher(Twist, self.cmd_vel_topic, 10)
         self.debug_pub = self.create_publisher(
             String, f"/{robot_id}/executor_debug", 10
         )
@@ -185,27 +226,10 @@ class TaskExecutor(Node):
         self.move_timer = self.create_timer(0.1, self.move_control)
         self.state_timer = self.create_timer(1.0, self.publish_robot_state)
 
-        # Nav2 Action Client (if use_nav2 is True)
-        self.nav_action_client = None
-        self.nav_goal_handle = None
-        self.nav_result_future = None
-        
-        if self.use_nav2:
-            action_server_name = f"/{robot_id}/navigate_to_pose"
-            self.nav_action_client = ActionClient(self, NavigateToPose, action_server_name)
-            self.get_logger().info(f"Nav2 action client created: {action_server_name}")
-            
-            # Wait for Nav2 server to be available
-            if self.nav_action_client.wait_for_server(timeout_sec=5.0):
-                self.get_logger().info("Nav2 server available")
-            else:
-                self.get_logger().warn("Nav2 server not available, falling back to cmd_vel")
-                self.use_nav2 = False
-
         self.get_logger().info(f"Task Executor initialized for {robot_id}")
-        self.get_logger().info(f"Mode: {'Nav2' if self.use_nav2 else 'cmd_vel'}")
-        self.get_logger().info(f"Subscribed to /{robot_id}/chassis/odom")
-        self.get_logger().info(f"Publishing to /{robot_id}/cmd_vel")
+        self.get_logger().info(f"Mode: {'Nav2 (global)' if self.use_nav2 and self.use_global_namespace else 'Nav2 (namespaced)' if self.use_nav2 else 'cmd_vel'}")
+        self.get_logger().info(f"Subscribed to {self.odom_topic}")
+        self.get_logger().info(f"Publishing to {self.cmd_vel_topic}")
 
     def odom_callback(self, msg):
         """Update position from real Isaac Sim odometry."""
@@ -541,12 +565,14 @@ def main(args=None):
     temp_node = rclpy.node.Node('temp')
     temp_node.declare_parameter('robot_id', 'amr1')
     temp_node.declare_parameter('use_nav2', False)
+    temp_node.declare_parameter('use_global_namespace', True)
     
     robot_id = temp_node.get_parameter('robot_id').value
     use_nav2 = temp_node.get_parameter('use_nav2').value
+    use_global_namespace = temp_node.get_parameter('use_global_namespace').value
     temp_node.destroy_node()
     
-    node = TaskExecutor(robot_id=robot_id, use_nav2=use_nav2)
+    node = TaskExecutor(robot_id=robot_id, use_nav2=use_nav2, use_global_namespace=use_global_namespace)
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

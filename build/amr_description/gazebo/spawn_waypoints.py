@@ -1,0 +1,1 @@
+/home/xelf/warehouse-automation-001/amr_description/gazebo/spawn_waypoints.py
