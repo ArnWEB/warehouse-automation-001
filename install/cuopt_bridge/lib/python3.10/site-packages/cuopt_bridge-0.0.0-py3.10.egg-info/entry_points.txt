@@ -1,4 +1,3 @@
 [console_scripts]
 cuopt_bridge = cuopt_bridge.cuopt_bridge:main
 cuopt_client = cuopt_bridge.cuopt_client:main
-

@@ -1,0 +1,39 @@
+[1.775s] Invoking command in '/home/ubuntu/warehouse-automation-001/hello_world_pkgs': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hello_world_pkgs build --build-base /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build install --record /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/install.log --single-version-externally-managed install_data
+[2.095s] running egg_info
+[2.114s] creating ../build/hello_world_pkgs/hello_world_pkgs.egg-info
+[2.114s] writing ../build/hello_world_pkgs/hello_world_pkgs.egg-info/PKG-INFO
+[2.115s] writing dependency_links to ../build/hello_world_pkgs/hello_world_pkgs.egg-info/dependency_links.txt
+[2.115s] writing entry points to ../build/hello_world_pkgs/hello_world_pkgs.egg-info/entry_points.txt
+[2.116s] writing requirements to ../build/hello_world_pkgs/hello_world_pkgs.egg-info/requires.txt
+[2.117s] writing top-level names to ../build/hello_world_pkgs/hello_world_pkgs.egg-info/top_level.txt
+[2.123s] writing manifest file '../build/hello_world_pkgs/hello_world_pkgs.egg-info/SOURCES.txt'
+[2.183s] reading manifest file '../build/hello_world_pkgs/hello_world_pkgs.egg-info/SOURCES.txt'
+[2.185s] writing manifest file '../build/hello_world_pkgs/hello_world_pkgs.egg-info/SOURCES.txt'
+[2.185s] running build
+[2.185s] running build_py
+[2.185s] creating /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build/lib/hello_world_pkgs
+[2.186s] copying hello_world_pkgs/hello_listener.py -> /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build/lib/hello_world_pkgs
+[2.189s] copying hello_world_pkgs/hello_talker.py -> /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build/lib/hello_world_pkgs
+[2.189s] copying hello_world_pkgs/__init__.py -> /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build/lib/hello_world_pkgs
+[2.189s] running install
+[2.196s] running install_lib
+[2.220s] creating /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages/hello_world_pkgs
+[2.220s] copying /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build/lib/hello_world_pkgs/hello_listener.py -> /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages/hello_world_pkgs
+[2.220s] copying /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build/lib/hello_world_pkgs/hello_talker.py -> /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages/hello_world_pkgs
+[2.220s] copying /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build/lib/hello_world_pkgs/__init__.py -> /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages/hello_world_pkgs
+[2.220s] byte-compiling /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages/hello_world_pkgs/hello_listener.py to hello_listener.cpython-310.pyc
+[2.220s] byte-compiling /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages/hello_world_pkgs/hello_talker.py to hello_talker.cpython-310.pyc
+[2.220s] byte-compiling /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages/hello_world_pkgs/__init__.py to __init__.cpython-310.pyc
+[2.220s] running install_data
+[2.224s] creating /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/ament_index/resource_index/packages
+[2.225s] copying resource/hello_world_pkgs -> /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/ament_index/resource_index/packages
+[2.225s] copying package.xml -> /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs
+[2.225s] creating /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/launch
+[2.225s] copying launch/hello_world_launch.py -> /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/share/hello_world_pkgs/launch
+[2.225s] running install_egg_info
+[2.242s] Copying ../build/hello_world_pkgs/hello_world_pkgs.egg-info to /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages/hello_world_pkgs-0.0.0-py3.10.egg-info
+[2.243s] running install_scripts
+[2.287s] Installing hello_listener script to /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/hello_world_pkgs
+[2.288s] Installing hello_talker script to /home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/hello_world_pkgs
+[2.288s] writing list of installed files to '/home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/install.log'
+[2.329s] Invoked command in '/home/ubuntu/warehouse-automation-001/hello_world_pkgs' returned '0': PYTHONPATH=/home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/warehouse-automation-001/install/hello_world_pkgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hello_world_pkgs build --build-base /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/build install --record /home/ubuntu/warehouse-automation-001/build/hello_world_pkgs/install.log --single-version-externally-managed install_data

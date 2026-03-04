@@ -1,4 +1,3 @@
 [console_scripts]
 hello_listener = hello_world_pkgs.hello_listener:main
 hello_talker = hello_world_pkgs.hello_talker:main
-
