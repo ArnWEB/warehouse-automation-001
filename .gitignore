@@ -1,0 +1,4 @@
+build/amr_description/colcon_command_prefix_setup_py.sh.env
+*.log
+*.pyc
+*.env

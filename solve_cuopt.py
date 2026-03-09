@@ -843,12 +843,12 @@ def main():
     }
 
     # Save waypoint graph to JSON for use by other scripts
-    with open("/tmp/cuopt_waypoint_graph.json", "w") as f:
-        json.dump(data["cost_waypoint_graph_data"]["waypoint_graph"], f)
+    # with open("/tmp/cuopt_waypoint_graph.json", "w") as f:
+    #     json.dump(data["cost_waypoint_graph_data"]["waypoint_graph"], f)
 
     # If cuOpt is not running on localhost:5000, edit ip and port parameters
     cuopt_service_client = CuOptServiceSelfHostClient(
-        ip="43.201.55.122", port=5000, polling_timeout=25, timeout_exception=False
+        ip="3.36.92.207", port=5000, polling_timeout=25, timeout_exception=False
     )
 
     # Submit the routing problem to the server
