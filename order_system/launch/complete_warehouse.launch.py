@@ -61,12 +61,6 @@ def generate_launch_description():
             output='screen'
         ),
         Node(
-            package='cuopt_bridge',
-            executable='cuopt_bridge',
-            name='cuopt_bridge',
-            output='screen'
-        ),
-        Node(
             package='orchestrator',
             executable='orchestrator',
             name='orchestrator',

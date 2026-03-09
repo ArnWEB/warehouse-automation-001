@@ -40,6 +40,7 @@ def generate_launch_description():
             output='screen',
         ),
         
+<<<<<<< Updated upstream
         # CuOpt Client
         Node(
             package='cuopt_bridge',
@@ -48,6 +49,8 @@ def generate_launch_description():
             output='screen',
         ),
         
+=======
+>>>>>>> Stashed changes
         # Fleet Visualization
         Node(
             package='orchestrator',

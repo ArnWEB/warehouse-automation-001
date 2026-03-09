@@ -17,13 +17,6 @@ def generate_launch_description():
             name='order_listener',
             output='screen'
         ),
-        # CuOpt Bridge - creates plans
-        Node(
-            package='cuopt_bridge',
-            executable='cuopt_bridge',
-            name='cuopt_bridge',
-            output='screen'
-        ),
         # Orchestrator - executes plans
         Node(
             package='orchestrator',

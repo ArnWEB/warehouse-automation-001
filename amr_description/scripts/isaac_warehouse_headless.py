@@ -1,13 +1,7 @@
 #!/usr/bin/env python3
 """
 Isaac Sim Warehouse Loading Script - Headless Compatible
-Loads the official NVIDIA warehouse demo with proper initialization.
-
-Usage:
-    ./isaac-sim.sh --headless --exec amr_description/scripts/isaac_warehouse_headless.py
-
-Or with Kit directly:
-    ./kit/kit apps/isaacsim.exp.full.kit --headless --exec /path/to/script.py
+Creates a complete warehouse environment with floor, walls, shelves, and robots.
 """
 
 import omni.ext
@@ -15,460 +9,368 @@ import omni.usd
 import omni.kit.commands
 import omni.timeline
 import omni.kit.app
-from pxr import UsdGeom, Gf, UsdLux, UsdPhysics
+from pxr import UsdGeom, Gf, UsdLux, UsdPhysics, PhysxSchema, Sdf, PhysicsSchemaTools, UsdShade
+import numpy as np
 
-EXTENSION_DATA_PATH = None
 
-
-def get_extension_data_path():
-    """Get the path to the warehouse demo extension data."""
-    global EXTENSION_DATA_PATH
-    if EXTENSION_DATA_PATH is not None:
-        return EXTENSION_DATA_PATH
-
-    # Use known path since extension path isn't resolved in --exec mode
-    EXTENSION_DATA_PATH = "/home/ubuntu/isaac-sim-allfiles/isaac-sim-standalone-5.1.0-linux-x86_64/extscache/omni.cuopt.examples-1.3.0+107.3.2/omni/cuopt/examples/warehouse_transport_demo/extension_data/"
-
-    print(f"[DEBUG] Extension data path: {EXTENSION_DATA_PATH}")
-
-    return EXTENSION_DATA_PATH
-
-    ext_manager = omni.kit.app.get_app().get_extension_manager()
-
-    # Get path to omni.cuopt.examples extension
-    ext_path = ext_manager.get_extension_path("omni.cuopt.examples")
-    # The extension path already includes the full path to the extension
-    # extension_path/omni/cuopt/examples/warehouse_transport_demo/extension_data/
-    EXTENSION_DATA_PATH = (
-        f"{ext_path}/omni/cuopt/examples/warehouse_transport_demo/extension_data/"
+def create_warehouse_floor(stage):
+    """Create warehouse floor with physics."""
+    print("[Warehouse] Creating warehouse floor...")
+    
+    size = 100.0
+    
+    # Create physics ground plane
+    PhysicsSchemaTools.addGroundPlane(
+        stage,
+        "/World/Warehouse/Floor",
+        "Z",
+        size,
+        Gf.Vec3f(0, 0, 0),
+        Gf.Vec3f(0.3, 0.3, 0.3)
     )
-
-    print(f"[DEBUG] Extension path: {ext_path}")
-    print(f"[DEBUG] Extension data path: {EXTENSION_DATA_PATH}")
-
-    return EXTENSION_DATA_PATH
-
-    ext_manager = omni.kit.app.get_app().get_extension_manager()
-    ext_path = ext_manager.get_extension_path("omni.cuopt.examples")
-    EXTENSION_DATA_PATH = (
-        f"{ext_path}/omni/cuopt/examples/warehouse_transport_demo/extension_data/"
-    )
-    return EXTENSION_DATA_PATH
-
-
-def load_warehouse_environment(stage):
-    """Load the warehouse building, shelves, and conveyors."""
-    from omni.cuopt.visualization.generate_warehouse_assets import (
-        generate_shelves_assets,
-        generate_conveyor_assets,
-    )
-    from omni.cuopt.visualization.generate_warehouse_building import (
-        generate_building_structure,
-    )
-    from omni.cuopt.visualization.common import check_build_base_path
-    from isaacsim.storage.native import get_assets_root_path
-
-    print("[Isaac Sim] Loading warehouse environment...")
-
-    ext_data_path = get_extension_data_path()
-    building_config = "warehouse_building_data.json"
-    shelves_config = "warehouse_shelves_data.json"
-    conveyors_config = "warehouse_conveyors_data.json"
-
-    base_isaac_path = get_assets_root_path()
-    base_nvidia_path = base_isaac_path + "/NVIDIA/Assets/"
-    digital_twin_path = base_nvidia_path + "DigitalTwin/Assets/Warehouse/"
-
-    building_prim_path = "/World/Warehouse/Building"
-    check_build_base_path(stage, building_prim_path, final_xform=True)
-    generate_building_structure(
-        stage, building_prim_path, ext_data_path + building_config, base_isaac_path
-    )
-
-    shelves_prim_path = "/World/Warehouse/Assets/Shelves"
-    check_build_base_path(stage, shelves_prim_path, final_xform=True)
-    generate_shelves_assets(
-        stage, shelves_prim_path, ext_data_path + shelves_config, base_nvidia_path
-    )
-
-    conveyor_prim_path = "/World/Warehouse/Assets/Conveyors"
-    check_build_base_path(stage, conveyor_prim_path, final_xform=True)
-    generate_conveyor_assets(
-        stage, conveyor_prim_path, ext_data_path + conveyors_config, digital_twin_path
-    )
-
-    print("[Isaac Sim] Warehouse environment loaded!")
+    
+    # Create floor plane for visualization
+    omni.kit.commands.execute("CreatePrim", prim_path="/World/Warehouse/FloorPlane", prim_type="Plane")
+    floor_plane = stage.GetPrimAtPath("/World/Warehouse/FloorPlane")
+    if floor_plane:
+        xform = UsdGeom.Xformable(floor_plane)
+        xform.AddScaleOp().Set(Gf.Vec3f(size/2, size/2, 1))
+        
+        # Floor material
+        mat_path = "/World/Looks/FloorMaterial"
+        mat = UsdShade.Material.Define(stage, mat_path)
+        pbr = UsdShade.Shader.Define(stage, f"{mat_path}/PBRShader")
+        pbr.CreateIdAttr("UsdPreviewSurface")
+        pbr.CreateInput("diffuseColor", Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(0.35, 0.35, 0.35))
+        pbr.CreateInput("roughness", Sdf.ValueTypeNames.Float).Set(0.9)
+        mat.CreateSurfaceOutput().ConnectToSource(pbr.ConnectableAPI(), "surface")
+        UsdShade.MaterialBindingAPI(floor_plane).Bind(mat)
+    
+    print(f"[Warehouse] Floor created: {size}m x {size}m")
 
 
-def load_waypoint_graph(stage):
-    """Load the 90-waypoint graph."""
-    from omni.cuopt.visualization.generate_waypoint_graph import (
-        visualize_waypoint_graph,
-    )
-    from omni.cuopt.service.waypoint_graph_model import load_waypoint_graph_from_file
+def create_warehouse_walls(stage):
+    """Create warehouse walls."""
+    print("[Warehouse] Creating warehouse walls...")
+    
+    wall_height = 8.0
+    wall_thickness = 0.2
+    warehouse_length = 80.0
+    warehouse_width = 60.0
+    
+    # Wall material
+    mat_path = "/World/Looks/WallMaterial"
+    mat = UsdShade.Material.Define(stage, mat_path)
+    pbr = UsdShade.Shader.Define(stage, f"{mat_path}/PBRShader")
+    pbr.CreateIdAttr("UsdPreviewSurface")
+    pbr.CreateInput("diffuseColor", Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(0.7, 0.7, 0.75))
+    pbr.CreateInput("roughness", Sdf.ValueTypeNames.Float).Set(0.9)
+    mat.CreateSurfaceOutput().ConnectToSource(pbr.ConnectableAPI(), "surface")
+    
+    walls = [
+        ("WallNorth", warehouse_length, wall_thickness, wall_height, 0, warehouse_width/2, wall_height/2),
+        ("WallSouth", warehouse_length, wall_thickness, wall_height, 0, -warehouse_width/2, wall_height/2),
+        ("WallEast", wall_thickness, warehouse_width, wall_height, warehouse_length/2, 0, wall_height/2),
+        ("WallWest", wall_thickness, warehouse_width, wall_height, -warehouse_length/2, 0, wall_height/2),
+    ]
+    
+    for name, sx, sy, sz, px, py, pz in walls:
+        omni.kit.commands.execute("CreatePrim", prim_path=f"/World/Warehouse/Walls/{name}", prim_type="Cube")
+        prim = stage.GetPrimAtPath(f"/World/Warehouse/Walls/{name}")
+        if prim:
+            xform = UsdGeom.Xformable(prim)
+            xform.AddTranslateOp().Set(Gf.Vec3d(px, py, pz))
+            xform.AddScaleOp().Set(Gf.Vec3f(sx/2, sy/2, sz/2))
+            UsdShade.MaterialBindingAPI(prim).Bind(mat)
+            UsdPhysics.CollisionAPI.Apply(prim)
+    
+    print(f"[Warehouse] Created {len(walls)} walls")
 
-    print("[Isaac Sim] Loading waypoint graph...")
-    ext_data_path = get_extension_data_path()
-    waypoint_graph_config = "waypoint_graph.json"
 
-    waypoint_graph_node_path = "/World/Warehouse/Transportation/WaypointGraph/Nodes"
-    waypoint_graph_edge_path = "/World/Warehouse/Transportation/WaypointGraph/Edges"
+def create_shelves(stage):
+    """Create warehouse shelving units using Isaac Sim World API."""
+    print("[Warehouse] Creating warehouse shelves...")
+    
+    # Use Isaac Sim World API for easier object creation
+    from isaacsim.core.api import World
+    from isaacsim.core.api.objects import DynamicCuboid
+    
+    world = World(stage_units_in_meters=1.0)
+    
+    shelf_positions = []
+    for i in range(5):
+        shelf_positions.append((-30 + i * 12, 15))
+    for i in range(5):
+        shelf_positions.append((-30 + i * 12, 0))
+    for i in range(5):
+        shelf_positions.append((-30 + i * 12, -15))
+    
+    for idx, (x, y) in enumerate(shelf_positions):
+        # Create shelf as a group of boxes
+        shelf_height = 4.0
+        shelf_width = 2.0
+        shelf_depth = 1.0
+        thickness = 0.05
+        
+        # Vertical posts (4 corners)
+        for dx, dy in [(-shelf_width/2, -shelf_depth/2), (shelf_width/2, -shelf_depth/2),
+                       (-shelf_width/2, shelf_depth/2), (shelf_width/2, shelf_depth/2)]:
+            post = world.scene.add(DynamicCuboid(
+                prim_path=f"/World/Warehouse/Shelves/Shelf_{idx}/Post_{dx}_{dy}",
+                position=np.array([x + dx, y + dy, shelf_height/2]),
+                size=thickness * 2,
+                color=np.array([0.8, 0.5, 0.2])
+            ))
+        
+        # Horizontal shelves
+        for level in range(4):
+            z = 1.0 + level * 1.2
+            shelf_plane = world.scene.add(DynamicCuboid(
+                prim_path=f"/World/Warehouse/Shelves/Shelf_{idx}/Level_{level}",
+                position=np.array([x, y, z]),
+                scale=np.array([shelf_width, shelf_depth, thickness]),
+                size=1.0,
+                color=np.array([0.8, 0.5, 0.2])
+            ))
+    
+    print(f"[Warehouse] Created {len(shelf_positions)} shelf units")
 
-    waypoint_graph_model = load_waypoint_graph_from_file(
-        stage, ext_data_path + waypoint_graph_config
-    )
-    visualize_waypoint_graph(
-        stage, waypoint_graph_model, waypoint_graph_node_path, waypoint_graph_edge_path
-    )
 
-    print("[Isaac Sim] Waypoint graph loaded!")
+def create_conveyors(stage):
+    """Create conveyor belt systems."""
+    print("[Warehouse] Creating conveyors...")
+    
+    from isaacsim.core.api import World
+    from isaacsim.core.api.objects import DynamicCuboid
+    
+    world = World(stage_units_in_meters=1.0)
+    
+    conveyors = [
+        (35, 20),
+        (35, -20),
+    ]
+    
+    for idx, (x, y) in enumerate(conveyors):
+        # Belt
+        world.scene.add(DynamicCuboid(
+            prim_path=f"/World/Warehouse/Conveyors/Conveyor_{idx}/Belt",
+            position=np.array([x, y, 0.8]),
+            scale=np.array([3.0, 0.5, 0.1]),
+            size=1.0,
+            color=np.array([0.3, 0.3, 0.3])
+        ))
+        
+        # Legs
+        for lx in [-1.2, 1.2]:
+            for ly in [-0.3, 0.3]:
+                world.scene.add(DynamicCuboid(
+                    prim_path=f"/World/Warehouse/Conveyors/Conveyor_{idx}/Leg_{lx}_{ly}",
+                    position=np.array([x + lx, y + ly, 0.4]),
+                    size=0.1,
+                    color=np.array([0.4, 0.4, 0.4])
+                ))
+    
+    print(f"[Warehouse] Created {len(conveyors)} conveyors")
+
+
+def create_waypoint_graph(stage):
+    """Create waypoint graph for navigation using Isaac Sim waypoint API."""
+    print("[Warehouse] Creating waypoint graph...")
+    
+    # Use the NVIDIA waypoint graph system if available
+    # Otherwise create visual waypoints
+    try:
+        from omni.cuopt.visualization.generate_waypoint_graph import visualize_waypoint_graph
+        from omni.cuopt.service.waypoint_graph_model import load_waypoint_graph_from_file
+        from isaacsim.storage.native import get_assets_root_path
+        
+        ext_path = "C:/isaacsim/extscache/omni.cuopt.examples-1.3.0+107.3.2/omni/cuopt/examples/warehouse_transport_demo/extension_data/"
+        
+        waypoint_graph_model = load_waypoint_graph_from_file(stage, ext_path + "waypoint_graph.json")
+        visualize_waypoint_graph(
+            stage, waypoint_graph_model, 
+            "/World/Warehouse/Navigation/WaypointGraph/Nodes",
+            "/World/Warehouse/Navigation/WaypointGraph/Edges"
+        )
+        print("[Warehouse] Waypoint graph loaded from CuOpt")
+        return
+    except Exception as e:
+        print(f"[Warehouse] CuOpt waypoints not available: {e}")
+    
+    # Fallback: create waypoints manually
+    print("[Warehouse] Creating manual waypoints...")
+    
+    from isaacsim.core.api import World
+    from isaacsim.core.api.objects import DynamicSphere
+    
+    world = World(stage_units_in_meters=1.0)
+    
+    waypoint_spacing = 3.0
+    warehouse_length = 80.0
+    warehouse_width = 60.0
+    
+    waypoints = []
+    waypoint_id = 0
+    
+    for x in np.arange(-warehouse_length/2 + 5, warehouse_length/2 - 5, waypoint_spacing):
+        for y in np.arange(-warehouse_width/2 + 5, warehouse_width/2 - 5, waypoint_spacing):
+            # Skip areas where shelves are
+            skip = False
+            for shelf_y in [0, 15, -15]:
+                if abs(y - shelf_y) < 4:
+                    skip = True
+            if skip:
+                continue
+            
+            # Use Isaac Sim to create sphere waypoint
+            from isaacsim.core.api.objects import DynamicSphere
+            
+            try:
+                world = World(stage_units_in_meters=1.0)
+                wp = world.scene.add(DynamicSphere(
+                    prim_path=f"/World/Warehouse/Navigation/Waypoints/WP_{waypoint_id}",
+                    position=np.array([x, y, 0.1]),
+                    radius=0.15,
+                    color=np.array([0.2, 0.8, 0.2])
+                ))
+            except:
+                # Fallback to USD
+                omni.kit.commands.execute("CreatePrim", prim_path=f"/World/Warehouse/Navigation/Waypoints/WP_{waypoint_id}", prim_type="Sphere")
+                prim = stage.GetPrimAtPath(f"/World/Warehouse/Navigation/Waypoints/WP_{waypoint_id}")
+                if prim:
+                    xform = UsdGeom.Xformable(prim)
+                    xform.AddTranslateOp().Set(Gf.Vec3d(x, y, 0.1))
+                    xform.AddScaleOp().Set(Gf.Vec3f(0.15, 0.15, 0.15))
+            
+            waypoints.append({"id": waypoint_id, "x": x, "y": y})
+            waypoint_id += 1
+    
+    print(f"[Warehouse] Created {len(waypoints)} waypoints")
+    return waypoints
 
 
 def spawn_amr_robots(stage, num_robots=3):
-    """Spawn AMR robots (iw_hub) with sensors in the warehouse."""
-    from pxr import PhysxSchema, Sdf
-
-    print(f"[Isaac Sim] Spawning {num_robots} AMR robots with sensors...")
-
-    # Use local iw_hub assets (in other_assets folder)
-    iw_hub_usd = "/home/ubuntu/isaac-sim-allfiles/other_assets/iw_hub.usd"
-    iw_hub_sensors_usd = (
-        "/home/ubuntu/isaac-sim-allfiles/other_assets/iw_hub_sensors.usd"
-    )
-
-    print(f"[Isaac Sim] iw_hub path: {iw_hub_usd}")
-    print(f"[Isaac Sim] iw_hub sensors path: {iw_hub_sensors_usd}")
-
+    """Spawn AMR robots in the warehouse."""
+    print(f"[Warehouse] Spawning {num_robots} AMR robots...")
+    
+    from isaacsim.core.api import World
+    from isaacsim.core.api.objects import DynamicCuboid
+    
+    world = World(stage_units_in_meters=1.0)
+    
     robot_positions = [
-        {"name": "amr1", "x": 17.98, "y": 4.16, "z": 0.0},
-        {"name": "amr2", "x": 17.98, "y": 8.79, "z": 0.0},
-        {"name": "amr3", "x": 17.98, "y": 47.7, "z": 0.0},
+        {"name": "amr1", "x": 15.0, "y": 5.0},
+        {"name": "amr2", "x": 15.0, "y": 10.0},
+        {"name": "amr3", "x": 15.0, "y": -5.0},
     ]
-
-    for i, robot in enumerate(robot_positions[:num_robots]):
-        robot_path = f"/World/AMR/{robot['name']}"
-
-        print(f"[Isaac Sim] Loading {robot['name']} from {iw_hub_usd}")
-
-        # Create a parent Xform for the robot
-        omni.kit.commands.execute(
-            "CreatePrim", prim_path=robot_path, prim_type="Xform", select_new_prim=False
-        )
-
-        # Add reference to iw_hub USD
-        try:
-            prim = stage.GetPrimAtPath(robot_path)
-            if prim:
-                # Add reference to iw_hub robot
-                prim.GetReferences().AddReference(iw_hub_usd)
-
-                # Also add sensors if available
-                sensor_prim_path = f"{robot_path}/sensors"
-                omni.kit.commands.execute(
-                    "CreatePrim",
-                    prim_path=sensor_prim_path,
-                    prim_type="Xform",
-                    select_new_prim=False,
-                )
-                sensor_prim = stage.GetPrimAtPath(sensor_prim_path)
-                if sensor_prim:
-                    sensor_prim.GetReferences().AddReference(iw_hub_sensors_usd)
-
-                # Set position using Xformable
-                # Try to find the chassis link and set position
-                chassis_path = f"{robot_path}/chassis_link"
-                chassis_prim = stage.GetPrimAtPath(chassis_path)
-                if not chassis_path:
-                    # Try alternative path
-                    chassis_path = f"{robot_path}/base_link"
-                    chassis_prim = stage.GetPrimAtPath(chassis_path)
-
-                if chassis_prim:
-                    xform = UsdGeom.Xformable(chassis_prim)
-                    for op in xform.GetOrderedXformOps():
-                        if op.GetOpType() == UsdGeom.XformOp.TypeTranslate:
-                            current_pos = op.Get()
-                            op.Set(
-                                Gf.Vec3d(robot["x"], robot["z"], current_pos[1])
-                            )  # Swap Y and Z for Isaac Sim
-
-                print(
-                    f"[Isaac Sim] Loaded {robot['name']} at ({robot['x']}, {robot['y']})"
-                )
-            else:
-                print(f"[Isaac Sim] Warning: Could not create prim at {robot_path}")
-                print(f"[Isaac Sim] Warning: Could not create prim at {robot_path}")
-        except Exception as e:
-            print(f"[Isaac Sim] Error loading {robot['name']}: {e}")
-            # Fallback to simple cube
-            cube_path = f"{robot_path}/Body"
-            omni.kit.commands.execute(
-                "CreatePrim",
-                prim_path=cube_path,
-                prim_type="Cube",
-                select_new_prim=False,
-            )
-
-            prim = stage.GetPrimAtPath(cube_path)
-            if prim:
-                xform = UsdGeom.Xformable(prim)
-                for op in xform.GetOrderedXformOps():
-                    if op.GetOpType() == UsdGeom.XformOp.TypeTranslate:
-                        op.Set(Gf.Vec3d(robot["x"], robot["y"], robot["z"]))
-                    elif op.GetOpType() == UsdGeom.XformOp.TypeScale:
-                        op.Set(Gf.Vec3f(0.5, 0.3, 0.2))
-
-                UsdPhysics.CollisionAPI.Apply(prim)
-                UsdPhysics.RigidBodyAPI.Apply(prim)
-                print(
-                    f"[Isaac Sim] Fallback: Spawned {robot['name']} cube at ({robot['x']}, {robot['y']})"
-                )
-
-    print(f"[Isaac Sim] {num_robots} AMR robots spawned!")
+    
+    for robot in robot_positions[:num_robots]:
+        # Robot body
+        body = world.scene.add(DynamicCuboid(
+            prim_path=f"/World/AMR/{robot['name']}/Body",
+            position=np.array([robot['x'], robot['y'], 0.15]),
+            scale=np.array([0.4, 0.3, 0.15]),
+            size=1.0,
+            color=np.array([0.2, 0.6, 0.9])
+        ))
+        
+        # Add physics
+        prim = stage.GetPrimAtPath(f"/World/AMR/{robot['name']}/Body")
+        if prim:
+            UsdPhysics.CollisionAPI.Apply(prim)
+            UsdPhysics.RigidBodyAPI.Apply(prim)
+        
+        print(f"[Warehouse] Spawned {robot['name']} at ({robot['x']}, {robot['y']})")
+    
+    print(f"[Warehouse] {num_robots} AMR robots spawned!")
 
 
-def add_sensors_to_robot(stage, robot_name, robot_path):
-    """Add sensors (lidar, camera, IMU) to a robot."""
-    print(f"[Isaac Sim] Adding sensors to {robot_name}...")
-
-    # Use omni.kit.commands to create sensor frames
-    # Note: Full sensor integration requires isaacsim.sensor extension
-
-    # Add a lidar sensor frame
-    lidar_path = f"{robot_path}/sensors/lidar"
-    omni.kit.commands.execute(
-        "CreatePrim", prim_path=lidar_path, prim_type="Xform", select_new_prim=False
-    )
-
-    # Add camera sensor frame
-    camera_front_path = f"{robot_path}/sensors/camera_front"
-    camera_rear_path = f"{robot_path}/sensors/camera_rear"
-    omni.kit.commands.execute(
-        "CreatePrim",
-        prim_path=camera_front_path,
-        prim_type="Xform",
-        select_new_prim=False,
-    )
-    omni.kit.commands.execute(
-        "CreatePrim",
-        prim_path=camera_rear_path,
-        prim_type="Xform",
-        select_new_prim=False,
-    )
-
-    # Add IMU sensor frame
-    imu_path = f"{robot_path}/sensors/imu"
-    omni.kit.commands.execute(
-        "CreatePrim", prim_path=imu_path, prim_type="Xform", select_new_prim=False
-    )
-
-    print(f"[Isaac Sim] Sensors added to {robot_name}")
-    print(f"[Isaac Sim]   - Lidar: {lidar_path}")
-    print(f"[Isaac Sim]   - Camera Front: {camera_front_path}")
-    print(f"[Isaac Sim]   - Camera Rear: {camera_rear_path}")
-    print(f"[Isaac Sim]   - IMU: {imu_path}")
+def setup_lighting(stage):
+    """Setup warehouse lighting."""
+    print("[Warehouse] Setting up lighting...")
+    
+    # Dome light
+    omni.kit.commands.execute("CreatePrim", prim_path="/World/Lights/DomeLight", prim_type="DomeLight")
+    dome = stage.GetPrimAtPath("/World/Lights/DomeLight")
+    if dome:
+        dome.GetAttribute("inputs:intensity").Set(500)
+    
+    # Distant light
+    omni.kit.commands.execute("CreatePrim", prim_path="/World/Lights/DistantLight", prim_type="DistantLight")
+    distant = stage.GetPrimAtPath("/World/Lights/DistantLight")
+    if distant:
+        distant.GetAttribute("inputs:intensity").Set(1000)
+    
+    print("[Warehouse] Lighting setup complete")
 
 
-def setup_ros2_bridge():
-    """Setup ROS2 bridge with differential drive controller for each robot."""
-    import omni.graph.core as og
-    from pxr import UsdGeom, Gf, Sdf
-    import usdrt
-
-    print("[Isaac Sim] Setting up ROS2 bridge with differential drive controllers...")
-
-    robots = [
-        {"name": "amr1", "path": "/World/AMR/amr1"},
-        {"name": "amr2", "path": "/World/AMR/amr2"},
-        {"name": "amr3", "path": "/World/AMR/amr3"},
-    ]
-
-    for robot in robots:
-        robot_name = robot["name"]
-        robot_path = robot["path"]
-        graph_path = f"/Graph/ROS2_{robot_name}"
-
-        print(f"[Isaac Sim] Creating ROS2 graph for {robot_name} at {graph_path}")
-
-        try:
-            keys = og.Controller.Keys
-            (graph, nodes, _, _) = og.Controller.edit(
-                {"graph_path": graph_path, "evaluator_name": "execution"},
-                {
-                    keys.CREATE_NODES: [
-                        ("OnPlaybackTick", "omni.graph.action.OnPlaybackTick"),
-                        ("ReadSimTime", "isaacsim.core.nodes.IsaacReadSimulationTime"),
-                        ("computeOdom", "isaacsim.core.nodes.IsaacComputeOdometry"),
-                        ("publishOdom", "isaacsim.ros2.bridge.ROS2PublishOdometry"),
-                        (
-                            "publishRawTF",
-                            "isaacsim.ros2.bridge.ROS2PublishRawTransformTree",
-                        ),
-                        ("subscribeTwist", "isaacsim.ros2.bridge.ROS2SubscribeTwist"),
-                        ("breakLinVel", "omni.graph.nodes.BreakVector3"),
-                        ("breakAngVel", "omni.graph.nodes.BreakVector3"),
-                        (
-                            "diffController",
-                            "isaacsim.robot.wheeled_robots.DifferentialController",
-                        ),
-                        (
-                            "artController",
-                            "isaacsim.core.nodes.IsaacArticulationController",
-                        ),
-                    ],
-                    keys.CONNECT: [
-                        ("OnPlaybackTick.outputs:tick", "computeOdom.inputs:execIn"),
-                        ("OnPlaybackTick.outputs:tick", "publishOdom.inputs:execIn"),
-                        ("OnPlaybackTick.outputs:tick", "publishRawTF.inputs:execIn"),
-                        (
-                            "ReadSimTime.outputs:simulationTime",
-                            "publishOdom.inputs:timeStamp",
-                        ),
-                        (
-                            "ReadSimTime.outputs:simulationTime",
-                            "publishRawTF.inputs:timeStamp",
-                        ),
-                        (
-                            "computeOdom.outputs:angularVelocity",
-                            "publishOdom.inputs:angularVelocity",
-                        ),
-                        (
-                            "computeOdom.outputs:linearVelocity",
-                            "publishOdom.inputs:linearVelocity",
-                        ),
-                        (
-                            "computeOdom.outputs:orientation",
-                            "publishOdom.inputs:orientation",
-                        ),
-                        ("computeOdom.outputs:position", "publishOdom.inputs:position"),
-                        (
-                            "computeOdom.outputs:orientation",
-                            "publishRawTF.inputs:rotation",
-                        ),
-                        (
-                            "computeOdom.outputs:position",
-                            "publishRawTF.inputs:translation",
-                        ),
-                        ("OnPlaybackTick.outputs:tick", "subscribeTwist.inputs:execIn"),
-                        ("OnPlaybackTick.outputs:tick", "artController.inputs:execIn"),
-                        (
-                            "subscribeTwist.outputs:execOut",
-                            "diffController.inputs:execIn",
-                        ),
-                        (
-                            "subscribeTwist.outputs:linearVelocity",
-                            "breakLinVel.inputs:tuple",
-                        ),
-                        (
-                            "breakLinVel.outputs:x",
-                            "diffController.inputs:linearVelocity",
-                        ),
-                        (
-                            "subscribeTwist.outputs:angularVelocity",
-                            "breakAngVel.inputs:tuple",
-                        ),
-                        (
-                            "breakAngVel.outputs:z",
-                            "diffController.inputs:angularVelocity",
-                        ),
-                        (
-                            "diffController.outputs:velocityCommand",
-                            "artController.inputs:velocityCommand",
-                        ),
-                    ],
-                    keys.SET_VALUES: [
-                        # Differential drive parameters (adjust for iw_hub)
-                        ("diffController.inputs:wheelRadius", 0.1),
-                        ("diffController.inputs:wheelDistance", 0.4),
-                        # Joint names - need to check actual joint names from iw_hub
-                        (
-                            "artController.inputs:jointNames",
-                            ["left_wheel_joint", "right_wheel_joint"],
-                        ),
-                        # Robot chassis path
-                        (
-                            "computeOdom.inputs:chassisPrim",
-                            [usdrt.Sdf.Path(robot_path)],
-                        ),
-                        (
-                            "artController.inputs:targetPrim",
-                            [usdrt.Sdf.Path(robot_path)],
-                        ),
-                        # ROS2 topic names - use robot name as namespace
-                        ("subscribeTwist.inputs:topicName", f"/{robot_name}/cmd_vel"),
-                        ("publishOdom.inputs:topicName", f"/{robot_name}/odom"),
-                        ("publishRawTF.inputs:topicName", f"/{robot_name}/tf"),
-                        ("publishRawTF.inputs:childFrameId", robot_name),
-                        ("publishRawTF.inputs:parentFrameId", "odom"),
-                    ],
-                },
-            )
-            print(f"[Isaac Sim] Created ROS2 graph for {robot_name}")
-        except Exception as e:
-            print(f"[Isaac Sim] Error creating graph for {robot_name}: {e}")
-
-    print("[Isaac Sim] ROS2 bridge setup complete!")
-    print("[Isaac Sim] Available topics:")
-    for robot in robots:
-        print(f"[Isaac Sim]   /{robot['name']}/cmd_vel (subscribe)")
-        print(f"[Isaac Sim]   /{robot['name']}/odom (publish)")
-        print(f"[Isaac Sim]   /{robot['name']}/tf (publish)")
+def setup_physics_scene(stage):
+    """Setup physics scene with gravity."""
+    print("[Warehouse] Setting up physics...")
+    
+    if not stage.GetPrimAtPath("/physicsScene"):
+        scene = UsdPhysics.Scene.Define(stage, "/physicsScene")
+        scene.CreateGravityDirectionAttr().Set(Gf.Vec3f(0.0, 0.0, -1.0))
+        scene.CreateGravityMagnitudeAttr().Set(981.0)
+    
+    print("[Warehouse] Physics setup complete")
 
 
 def run_main():
     """Main function - runs after Isaac Sim is fully initialized."""
     print("=" * 60)
-    print("[Isaac Sim] Warehouse ROS2 Loading Script")
+    print("[Warehouse] Isaac Sim Warehouse Loading Script")
     print("=" * 60)
-
+    
     usd_context = omni.usd.get_context()
     stage = usd_context.get_stage()
-
+    
     if stage is None:
-        print("[Isaac Sim] ERROR: No USD stage available!")
+        print("[Warehouse] ERROR: No USD stage available!")
         return
-
-    load_warehouse_environment(stage)
-    load_waypoint_graph(stage)
-    # num_robots = 3
-    # spawn_amr_robots(stage, num_robots=num_robots)
-
-    # # Add sensors to robots
-    # for i in range(1, num_robots + 1):
-    #     add_sensors_to_robot(stage, f"amr{i}", f"/World/AMR/amr{i}")
-
-    # setup_ros2_bridge()
-
-    from isaacsim.core.utils.viewports import set_camera_view
-
-    set_camera_view(
-        eye=[50.0, 0.0, 40.0],
-        target=[20.0, 40.0, 0.0],
-        camera_prim_path="/OmniverseKit_Persp",
-    )
-
+    
+    # Create warehouse environment
+    setup_physics_scene(stage)
+    create_warehouse_floor(stage)
+    create_warehouse_walls(stage)
+    create_shelves(stage)
+    create_conveyors(stage)
+    waypoints = create_waypoint_graph(stage)
+    spawn_amr_robots(stage, num_robots=3)
+    setup_lighting(stage)
+    
+    # Set camera view
+    try:
+        from isaacsim.core.utils.viewports import set_camera_view
+        set_camera_view(
+            eye=[-40.0, -30.0, 40.0],
+            target=[20.0, 0.0, 0.0],
+            camera_prim_path="/OmniverseKit_Persp",
+        )
+    except:
+        print("[Warehouse] Could not set camera view")
+    
     print("=" * 60)
-    print("[Isaac Sim] Warehouse loaded successfully!")
-    print("[Isaac Sim] Ready for ROS2 connection")
+    print("[Warehouse] Warehouse loaded successfully!")
+    print(f"[Warehouse] Total waypoints: {len(waypoints) if waypoints else 0}")
+    print("[Warehouse] Ready for ROS2 connection")
     print("=" * 60)
 
 
 def on_kit_ready():
     """Called when Kit is ready."""
-    print("[Isaac Sim] Kit ready, loading warehouse...")
+    print("[Warehouse] Kit ready, loading warehouse...")
     run_main()
 
 
 def setup_update_subscription():
     """Subscribe to update events to run after initialization."""
     app = omni.kit.app.get_app()
-
-    # Check if app is already running
+    
     if app.is_running():
         on_kit_ready()
         return
-
-    # Subscribe to startup complete
+    
     stream = app.get_startup_event_stream()
     subscription = stream.create_subscription_to_pop(
         lambda event: on_kit_ready()

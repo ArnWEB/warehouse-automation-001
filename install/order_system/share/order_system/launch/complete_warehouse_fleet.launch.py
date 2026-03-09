@@ -77,14 +77,6 @@ def generate_launch_description():
                     output='screen'
                 ),
                 
-                # CuOpt Client
-                Node(
-                    package='cuopt_bridge',
-                    executable='cuopt_client',
-                    name='cuopt_client',
-                    output='screen'
-                ),
-                
                 # Task Executors (one per robot)
                 Node(
                     package='orchestrator',

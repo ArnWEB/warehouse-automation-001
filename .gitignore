@@ -1,4 +1,86 @@
+<<<<<<< Updated upstream
 build/amr_description/colcon_command_prefix_setup_py.sh.env
 *.log
 *.pyc
 *.env
+=======
+# ROS 2 Workspace Directories
+build/
+install/
+log/
+
+# CMake / C++ Build Artifacts
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.ext
+*.out
+*.app
+.catkin_workspace
+
+# Python Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ROS 2 Specifics / TF debugging
+frames*.pdf
+frames*.gv
+*.bag
+*.sqlite3
+
+# IDEs & Editor Configuration
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.cproject
+.settings/
+.cache/
+*.user
+compile_commands.json
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Others
+*.log
+*.tar
+*.tar.gz
+*.gz
+*.zip
+>>>>>>> Stashed changes
+/install
