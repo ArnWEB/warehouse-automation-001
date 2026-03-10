@@ -1,11 +1,5 @@
-<<<<<<< Updated upstream
-build/amr_description/colcon_command_prefix_setup_py.sh.env
-*.log
-*.pyc
-*.env
-=======
 # ROS 2 Workspace Directories
-build/
+build/*
 install/
 log/
 
@@ -82,5 +76,4 @@ Desktop.ini
 *.tar.gz
 *.gz
 *.zip
->>>>>>> Stashed changes
 /install

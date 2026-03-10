@@ -9,58 +9,6 @@ cd /home/ubuntu/warehouse-automation-001
 source /opt/ros/humble/setup.bash
 source install/setup.bash
 
-echo "======================================================================"
-echo "    END-TO-END TEST: Real CuOpt Server Integration"
-echo "======================================================================"
-echo ""
-echo "CuOpt Server: 43.203.202.86:5000"
-echo "Robots: amr1, amr2, amr3"
-echo "Navigation: Nav2 (Isaac Sim)"
-echo ""
-
-echo "======================================================================"
-echo "STEP 1: Pre-flight Checks"
-echo "======================================================================"
-
-# Check cuopt_sh_client
-echo -n "Checking cuopt_sh_client... "
-python3 -c "from cuopt_sh_client import CuOptServiceSelfHostClient" 2>/dev/null && echo "✓ installed" || echo "✗ NOT installed"
-
-# Check server connectivity
-echo -n "Testing CuOpt server connectivity... "
-curl -s --connect-timeout 3 http://43.203.202.86:5000 > /dev/null 2>&1 && echo "✓ reachable" || echo "✗ unreachable"
-
-# Check Isaac Sim odom topics
-echo -n "Checking Isaac Sim odometry... "
-ODOM_COUNT=$(ros2 topic list 2>/dev/null | grep "chassis/odom" | wc -l)
-echo "found $ODOM_COUNT robots"
-
-# Check Nav2 action servers
-echo -n "Checking Nav2 action servers... "
-NAV2_COUNT=$(ros2 action list 2>/dev/null | grep "navigate_to_pose" | wc -l)
-echo "found $NAV2_COUNT servers"
-
-if [ "$ODOM_COUNT" -lt 3 ] || [ "$NAV2_COUNT" -lt 3 ]; then
-    echo ""
-    echo "⚠️  WARNING: Expected 3 robots with Nav2, found odom=$ODOM_COUNT nav2=$NAV2_COUNT"
-    echo "Isaac Sim may not be fully initialized. Continue anyway? (y/n)"
-    read -r response
-    if [[ ! "$response" =~ ^[Yy]$ ]]; then
-        echo "Exiting..."
-        exit 1
-    fi
-fi
-
-echo ""
-echo "======================================================================"
-echo "STEP 2: Cleanup Previous Instances"
-echo "======================================================================"
-pkill -f task_executor 2>/dev/null || echo "No task executors running"
-pkill -f cuopt_client 2>/dev/null || echo "No cuopt_client running"
-pkill -f order_generator 2>/dev/null || echo "No order_generator running"
-sleep 2
-echo "✓ Cleanup complete"
-
 echo ""
 echo "======================================================================"
 echo "STEP 3: Launch Task Executors (Nav2 mode, namespaced)"
@@ -81,24 +29,24 @@ EXECUTOR_COUNT=$(ps aux | grep "task_executor.*robot_id" | grep -v grep | wc -l)
 echo "✓ Launched $EXECUTOR_COUNT task executors"
 
 echo ""
-echo "======================================================================"
-echo "STEP 4: Launch CuOpt Client (Real Server Mode)"
-echo "======================================================================"
-echo "This will connect to 43.203.202.86:5000 for real optimization"
-echo ""
+# echo "======================================================================"
+# echo "STEP 4: Launch CuOpt Client (Real Server Mode)"
+# echo "======================================================================"
+# echo "This will connect to 43.203.202.86:5000 for real optimization"
+# echo ""
 
-ros2 run cuopt_bridge cuopt_client > /tmp/cuopt_client.log 2>&1 &
-CUOPT_PID=$!
-sleep 3
+# ros2 run cuopt_bridge cuopt_client > /tmp/cuopt_client.log 2>&1 &
+# CUOPT_PID=$!
+# sleep 3
 
-if ps -p $CUOPT_PID > /dev/null; then
-    echo "✓ CuOpt client started (PID: $CUOPT_PID)"
-    echo "  Log: /tmp/cuopt_client.log"
-else
-    echo "✗ Failed to start CuOpt client"
-    echo "Check logs: cat /tmp/cuopt_client.log"
-    exit 1
-fi
+# if ps -p $CUOPT_PID > /dev/null; then
+#     echo "✓ CuOpt client started (PID: $CUOPT_PID)"
+#     echo "  Log: /tmp/cuopt_client.log"
+# else
+#     echo "✗ Failed to start CuOpt client"
+#     echo "Check logs: cat /tmp/cuopt_client.log"
+#     exit 1
+# fi
 
 echo ""
 echo "======================================================================"

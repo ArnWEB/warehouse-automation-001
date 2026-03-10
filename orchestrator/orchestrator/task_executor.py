@@ -354,7 +354,7 @@ class TaskExecutor(Node):
 
             # Use robot_id directly as key (e.g., "amr1", "amr2")
             if self.robot_id in assignments:
-                new_tasks = assignments[self.robot_id]["tasks"]
+                new_tasks = assignments[self.robot_id]["route"]
                 new_plan_id = plan["plan_id"]
 
                 if new_plan_id != self.plan_id:
