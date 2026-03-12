@@ -77,3 +77,5 @@ Desktop.ini
 *.gz
 *.zip
 /install
+build/cuopt_bridge/colcon_command_prefix_setup_py.sh.env
+build/cuopt_bridge/colcon_command_prefix_setup_py.sh.env

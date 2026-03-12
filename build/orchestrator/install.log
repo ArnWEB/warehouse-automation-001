@@ -13,6 +13,8 @@
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/gazebo_fleet_mover.py
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_dashboard.py
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/simple_mover.py
+/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/test_docking.py
+/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/test_pickup_sequence.py
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/fleet_manager.py
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/test_gazebo_mover.py
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__pycache__/gazebo_velocity_mover.cpython-310.pyc
@@ -30,10 +32,13 @@
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__pycache__/gazebo_fleet_mover.cpython-310.pyc
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__pycache__/fleet_dashboard.cpython-310.pyc
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__pycache__/simple_mover.cpython-310.pyc
+/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__pycache__/test_docking.cpython-310.pyc
+/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__pycache__/test_pickup_sequence.cpython-310.pyc
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__pycache__/fleet_manager.cpython-310.pyc
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/python3.10/site-packages/orchestrator/__pycache__/test_gazebo_mover.cpython-310.pyc
 /home/ubuntu/warehouse-automation-001/install/orchestrator/share/ament_index/resource_index/packages/orchestrator
 /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/package.xml
+/home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch/test_docking.launch.py
 /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch/nav2_amr1.launch.py
 /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch/nav2_amr.launch.py
 /home/ubuntu/warehouse-automation-001/install/orchestrator/share/orchestrator/launch/nav2_all.launch.py
@@ -66,4 +71,6 @@
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator/robot_state_monitor
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator/simple_mover
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator/task_executor
+/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator/test_docking
 /home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator/test_gazebo_mover
+/home/ubuntu/warehouse-automation-001/install/orchestrator/lib/orchestrator/test_pickup_sequence

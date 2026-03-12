@@ -11,4 +11,6 @@ orchestrator = orchestrator.orchestrator:main
 robot_state_monitor = orchestrator.robot_state_monitor:main
 simple_mover = orchestrator.simple_mover:main
 task_executor = orchestrator.task_executor:main
+test_docking = orchestrator.test_docking:main
 test_gazebo_mover = orchestrator.test_gazebo_mover:main
+test_pickup_sequence = orchestrator.test_pickup_sequence:main

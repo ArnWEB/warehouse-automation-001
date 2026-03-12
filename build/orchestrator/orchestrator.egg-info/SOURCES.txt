@@ -15,6 +15,7 @@ launch/nav2_amr2.launch.py
 launch/nav2_amr3.launch.py
 launch/nav2_amr_simple.launch.py
 launch/production_fleet.launch.py
+launch/test_docking.launch.py
 orchestrator/__init__.py
 orchestrator/amr_robot.py
 orchestrator/fleet_dashboard.py
@@ -31,7 +32,9 @@ orchestrator/orchestrator.py
 orchestrator/robot_state_monitor.py
 orchestrator/simple_mover.py
 orchestrator/task_executor.py
+orchestrator/test_docking.py
 orchestrator/test_gazebo_mover.py
+orchestrator/test_pickup_sequence.py
 params/nav2_amr1.yaml
 params/nav2_amr1_ref.yaml
 params/nav2_amr2.yaml
